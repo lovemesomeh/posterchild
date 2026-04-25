@@ -1,0 +1,20 @@
+# Pipeline requirements
+# Install in Termux Ubuntu environment:
+#   pip install -r requirements.txt --break-system-packages
+
+# Core
+pyyaml
+requests
+
+# Transcription (cloud)
+groq
+
+# Transcription (local, optional — large download)
+# openai-whisper
+
+# LLM editorial (install whichever provider you use)
+anthropic
+# openai
+
+# Scheduling timezone support
+pytz
