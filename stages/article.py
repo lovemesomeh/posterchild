@@ -2,12 +2,21 @@
 stages/article.py — Assemble transcript text and stills into a markdown file.
 
 Input:  edited text, list of still paths, video name stem
-Output: path to compiled .md file
+Output: path to compiled .md file inside a self-contained post folder
 
-The markdown file is what gets sent to WordPress and forms the
-basis of social captions. Easy to inspect and edit before posting.
+Each run produces a folder like:
+    ~/pipeline/output/my_video_2026-04-24_143022/
+        post.md          <- the article, images referenced by filename only
+        still_01.jpg     <- images copied here alongside the markdown
+        still_02.jpg
+
+This makes the post fully portable — grab the folder, take it anywhere.
+Drop it into a blog editor, zip it, sync it to a PC — images always
+travel with the text.
 """
 
+import re
+import shutil
 from datetime import datetime
 from pathlib import Path
 
@@ -15,7 +24,7 @@ from pathlib import Path
 def compile_article(text: str, stills: list, video_stem: str,
                     config: dict, logger) -> str:
     """
-    Build a markdown article from text and still images.
+    Build a self-contained post folder with markdown and images.
 
     Args:
         text:       body text (raw or LLM-edited transcript)
@@ -25,32 +34,46 @@ def compile_article(text: str, stills: list, video_stem: str,
         logger:     pipeline logger
 
     Returns:
-        Path to the compiled markdown file.
+        Path to the compiled markdown file (inside the post folder).
     """
     cfg        = config["article"]
     output_dir = Path(config["pipeline"]["output_dir"]).expanduser()
-    output_dir.mkdir(parents=True, exist_ok=True)
 
-    # ── Title ─────────────────────────────────────────────────────────────
-    prefix = cfg.get("default_title_prefix", "Show Your Work:")
-    # Convert snake_case or kebab-case filename to readable words
+    # -- Create a timestamped folder for this post
+    timestamp = datetime.now().strftime("%Y-%m-%d_%H%M%S")
+    post_dir  = output_dir / f"{video_stem}_{timestamp}"
+    post_dir.mkdir(parents=True, exist_ok=True)
+    logger.debug(f"Post folder: {post_dir}")
+
+    # -- Copy stills into the post folder, rename sequentially
+    local_stills = []
+    for i, src in enumerate(stills):
+        src_path  = Path(src)
+        dest_name = f"still_{i+1:02d}{src_path.suffix}"
+        dest_path = post_dir / dest_name
+        shutil.copy2(src_path, dest_path)
+        local_stills.append(dest_name)   # relative name only
+        logger.debug(f"Copied still: {src_path.name} -> {dest_name}")
+
+    # -- Title
+    prefix        = cfg.get("default_title_prefix", "Show Your Work:")
     readable_name = video_stem.replace("_", " ").replace("-", " ").title()
-    title = f"{prefix} {readable_name}"
+    title         = f"{prefix} {readable_name}"
 
-    # ── Build markdown ────────────────────────────────────────────────────
+    # -- Build markdown using relative image filenames
     placement = cfg.get("image_placement", "after_section")
-    md = _build_markdown(title, text, stills, placement)
+    md = _build_markdown(title, text, local_stills, placement)
 
-    # ── Write file ────────────────────────────────────────────────────────
-    timestamp  = datetime.now().strftime("%Y-%m-%d_%H%M%S")
-    out_path   = output_dir / f"{video_stem}_{timestamp}.md"
-    out_path.write_text(md, encoding="utf-8")
+    # -- Write markdown into the post folder
+    md_path = post_dir / "post.md"
+    md_path.write_text(md, encoding="utf-8")
 
-    logger.debug(f"Article: {len(md.split())} words, {len(stills)} images")
-    return str(out_path)
+    logger.info(f"Post folder ready: {post_dir}")
+    logger.debug(f"Article: {len(md.split())} words, {len(local_stills)} images")
+    return str(md_path)
 
 
-# ── Markdown builders ─────────────────────────────────────────────────────────
+# -- Markdown builders --------------------------------------------------------
 
 def _build_markdown(title: str, text: str, stills: list, placement: str) -> str:
     """Build the full markdown document."""
@@ -58,15 +81,9 @@ def _build_markdown(title: str, text: str, stills: list, placement: str) -> str:
     header   = f"# {title}\n\n*{date_str}*\n\n"
 
     if placement == "top":
-        images_block = _images_md(stills)
-        body         = _paragraphs_md(text)
-        return header + images_block + "\n" + body
-
+        return header + _images_md(stills) + "\n" + _paragraphs_md(text)
     elif placement == "end":
-        body         = _paragraphs_md(text)
-        images_block = _images_md(stills)
-        return header + body + "\n" + images_block
-
+        return header + _paragraphs_md(text) + "\n" + _images_md(stills)
     else:  # "after_section" — interleave images between paragraphs
         return header + _interleaved_md(text, stills)
 
@@ -76,11 +93,8 @@ def _paragraphs_md(text: str) -> str:
     Split text into paragraphs. Whisper output is often one long string;
     we break on sentence boundaries to create readable paragraphs.
     """
-    import re
-    # Split on ". " followed by a capital letter (rough sentence boundary)
     sentences = re.split(r'(?<=[.!?])\s+', text.strip())
 
-    # Group into ~3-sentence paragraphs
     paras = []
     chunk = []
     for i, sent in enumerate(sentences):
@@ -93,12 +107,8 @@ def _paragraphs_md(text: str) -> str:
 
 
 def _images_md(stills: list) -> str:
-    """Generate markdown image references for all stills."""
-    lines = []
-    for i, path in enumerate(stills):
-        name = Path(path).name
-        lines.append(f"![Still {i+1}]({path})\n")
-    return "\n".join(lines)
+    """Generate markdown image references using relative filenames."""
+    return "\n".join(f"![Still {i+1}]({name})\n" for i, name in enumerate(stills))
 
 
 def _interleaved_md(text: str, stills: list) -> str:
@@ -106,10 +116,8 @@ def _interleaved_md(text: str, stills: list) -> str:
     Distribute images evenly through the text.
     With 2 stills and 6 paragraphs: image after para 2 and para 4.
     """
-    import re
     sentences = re.split(r'(?<=[.!?])\s+', text.strip())
 
-    # Group into paragraphs
     paras = []
     chunk = []
     for i, sent in enumerate(sentences):
@@ -121,10 +129,8 @@ def _interleaved_md(text: str, stills: list) -> str:
     if not stills:
         return "\n\n".join(paras) + "\n"
 
-    # Calculate insertion points
     n_paras  = len(paras)
     n_images = len(stills)
-    # Insert image after every (n_paras // (n_images + 1)) paragraphs
     interval  = max(1, n_paras // (n_images + 1))
     insert_at = {interval * (j + 1) for j in range(n_images)}
 
@@ -134,13 +140,11 @@ def _interleaved_md(text: str, stills: list) -> str:
         parts.append(para)
         if i + 1 in insert_at:
             try:
-                still_path = next(still_iter)
-                parts.append(f"\n![Still]({still_path})\n")
+                parts.append(f"\n![]({next(still_iter)})\n")
             except StopIteration:
                 pass
 
-    # Any remaining stills go at the end
     for remaining in still_iter:
-        parts.append(f"\n![Still]({remaining})\n")
+        parts.append(f"\n![]({remaining})\n")
 
     return "\n\n".join(parts) + "\n"

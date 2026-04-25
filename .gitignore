@@ -1,0 +1,20 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> eb74d90 (not sure where we are)
+# Config contains API keys — never commit this
+config.yaml
+
+# Runtime output — no need to version these
+logs/
+output/
+failed/
+
+# Python
+__pycache__/
+*.pyc
+<<<<<<< HEAD
+*.pyo
+=======
+*.pyo
+>>>>>>> eb74d90 (not sure where we are)
