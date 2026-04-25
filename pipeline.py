@@ -1,0 +1,209 @@
+#!/usr/bin/env python3
+"""
+pipeline.py — Main entry point.
+
+Usage:
+    python3 pipeline.py /path/to/video.mp4
+    python3 pipeline.py /path/to/video.mp4 --config /path/to/config.yaml
+    python3 pipeline.py /path/to/video.mp4 --dry-run
+    python3 pipeline.py /path/to/video.mp4 --stage transcribe
+"""
+
+import argparse
+import shutil
+import sys
+import time
+import traceback
+import yaml
+from datetime import datetime
+from pathlib import Path
+
+from logger import setup_logger, notify, clean_old_logs
+
+# Stage imports — each is a separate module you can test individually
+from stages.audio import extract_audio
+from stages.transcribe import transcribe
+from stages.frames import extract_frames
+from stages.image_filter import filter_images
+from stages.editorial import editorial_pass
+from stages.article import compile_article
+from stages.publish import publish_all
+
+
+# ── Helpers ──────────────────────────────────────────────────────────────────
+
+def load_config(config_path: str) -> dict:
+    with open(Path(config_path).expanduser()) as f:
+        return yaml.safe_load(f)
+
+
+def make_run_id() -> str:
+    return datetime.now().strftime("%Y-%m-%d_%H%M%S")
+
+
+def save_failed_run(run_id: str, config: dict, artifacts: dict) -> None:
+    """
+    On failure, copy whatever was produced into the failed/ dir
+    so you don't have to redo work that succeeded.
+    """
+    failed_dir = Path(config["pipeline"]["failed_dir"]).expanduser() / run_id
+    failed_dir.mkdir(parents=True, exist_ok=True)
+    for name, path in artifacts.items():
+        if path and Path(path).exists():
+            shutil.copy2(path, failed_dir / Path(path).name)
+
+
+# ── Pipeline ─────────────────────────────────────────────────────────────────
+
+def run_pipeline(video_path: str, config: dict, logger) -> bool:
+    """
+    Execute all pipeline stages in order.
+    Returns True on success, False on failure.
+    """
+    start = time.time()
+    video = Path(video_path)
+    artifacts = {}   # tracks produced files for failure recovery
+
+    # Print mode banner so there's no ambiguity in the log
+    dry  = config["pipeline"].get("dry_run", True)
+    test = config["pipeline"].get("testing_mode", True)
+    if dry:
+        logger.info("MODE: DRY RUN — no API calls will be made")
+    elif test:
+        logger.info("MODE: TESTING — all outputs will be saved as drafts")
+    else:
+        logger.info("MODE: LIVE — posts will be published")
+
+    logger.info(f"Input video: {video}")
+
+    try:
+        # ── Stage 1: Extract audio ────────────────────────────────────────
+        logger.info("─── Stage 1: Audio extraction")
+        audio_path = extract_audio(video, config, logger)
+        artifacts["audio"] = audio_path
+        logger.info(f"Audio saved: {audio_path}")
+
+        # ── Stage 2: Transcribe ───────────────────────────────────────────
+        logger.info("─── Stage 2: Transcription")
+        if dry:
+            logger.info("DRY RUN: skipping transcription API call")
+            transcript = _dry_run_transcript()
+        else:
+            transcript = transcribe(audio_path, config, logger)
+        logger.info(f"Transcript: {len(transcript['text'].split())} words, "
+                    f"{len(transcript['segments'])} segments")
+
+        # ── Stage 3: Find keywords & extract frames ───────────────────────
+        logger.info("─── Stage 3: Frame extraction")
+        stills = extract_frames(video, transcript, config, logger)
+        artifacts["stills"] = stills
+        logger.info(f"Stills extracted: {len(stills)}")
+
+        # ── Stage 4: Image filtering (optional) ──────────────────────────
+        if config["image_filter"]["enabled"]:
+            logger.info("─── Stage 4: Image filtering")
+            stills = filter_images(stills, config, logger)
+        else:
+            logger.info("─── Stage 4: Image filtering (disabled)")
+
+        # ── Stage 5: LLM editorial pass (optional) ────────────────────────
+        logger.info("─── Stage 5: LLM editorial")
+        if config["llm_editorial"]["enabled"] and not dry:
+            body_text = editorial_pass(transcript["text"], config, logger)
+        else:
+            reason = "DRY RUN" if dry else "disabled"
+            logger.info(f"LLM editorial skipped ({reason})")
+            body_text = transcript["text"]
+
+        # ── Stage 6: Compile article ──────────────────────────────────────
+        logger.info("─── Stage 6: Article assembly")
+        article_path = compile_article(
+            body_text, stills, video.stem, config, logger
+        )
+        artifacts["article"] = article_path
+        logger.info(f"Article saved: {article_path}")
+
+        # ── Stage 7: Publish ──────────────────────────────────────────────
+        logger.info("─── Stage 7: Publishing")
+        if dry:
+            logger.info("DRY RUN: skipping all publish calls")
+            logger.info(f"  → Article ready at: {article_path}")
+            for s in stills:
+                logger.info(f"  → Still ready at:   {s}")
+        else:
+            publish_all(article_path, stills, body_text, config, logger)
+
+        # ── Done ──────────────────────────────────────────────────────────
+        elapsed = round(time.time() - start, 1)
+        logger.info(f"Pipeline complete in {elapsed}s")
+        notify(f"Done: {video.name} → {len(stills)} stills posted", config, logger)
+        return True
+
+    except Exception as e:
+        logger.error(f"Pipeline failed at: {e}")
+        logger.error(traceback.format_exc())
+        save_failed_run(make_run_id(), config, artifacts)
+        notify(f"Pipeline FAILED: {video.name} — check last_run.log", config, logger)
+        return False
+
+
+# ── Dry-run placeholder ───────────────────────────────────────────────────────
+
+def _dry_run_transcript() -> dict:
+    """Return a fake transcript so all downstream stages can be tested."""
+    return {
+        "text": (
+            "Today I'm going to show you how I built this bracket. "
+            "I started by measuring the wall, look here, then I marked "
+            "the drill points. After that I mounted the rail, look here, "
+            "and checked it was level."
+        ),
+        "segments": [
+            {"start": 4.2,  "end": 5.1,  "text": "look here"},
+            {"start": 18.7, "end": 19.6, "text": "look here"},
+        ],
+    }
+
+
+# ── CLI ───────────────────────────────────────────────────────────────────────
+
+def main():
+    parser = argparse.ArgumentParser(description="Video-to-post pipeline")
+    parser.add_argument("video", help="Path to input video file")
+    parser.add_argument(
+        "--config", default="~/pipeline/config.yaml",
+        help="Path to config file (default: ~/pipeline/config.yaml)"
+    )
+    parser.add_argument(
+        "--dry-run", action="store_true",
+        help="Override config: run all local stages, skip all API calls"
+    )
+    parser.add_argument(
+        "--draft", action="store_true",
+        help="Override config: post everything as drafts"
+    )
+    args = parser.parse_args()
+
+    config = load_config(args.config)
+
+    # CLI flags override config
+    if args.dry_run:
+        config["pipeline"]["dry_run"] = True
+    if args.draft:
+        config["pipeline"]["testing_mode"] = True
+
+    run_id = make_run_id()
+    logger = setup_logger(config, run_id)
+    clean_old_logs(config, logger)
+
+    video_path = Path(args.video).expanduser()
+    if not video_path.exists():
+        logger.error(f"Video file not found: {video_path}")
+        sys.exit(1)
+
+    success = run_pipeline(str(video_path), config, logger)
+    sys.exit(0 if success else 1)
+
+
+if __name__ == "__main__":
+    main()

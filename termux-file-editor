@@ -1,0 +1,32 @@
+#!/bin/bash
+# termux-file-editor
+#
+# Place this file at: ~/bin/termux-file-editor
+# Make executable:    chmod +x ~/bin/termux-file-editor
+#
+# Then in Android Gallery/Photos: Share → Termux
+# The video file path arrives as $1.
+#
+# This script immediately backgrounds the pipeline and exits,
+# so the Termux terminal barely flashes on screen.
+
+VIDEO_PATH="$1"
+PIPELINE_DIR="$HOME/pipeline"
+LOG_DIR="$HOME/pipeline/logs"
+PYTHON="python3"
+
+# Basic sanity check
+if [ -z "$VIDEO_PATH" ]; then
+    termux-notification --title "Pipeline" --content "Error: no file received" 2>/dev/null
+    exit 1
+fi
+
+# Ensure log dir exists
+mkdir -p "$LOG_DIR"
+
+# Fire and forget — pipeline runs in background, terminal closes
+nohup "$PYTHON" "$PIPELINE_DIR/pipeline.py" "$VIDEO_PATH" \
+    >> "$LOG_DIR/last_run.log" 2>&1 &
+
+# Exit immediately so Termux window closes
+exit 0

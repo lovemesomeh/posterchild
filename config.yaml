@@ -1,0 +1,118 @@
+# ============================================================
+# PIPELINE CONFIG
+# Keep this file private — it contains API keys.
+# Add config.yaml to .gitignore if you version this project.
+# ============================================================
+
+pipeline:
+  testing_mode: true    # true = all posts saved as drafts
+  dry_run: true         # true = no API calls at all, just local output
+  log_dir: ~/pipeline/logs
+  output_dir: ~/pipeline/output
+  failed_dir: ~/pipeline/failed
+  log_keep_days: 30
+  notify_on_complete: true   # termux notification when done
+
+# ============================================================
+# STAGE 1: AUDIO EXTRACTION (local, no API)
+# ============================================================
+audio:
+  sample_rate: 16000    # Hz — all Whisper needs for speech
+  channels: 1           # mono
+  bitrate: 32k          # keeps file tiny (~1-2MB per 5 min)
+  format: mp3
+
+# ============================================================
+# STAGE 2: TRANSCRIPTION
+# ============================================================
+transcription:
+  provider: groq        # "groq" or "local"
+  api_key: YOUR_GROQ_API_KEY
+  model: whisper-large-v3
+  language: en
+  # Local whisper settings (used when provider = "local")
+  local_model: base     # "tiny", "base", "small" — tiny is fastest on mobile
+
+# ============================================================
+# STAGE 3: KEYWORD & FRAME EXTRACTION
+# ============================================================
+keyword:
+  trigger: "look here"  # the spoken cue word or phrase
+  padding_ms: 500       # grab frame this many ms AFTER keyword (let camera settle)
+  format: jpg
+  quality: 85           # jpeg quality 0-100
+
+# ============================================================
+# STAGE 4: IMAGE FILTERING (optional)
+# ============================================================
+image_filter:
+  enabled: false
+  brightness: 0.05      # -1.0 to 1.0
+  saturation: 1.2       # 0.0 to 3.0
+  watermark: false
+  watermark_text: "yoursite.com"
+  watermark_position: "bottom_right"   # or "bottom_left", "top_right", "top_left"
+
+# ============================================================
+# STAGE 5: LLM EDITORIAL PASS (optional)
+# ============================================================
+llm_editorial:
+  enabled: false
+  provider: anthropic   # "anthropic", "openai", or "groq"
+  api_key: YOUR_ANTHROPIC_API_KEY
+  model: claude-opus-4-20250514
+  max_tokens: 4096
+  prompt: |
+    You are editing a "show your work" style blog post written by a
+    maker and builder. The source is a spoken narration transcribed
+    by Whisper, so it may be informal and occasionally repetitive.
+
+    Your job is to lightly clean it up while preserving the author's
+    voice — do not make it corporate or overly polished. Keep all
+    technical details exactly as stated. Fix run-on sentences and
+    filler words ("um", "uh", "you know"). Return only the edited
+    text, no commentary, no markdown formatting.
+
+# ============================================================
+# STAGE 6: ARTICLE ASSEMBLY
+# ============================================================
+article:
+  include_transcript: true
+  image_placement: after_section  # "after_section", "end", "top"
+  title_from_llm: false           # if true, asks LLM to generate a title
+  default_title_prefix: "Show Your Work:"
+
+# ============================================================
+# STAGE 7: PUBLISHING
+# ============================================================
+posting:
+
+  wordpress:
+    enabled: true
+    url: https://yoursite.com
+    username: your_wp_username
+    app_password: YOUR_WP_APP_PASSWORD   # Settings > Users > Profile > Application Passwords
+    status: draft                         # "draft" or "publish"
+    category: "Show Your Work"
+    tags: []                              # e.g. ["making", "process", "build"]
+
+  bundle_social:
+    enabled: false
+    api_key: YOUR_BUNDLE_SOCIAL_API_KEY
+    team_id: YOUR_TEAM_ID
+    status: DRAFT                         # "DRAFT" or "SCHEDULED"
+    schedule_time: "09:00"
+    timezone: "America/New_York"
+    platforms:
+      instagram: true
+      facebook: true
+      threads: false
+      bluesky: false
+      linkedin: false
+      twitter: false
+
+  buffer:
+    enabled: false
+    api_key: YOUR_BUFFER_API_KEY
+    save_as_draft: true
+    platforms: []                         # add channel IDs from Buffer dashboard
