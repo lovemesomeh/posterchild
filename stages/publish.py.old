@@ -16,7 +16,7 @@ def publish_all(article_path: str, stills: list, text: str,
                 config: dict, logger) -> None:
     """
     Route content to all enabled posting destinations.
-
+ 
     Image handling:
       - stills passed in are the originals (used in the article)
       - before any social posting, we crop to a safe aspect ratio
@@ -25,25 +25,21 @@ def publish_all(article_path: str, stills: list, text: str,
         never prevents the others from running
     """
     from stages.image_filter import crop_for_instagram
-
+ 
     posting    = config["posting"]
     test_mode  = config["pipeline"].get("testing_mode", True)
     article_md = Path(article_path).read_text(encoding="utf-8")
     caption    = _make_caption(text, max_chars=2200)
-
+ 
     # Crop stills for social posting — originals stay in the article.
-    # crop_for_instagram() accepts (path, alt_text) tuples and preserves alt_text.
-    # Produces 4:5 for portrait, 5:4 for landscape — always >= 0.8 for Instagram.
+    # crop_for_instagram() produces 5:4 (landscape) or 4:5 (portrait)
+    # whichever fits the source, always >= 0.75 ratio for Instagram.
     if stills:
         logger.info("Preparing social images (aspect ratio crop)...")
         social_stills = crop_for_instagram(stills, logger)
     else:
         social_stills = stills
-
-    # Helper to extract just the paths for functions that need a plain list
-    def paths_only(stills_list):
-        return [s[0] if isinstance(s, tuple) else s for s in stills_list]
-
+ 
     if posting.get("wordpress", {}).get("enabled", False):
         logger.info("Publishing to WordPress...")
         try:
@@ -52,7 +48,7 @@ def publish_all(article_path: str, stills: list, text: str,
         except Exception as e:
             logger.error(f"WordPress publishing failed: {e}")
             logger.info("Continuing with remaining services...")
-
+ 
     if posting.get("bundle_social", {}).get("enabled", False):
         logger.info("Publishing to bundle.social...")
         try:
@@ -60,7 +56,7 @@ def publish_all(article_path: str, stills: list, text: str,
         except Exception as e:
             logger.error(f"bundle.social publishing failed: {e}")
             logger.info("Continuing with remaining services...")
-
+ 
     if posting.get("buffer", {}).get("enabled", False):
         logger.info("Publishing to Buffer...")
         try:
@@ -68,6 +64,7 @@ def publish_all(article_path: str, stills: list, text: str,
         except Exception as e:
             logger.error(f"Buffer publishing failed: {e}")
             logger.info("Continuing with remaining services...")
+
 
 
 # ── bundle.social ─────────────────────────────────────────────────────────────
@@ -92,12 +89,11 @@ def post_to_bundle(caption: str, stills: list, config: dict,
     # ── Step 1: Upload each still image ──────────────────────────────────
     upload_ids = []
     for still in stills:
-        path = still[0] if isinstance(still, tuple) else still
-        uid  = _bundle_upload_image(path, team_id, api_key, logger)
+        uid = _bundle_upload_image(still, team_id, api_key, logger)
         if uid:
             upload_ids.append(uid)
         else:
-            logger.warning(f"Skipping still in post — upload failed: {path}")
+            logger.warning(f"Skipping still in post — upload failed: {still}")
 
     # ── Step 2: Build the post payload ────────────────────────────────────
     active_platforms = {k: v for k, v in cfg.get("platforms", {}).items() if v}
@@ -114,6 +110,7 @@ def post_to_bundle(caption: str, stills: list, config: dict,
         "linkedin":  "LINKEDIN",
         "twitter":   "TWITTER",
         "pinterest": "PINTEREST",
+        "reddit":   "REDDIT",
     }
     post_data = {}
     for key, bundle_key in platform_key_map.items():
@@ -171,7 +168,7 @@ def _bundle_upload_image(image_path: str, team_id: str,
     try:
         with open(path, "rb") as f:
             response = requests.post(
-                f"{BASE}/upload",
+                f"{BASE}/upload/",
                 headers={"x-api-key": api_key},
                 files={"file": (path.name, f, mime)},
                 data={"teamId": team_id},
@@ -233,10 +230,9 @@ def post_to_wordpress(markdown_text: str, stills: list,
     # Upload images to WP media library
     url_map = {}
     for still in stills:
-        path = still[0] if isinstance(still, tuple) else still
-        wp_url = _wp_upload_image(path, base, auth, logger)
+        wp_url = _wp_upload_image(still, base, auth, logger)
         if wp_url:
-            url_map[path] = wp_url
+            url_map[still] = wp_url
 
     content = _rewrite_image_paths(markdown_text, url_map)
     title   = _extract_title(markdown_text)
@@ -300,30 +296,10 @@ def _extract_title(md):
     return "Show Your Work"
 
 
-# ── Buffer (GraphQL API) ──────────────────────────────────────────────────────
-#
-# Auth: personal Bearer token from publish.buffer.com/settings/api
-# Images: Buffer needs public URLs — we upload via imgbb (free: imgbb.com)
-#
-# Config format — channels are objects so we know the service type:
-#
-#   buffer:
-#     enabled: true
-#     api_key: YOUR_BUFFER_KEY
-#     imgbb_api_key: YOUR_IMGBB_KEY   # free at imgbb.com
-#     save_as_draft: true
-#     channels:
-#       - id: "695b229d457dae6a34dc3fee"
-#         service: instagram
-#         type: post          # post, story, or reel
-#       - id: "5ebdf7028e911757542f83f3"
-#         service: facebook
-#         type: post
-#       - id: "695b2378457dae6a34dc4185"
-#         service: threads    # no type needed
+# ── Buffer ────────────────────────────────────────────────────────────────────
 
 BUFFER_ENDPOINT = "https://api.buffer.com"
-
+ 
 _CREATE_POST_MUTATION = """
 mutation CreatePost($input: CreatePostInput!) {
   createPost(input: $input) {
@@ -336,8 +312,8 @@ mutation CreatePost($input: CreatePostInput!) {
   }
 }
 """
-
-
+ 
+ 
 def post_to_buffer(caption: str, stills: list,
                    config: dict, logger, test_mode: bool) -> None:
     """
@@ -352,54 +328,52 @@ def post_to_buffer(caption: str, stills: list,
         "Authorization": f"Bearer {api_key}",
         "Content-Type":  "application/json",
     }
-
+ 
     channels = cfg.get("channels", [])
     if not channels:
         logger.warning("Buffer: no channels configured — skipping. "
                        "Run: python buffer_channels.py")
         return
-
+ 
     # Upload images once to imgbb to get public URLs.
     # Instagram channels get 5:4 crops; others get originals.
     imgbb_key = cfg.get("imgbb_api_key", "")
-
+ 
     standard_urls  = []   # originals — for threads, bluesky etc.
     instagram_urls = []   # 5:4 cropped — for instagram, facebook
-
+ 
     if stills and imgbb_key:
         from stages.image_filter import crop_for_instagram
         cropped = crop_for_instagram(stills, logger)
-
-        for still in stills:
-            path = still[0] if isinstance(still, tuple) else still
-            url  = _imgbb_upload(path, imgbb_key, logger)
+ 
+        for path in stills:
+            url = _imgbb_upload(path, imgbb_key, logger)
             if url:
                 standard_urls.append(url)
-
-        for still in cropped:
-            path = still[0] if isinstance(still, tuple) else still
-            url  = _imgbb_upload(path, imgbb_key, logger)
+ 
+        for path in cropped:
+            url = _imgbb_upload(path, imgbb_key, logger)
             if url:
                 instagram_urls.append(url)
-
+ 
     elif stills and not imgbb_key:
         logger.warning("Buffer: imgbb_api_key not set — posting text only. "
                        "Get a free key at imgbb.com to enable image posts.")
-
+ 
     for channel in channels:
         channel_id = channel.get("id")
         service    = channel.get("service", "").lower()
         post_type  = channel.get("type", "post")
-
+ 
         # Instagram and Facebook need images — skip if we have none
         needs_images = service in ("instagram", "facebook")
         use_urls     = instagram_urls if needs_images else standard_urls
-
+ 
         if needs_images and not use_urls:
             logger.warning(f"Buffer: skipping {service} channel {channel_id} "
                            f"— no images available (add imgbb_api_key to config)")
             continue
-
+ 
         try:
             post_id = _buffer_create_post(
                 caption, use_urls, channel_id,
@@ -412,13 +386,13 @@ def post_to_buffer(caption: str, stills: list,
         except Exception as e:
             logger.error(f"Buffer post failed for {service} channel "
                          f"{channel_id}: {e}")
-
-
+ 
+ 
 def _buffer_create_post(caption: str, image_urls: list, channel_id: str,
                         service: str, post_type: str,
                         as_draft: bool, headers: dict, logger) -> str:
     """Build and send the GraphQL createPost mutation for one channel."""
-
+ 
     post_input = {
         "text":           caption,
         "channelId":      channel_id,
@@ -426,18 +400,18 @@ def _buffer_create_post(caption: str, image_urls: list, channel_id: str,
         "mode":           "addToQueue",
         "saveToDraft":    as_draft,
     }
-
+ 
     # Attach images as public URLs
     if image_urls:
         post_input["assets"] = {
             "images": [{"url": u} for u in image_urls]
         }
-
+ 
     # Note: Buffer auto-determines post type (photo/video/text) from the
     # assets included. The instagramOptions/facebookOptions fields do NOT
     # exist in Buffer's public GraphQL schema and cause 400 errors.
     # If Buffer adds explicit type support later it will appear in their docs.
-
+ 
     r = requests.post(
         BUFFER_ENDPOINT,
         headers=headers,
@@ -449,33 +423,33 @@ def _buffer_create_post(caption: str, image_urls: list, channel_id: str,
         # Log full body so we can see exactly what Buffer rejected
         logger.error(f"Buffer HTTP {r.status_code}: {r.text[:600]}")
         r.raise_for_status()
-
+ 
     data   = r.json()
     result = data.get("data", {}).get("createPost", {})
-
+ 
     if "errors" in data:
         raise RuntimeError(f"GraphQL error: {data['errors']}")
     if "message" in result:
         raise RuntimeError(f"Buffer mutation error: {result['message']}")
-
+ 
     return result.get("post", {}).get("id", "unknown")
-
-
+ 
+ 
 def _imgbb_upload(image_path: str, api_key: str, logger) -> str | None:
     """
     Upload one image to imgbb.com and return its public URL.
     Free tier: unlimited uploads, images hosted indefinitely with an account.
     Get a free API key at: https://imgbb.com/
-
+ 
     Returns URL string on success, None on failure.
     """
     import base64
     path = Path(image_path)
-
+ 
     try:
         with open(path, "rb") as f:
             image_b64 = base64.b64encode(f.read()).decode("utf-8")
-
+ 
         r = requests.post(
             "https://api.imgbb.com/1/upload",
             data={"key": api_key, "image": image_b64},
@@ -483,20 +457,20 @@ def _imgbb_upload(image_path: str, api_key: str, logger) -> str | None:
         )
         r.raise_for_status()
         data = r.json()
-
+ 
         if not data.get("success"):
             logger.warning(f"imgbb upload failed for {path.name}: "
                            f"{data.get('error', {}).get('message', 'unknown')}")
             return None
-
+ 
         url = data["data"]["url"]
         logger.debug(f"imgbb upload OK: {path.name} → {url}")
         return url
-
+ 
     except Exception as e:
         logger.warning(f"imgbb upload error for {path.name}: {e}")
         return None
-
+ 
 
 
 

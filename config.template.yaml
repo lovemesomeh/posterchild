@@ -6,11 +6,10 @@
 
 pipeline:
   testing_mode: true    # true = all posts saved as drafts
-  dry_run: false         # true = no API calls at all, just local output
-  log_dir: ~/home/matthew/Documents/github/posterchild/logs
-  output_dir: ~/home/matthew/Documents/github/posterchild/output
-  # output_dir: ~/storage/shared/Documents/posterchild
-  failed_dir: ~/home/matthew/Documents/github/posterchild/failed
+  dry_run: true         # true = no API calls at all, just local output
+  log_dir: ~/posterchild/logs
+  output_dir: ~/posterchild/output
+  failed_dir: ~/posterchild/failed
   log_keep_days: 30
   notify_on_complete: true   # termux notification when done
 
@@ -28,7 +27,7 @@ audio:
 # ============================================================
 transcription:
   provider: groq        # "groq" or "local"
-  api_key: {{ GROQ_API_KEY }}  # set this in your environment variables for security
+  api_key: YOUR_GROQ_API_KEY
   model: whisper-large-v3
   language: en
   # Local whisper settings (used when provider = "local")
@@ -51,11 +50,13 @@ image_filter:
   brightness: 0.05      # -1.0 to 1.0
   saturation: 1.2       # 0.0 to 3.0
   watermark: false
-  watermark_text: "Love Me Some Honey"  # if watermark is true, set this to your name or brand
-  watermark_opacity: 0.5                 # 0.0 to 1.0
+  watermark_text: "yoursite.com"
   watermark_position: "bottom_right"   # or "bottom_left", "top_right", "top_left"
 
+
+# ============================================================
 # STAGE 4b: TRANSCRIPT FILTERING (runs before LLM editorial)
+# ============================================================
 transcript_filter:
   enabled: true
   filters:
@@ -65,19 +66,14 @@ transcript_filter:
     fix_whitespace: true         # normalizes spaces and punctuation
     capitalize_sentences: true   # ensures sentences start with capital
 
-
 # ============================================================
 # STAGE 5: LLM EDITORIAL PASS (optional)
 # ============================================================
 llm_editorial:
   enabled: true
-  provider: groq      # "anthropic", "openai", or "groq"
-  api_key: {{ GROQ_API_KEY }}  # set this in your environment variables for security
+  provider: groq        # same Groq key as transcription
+  api_key: YOUR_GROQ_API_KEY
   model: llama-3.3-70b-versatile
-  
-#  provider: anthropic   # "anthropic", "openai", or "groq"
-#  api_key: {{ ANTHROPIC_API_KEY }}  # set this in your environment variables for security
-#  model: claude-opus-4-20250514
   max_tokens: 4096
   prompt: |
     You are editing a "show your work" style blog post written by a
@@ -89,11 +85,6 @@ llm_editorial:
     technical details exactly as stated. Fix run-on sentences and
     filler words ("um", "uh", "you know"). Return only the edited
     text, no commentary, no markdown formatting.
-
-    Return your response as two parts separated by "---":
-    Line 1: a short title (8 words max)
-    ---
-    The edited body text.
 
 # ============================================================
 # STAGE 6: ARTICLE ASSEMBLY
@@ -110,9 +101,9 @@ article:
 posting:
 
   wordpress:
-    enabled: false
-    url: https://lovemesomehoney.home.blog
-    username: lovemesomehoney
+    enabled: false     # wordpress.com needs OAuth2, add later
+    url: https://yoursite.com
+    username: your_wp_username
     app_password: YOUR_WP_APP_PASSWORD   # Settings > Users > Profile > Application Passwords
     status: draft                         # "draft" or "publish"
     category: "Show Your Work"
@@ -120,36 +111,21 @@ posting:
 
   bundle_social:
     enabled: true
-    api_key: {{ BUNDLE_SOCIAL_API_KEY }}  # set this in your environment variables for security
-    team_id: f585b095-c6b6-4d93-ad6d-bbc5b67b4a6c
+    api_key: YOUR_BUNDLE_SOCIAL_API_KEY
+    team_id: YOUR_TEAM_ID
     status: DRAFT                         # "DRAFT" or "SCHEDULED"
     schedule_time: "09:00"
     timezone: "America/New_York"
     platforms:
       instagram: true
-      facebook: false
-      threads: true
-      bluesky: true
+      facebook: true
+      threads: false
+      bluesky: false
       linkedin: false
       twitter: false
-      reddit: false
-      pinterest: false
 
   buffer:
     enabled: true
-    api_key: {{ BUFFER_API_KEY }}  # set this in your environment variables for security
-    imgbb_api_key: {{ IMGBB_API_KEY }}  # for image hosting, set this in your environment variables for security
+    api_key: YOUR_BUFFER_API_KEY
     save_as_draft: true
-
-    channels:
-      - id: "695b229d457dae6a34dc3fee"
-        service: instagram
-        type: post
-      - id: "5ebdf7028e911757542f83f3"
-        service: facebook
-        type: post
-      - id: "695b2378457dae6a34dc4185"
-        service: linkedin
-
-
-  dry_run: false       # true = no API calls at all, just local output
+    platforms: []                         # add channel IDs from Buffer dashboard

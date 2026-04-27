@@ -80,7 +80,6 @@ def _transcribe_groq(audio_path: str, config: dict, logger) -> dict:
                 "model":                   model,
                 "language":                lang,
                 "response_format":         "verbose_json",
-                "timestamp_granularities": "segment",
             },
             timeout=120,   # large files can take a moment
         )

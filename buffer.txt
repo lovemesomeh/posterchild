@@ -1,0 +1,2374 @@
+{
+  "log": {
+    "version": "1.2",
+    "creator": {
+      "name": "Firefox",
+      "version": "149.0.2"
+    },
+    "browser": {
+      "name": "Firefox",
+      "version": "149.0.2"
+    },
+    "pages": [
+      {
+        "id": "page_2",
+        "pageTimings": {
+          "onContentLoad": -1,
+          "onLoad": -1
+        },
+        "startedDateTime": "2026-04-26T05:18:42.833-04:00",
+        "title": "https://publish.buffer.com/schedule"
+      }
+    ],
+    "entries": [
+      {
+        "startedDateTime": "2026-04-26T05:18:42.833-04:00",
+        "request": {
+          "bodySize": 477,
+          "method": "POST",
+          "url": "https://graph.buffer.com/?_o=GetComposerChannelsList",
+          "httpVersion": "HTTP/3",
+          "headers": [
+            {
+              "name": "Host",
+              "value": "graph.buffer.com"
+            },
+            {
+              "name": "User-Agent",
+              "value": "Mozilla/5.0 (X11; Linux x86_64; rv:149.0) Gecko/20100101 Firefox/149.0"
+            },
+            {
+              "name": "Accept",
+              "value": "*/*"
+            },
+            {
+              "name": "Accept-Language",
+              "value": "en-US,en;q=0.9"
+            },
+            {
+              "name": "Accept-Encoding",
+              "value": "gzip, deflate, br, zstd"
+            },
+            {
+              "name": "Referer",
+              "value": "https://publish.buffer.com/"
+            },
+            {
+              "name": "content-type",
+              "value": "application/json"
+            },
+            {
+              "name": "x-buffer-client-id",
+              "value": "webapp-publishing"
+            },
+            {
+              "name": "x-buffer-client-name",
+              "value": "webapp-publishing"
+            },
+            {
+              "name": "Content-Length",
+              "value": "477"
+            },
+            {
+              "name": "Origin",
+              "value": "https://publish.buffer.com"
+            },
+            {
+              "name": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "name": "Cookie",
+              "value": "buffer-marketing=eyJ2aXNpdG9ySWQiOiI1NTA2MzFkYS0yMDBmLTQyZGMtYjk4Ny0wZWI3MTM5YzdlOWYiLCJjb29raWVWZXJzaW9uIjoyLCJ0cmFja2luZyI6eyJyZWZlcnJlciI6Imh0dHBzOi8vYnVmZmVyLmNvbS8iLCJ1c2VyQWdlbnQiOiJNb3ppbGxhLzUuMCAoWDExOyBMaW51eCB4ODZfNjQ7IHJ2OjE0OS4wKSBHZWNrby8yMDEwMDEwMSBGaXJlZm94LzE0OS4wIiwiZmJwIjoiZmIuMS4xNzc3MTA5MDgwNTQ1LjY4MzY2NDIwOTg3NDE4MDQ3In0sInV0bXMiOnsidmFsdWVzIjp7InV0bV9jYW1wYWlnbiI6IlJlc2VuZCBFbWFpbCBWZXJpZmljYXRpb24gKFNIIC0gMDYvMjMpIiwidXRtX21lZGl1bSI6ImVtYWlsX2FjdGlvbiIsInV0bV9zb3VyY2UiOiJjdXN0b21lci5pbyIsInV0bV9jb250ZW50IjoiUmVzZW5kIEVtYWlsIFZlcmlmaWNhdGlvbiAoU0ggLSAwNi8yMykifSwidXBkYXRlZEF0IjoxNzc3MTA5MjA2NTI2fX0=; buffer-marketing.sig=QcSFbPso1UQ3rd66QS5j2yBmtMw; cookieyesID=YjZGNlJ4NVpKQzRZNXRmcENPQU5rOGlwMXpobnBWNXo; ajs_anonymous_id=cabcf131-7c17-429f-a501-41fd2e3fd438; cky-consent=no; cookieyes-necessary=yes; cookieyes-functional=yes; cookieyes-analytics=yes; cookieyes-performance=yes; cookieyes-advertisement=yes; cookieyes-other=yes; _ga_VQSKXK8EGY=GS2.1.s1777171296$o2$g1$t1777172867$j60$l0$h0; _ga=GA1.1.191495887.1777109080; _fbp=fb.1.1777109080545.68366420987418047; buffer-signup=eyJ2aXNpdG9ySWQiOiI1NTA2MzFkYS0yMDBmLTQyZGMtYjk4Ny0wZWI3MTM5YzdlOWYifQ==; _clck=omhqn2%5E2%5Eg5j%5E0%5E2306; _clsk=wo4vaj%5E1777172722647%5E4%5E1%5Eo.clarity.ms%2Fcollect; buffer_session=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzZXNzaW9uSWQiOiJ2MV81ZWJjZjA5Yjg4NDBjMzNhMTdhOTE0YWNfNTJlZjA3ZTYtZjQzMS00MjI1LThiZTUtMGUwNWVlZWMzNzI0Iiwic2Vzc2lvblZlcnNpb24iOiJ2MSIsImlhdCI6MTc3NzEwOTE0OX0.clIgBxnSq6LOk0d9FT_WmZM3MrxozZ2ZzYJHPCMCK3Y; bufferapp_ci_session=u9uh4G%2F0lELugNDUDXtBPhD6UMj3jcMC7oKLOkARcuETB7dWrGRmBiW5v9rT4rR8FYWz1VUAfVF9l8dn2VSo1j%2FpV7FGl3pO%2BbA7Ic91%2B9xMY8shxXZs1wIRjkjU0%2FqeD87UrjBCFMHP0qOIqMsdMmVxshlEjQli0lGMfrnyGrtPyE%2Fw%2B5orBcYmHQHXTyi9N02BsqJqnF98ZTfDGT%2BnzPCrjx0BwSgLC68MKrBK%2B8gcxwtx92H1ReRh0Dfd4eeLmsUTe0XQ5bLGJs95WG9S2avQmI%2BZwwVd19T0kLqI6kzIxpSyN%2BLnTbKbCBogCrVCixwFDnNhNo7Z32UAJrkHs74naGH9K8l6xfeIiwSsSYtumBi%2F2ebc8l2DV9cRTudeX%2BMREV0uKm23mBofV50nN8yfMX3LiWwdGh8JqxKwJmyFSIaeELjCiWFK%2FeR2TvJloCs7gxraztNZS5y0b9x3yflnLTSVxPLHu%2BApSG4xrp52AhKDQMH%2F3ylpTHLJQ6IA2mLteKPED%2BnnQFtrdVBcA4hi8NaFopUsz4riwwr7rvsa9JEbdvAOUfekp08Z208nvq7wDF44l%2FztnCyRh9I4iLuzrsk%2Bq8NjJWv1o%2BGU6ZQ70NSbfpxJT0s2YhavV%2FPz; ajs_user_id=5ebcf09b8840c33a17a914ac; AWSALBTG=oIiHuKiXLbzJt1qgIfuG+6GGNAsp8irG1rVA0q+LlSILTGJTNsIAMZLok23u2hPFTyZGsL+iSOvwuL/rMenFQMn+F5qU4H33CT2HXIQ2OEoRopoWgK6EXTkbGnwJiWK0rQGQEquLD5sbyNkBxdX2HDG31lo5PyWupzdlSHThClOV; AWSALBTGCORS=oIiHuKiXLbzJt1qgIfuG+6GGNAsp8irG1rVA0q+LlSILTGJTNsIAMZLok23u2hPFTyZGsL+iSOvwuL/rMenFQMn+F5qU4H33CT2HXIQ2OEoRopoWgK6EXTkbGnwJiWK0rQGQEquLD5sbyNkBxdX2HDG31lo5PyWupzdlSHThClOV; ajs_group_id=5ebcf09c951223611428be19; popcorn_theme=%22light%22; _gcl_au=1.1.313526753.1777172034; _twpid=tw.1777172692856.531898524915413066; _gid=GA1.2.1504414671.1777172694; mp_90f73cfa0608e74231d66fdf4f31e120_mixpanel=%7B%22distinct_id%22%3A%20%22cabcf131-7c17-429f-a501-41fd2e3fd438%22%2C%22%24device_id%22%3A%20%22cabcf131-7c17-429f-a501-41fd2e3fd438%22%2C%22%24initial_referrer%22%3A%20%22https%3A%2F%2Flogin.buffer.com%2F%22%2C%22%24initial_referring_domain%22%3A%20%22login.buffer.com%22%2C%22__mps%22%3A%20%7B%7D%2C%22__mpso%22%3A%20%7B%7D%2C%22__mpus%22%3A%20%7B%7D%2C%22__mpa%22%3A%20%7B%7D%2C%22__mpu%22%3A%20%7B%7D%2C%22__mpr%22%3A%20%5B%5D%2C%22__mpap%22%3A%20%5B%5D%2C%22visual_refresh_enabled%22%3A%20true%2C%22%24user_id%22%3A%20%225ebcf09b8840c33a17a914ac%22%7D"
+            },
+            {
+              "name": "Sec-Fetch-Dest",
+              "value": "empty"
+            },
+            {
+              "name": "Sec-Fetch-Mode",
+              "value": "cors"
+            },
+            {
+              "name": "Sec-Fetch-Site",
+              "value": "same-site"
+            },
+            {
+              "name": "Priority",
+              "value": "u=0"
+            },
+            {
+              "name": "TE",
+              "value": "trailers"
+            }
+          ],
+          "cookies": [
+            {
+              "name": "buffer-marketing",
+              "value": "eyJ2aXNpdG9ySWQiOiI1NTA2MzFkYS0yMDBmLTQyZGMtYjk4Ny0wZWI3MTM5YzdlOWYiLCJjb29raWVWZXJzaW9uIjoyLCJ0cmFja2luZyI6eyJyZWZlcnJlciI6Imh0dHBzOi8vYnVmZmVyLmNvbS8iLCJ1c2VyQWdlbnQiOiJNb3ppbGxhLzUuMCAoWDExOyBMaW51eCB4ODZfNjQ7IHJ2OjE0OS4wKSBHZWNrby8yMDEwMDEwMSBGaXJlZm94LzE0OS4wIiwiZmJwIjoiZmIuMS4xNzc3MTA5MDgwNTQ1LjY4MzY2NDIwOTg3NDE4MDQ3In0sInV0bXMiOnsidmFsdWVzIjp7InV0bV9jYW1wYWlnbiI6IlJlc2VuZCBFbWFpbCBWZXJpZmljYXRpb24gKFNIIC0gMDYvMjMpIiwidXRtX21lZGl1bSI6ImVtYWlsX2FjdGlvbiIsInV0bV9zb3VyY2UiOiJjdXN0b21lci5pbyIsInV0bV9jb250ZW50IjoiUmVzZW5kIEVtYWlsIFZlcmlmaWNhdGlvbiAoU0ggLSAwNi8yMykifSwidXBkYXRlZEF0IjoxNzc3MTA5MjA2NTI2fX0="
+            },
+            {
+              "name": "buffer-marketing.sig",
+              "value": "QcSFbPso1UQ3rd66QS5j2yBmtMw"
+            },
+            {
+              "name": "cookieyesID",
+              "value": "YjZGNlJ4NVpKQzRZNXRmcENPQU5rOGlwMXpobnBWNXo"
+            },
+            {
+              "name": "ajs_anonymous_id",
+              "value": "cabcf131-7c17-429f-a501-41fd2e3fd438"
+            },
+            {
+              "name": "cky-consent",
+              "value": "no"
+            },
+            {
+              "name": "cookieyes-necessary",
+              "value": "yes"
+            },
+            {
+              "name": "cookieyes-functional",
+              "value": "yes"
+            },
+            {
+              "name": "cookieyes-analytics",
+              "value": "yes"
+            },
+            {
+              "name": "cookieyes-performance",
+              "value": "yes"
+            },
+            {
+              "name": "cookieyes-advertisement",
+              "value": "yes"
+            },
+            {
+              "name": "cookieyes-other",
+              "value": "yes"
+            },
+            {
+              "name": "_ga_VQSKXK8EGY",
+              "value": "GS2.1.s1777171296$o2$g1$t1777172867$j60$l0$h0"
+            },
+            {
+              "name": "_ga",
+              "value": "GA1.1.191495887.1777109080"
+            },
+            {
+              "name": "_fbp",
+              "value": "fb.1.1777109080545.68366420987418047"
+            },
+            {
+              "name": "buffer-signup",
+              "value": "eyJ2aXNpdG9ySWQiOiI1NTA2MzFkYS0yMDBmLTQyZGMtYjk4Ny0wZWI3MTM5YzdlOWYifQ=="
+            },
+            {
+              "name": "_clck",
+              "value": "omhqn2^2^g5j^0^2306"
+            },
+            {
+              "name": "_clsk",
+              "value": "wo4vaj^1777172722647^4^1^o.clarity.ms/collect"
+            },
+            {
+              "name": "buffer_session",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzZXNzaW9uSWQiOiJ2MV81ZWJjZjA5Yjg4NDBjMzNhMTdhOTE0YWNfNTJlZjA3ZTYtZjQzMS00MjI1LThiZTUtMGUwNWVlZWMzNzI0Iiwic2Vzc2lvblZlcnNpb24iOiJ2MSIsImlhdCI6MTc3NzEwOTE0OX0.clIgBxnSq6LOk0d9FT_WmZM3MrxozZ2ZzYJHPCMCK3Y"
+            },
+            {
+              "name": "bufferapp_ci_session",
+              "value": "u9uh4G/0lELugNDUDXtBPhD6UMj3jcMC7oKLOkARcuETB7dWrGRmBiW5v9rT4rR8FYWz1VUAfVF9l8dn2VSo1j/pV7FGl3pO+bA7Ic91+9xMY8shxXZs1wIRjkjU0/qeD87UrjBCFMHP0qOIqMsdMmVxshlEjQli0lGMfrnyGrtPyE/w+5orBcYmHQHXTyi9N02BsqJqnF98ZTfDGT+nzPCrjx0BwSgLC68MKrBK+8gcxwtx92H1ReRh0Dfd4eeLmsUTe0XQ5bLGJs95WG9S2avQmI+ZwwVd19T0kLqI6kzIxpSyN+LnTbKbCBogCrVCixwFDnNhNo7Z32UAJrkHs74naGH9K8l6xfeIiwSsSYtumBi/2ebc8l2DV9cRTudeX+MREV0uKm23mBofV50nN8yfMX3LiWwdGh8JqxKwJmyFSIaeELjCiWFK/eR2TvJloCs7gxraztNZS5y0b9x3yflnLTSVxPLHu+ApSG4xrp52AhKDQMH/3ylpTHLJQ6IA2mLteKPED+nnQFtrdVBcA4hi8NaFopUsz4riwwr7rvsa9JEbdvAOUfekp08Z208nvq7wDF44l/ztnCyRh9I4iLuzrsk+q8NjJWv1o+GU6ZQ70NSbfpxJT0s2YhavV/Pz"
+            },
+            {
+              "name": "ajs_user_id",
+              "value": "5ebcf09b8840c33a17a914ac"
+            },
+            {
+              "name": "AWSALBTG",
+              "value": "oIiHuKiXLbzJt1qgIfuG+6GGNAsp8irG1rVA0q+LlSILTGJTNsIAMZLok23u2hPFTyZGsL+iSOvwuL/rMenFQMn+F5qU4H33CT2HXIQ2OEoRopoWgK6EXTkbGnwJiWK0rQGQEquLD5sbyNkBxdX2HDG31lo5PyWupzdlSHThClOV"
+            },
+            {
+              "name": "AWSALBTGCORS",
+              "value": "oIiHuKiXLbzJt1qgIfuG+6GGNAsp8irG1rVA0q+LlSILTGJTNsIAMZLok23u2hPFTyZGsL+iSOvwuL/rMenFQMn+F5qU4H33CT2HXIQ2OEoRopoWgK6EXTkbGnwJiWK0rQGQEquLD5sbyNkBxdX2HDG31lo5PyWupzdlSHThClOV"
+            },
+            {
+              "name": "ajs_group_id",
+              "value": "5ebcf09c951223611428be19"
+            },
+            {
+              "name": "popcorn_theme",
+              "value": "\"light\""
+            },
+            {
+              "name": "_gcl_au",
+              "value": "1.1.313526753.1777172034"
+            },
+            {
+              "name": "_twpid",
+              "value": "tw.1777172692856.531898524915413066"
+            },
+            {
+              "name": "_gid",
+              "value": "GA1.2.1504414671.1777172694"
+            },
+            {
+              "name": "mp_90f73cfa0608e74231d66fdf4f31e120_mixpanel",
+              "value": "{\"distinct_id\": \"cabcf131-7c17-429f-a501-41fd2e3fd438\",\"$device_id\": \"cabcf131-7c17-429f-a501-41fd2e3fd438\",\"$initial_referrer\": \"https://login.buffer.com/\",\"$initial_referring_domain\": \"login.buffer.com\",\"__mps\": {},\"__mpso\": {},\"__mpus\": {},\"__mpa\": {},\"__mpu\": {},\"__mpr\": [],\"__mpap\": [],\"visual_refresh_enabled\": true,\"$user_id\": \"5ebcf09b8840c33a17a914ac\"}"
+            }
+          ],
+          "queryString": [
+            {
+              "name": "_o",
+              "value": "GetComposerChannelsList"
+            }
+          ],
+          "headersSize": 4006,
+          "postData": {
+            "mimeType": "application/json",
+            "params": [],
+            "text": "{\"operationName\":\"GetComposerChannelsList\",\"variables\":{\"input\":{\"organizationId\":\"5ebcf09c951223611428be19\"}},\"query\":\"query GetComposerChannelsList($input: ChannelsInput!) {\\n  channels(input: $input) {\\n    id\\n    ...ComposerChannelFragment\\n    __typename\\n  }\\n}\\n\\nfragment ComposerChannelFragment on Channel {\\n  id\\n  name\\n  displayName\\n  service\\n  type\\n  avatar\\n  locationData {\\n    location\\n    __typename\\n  }\\n  isLocked\\n  isDisconnected\\n  __typename\\n}\"}"
+          }
+        },
+        "response": {
+          "status": 200,
+          "statusText": "",
+          "httpVersion": "HTTP/3",
+          "headers": [
+            {
+              "name": "date",
+              "value": "Sun, 26 Apr 2026 09:18:43 GMT"
+            },
+            {
+              "name": "content-type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "name": "cf-ray",
+              "value": "9f24806e5d40c202-ATL"
+            },
+            {
+              "name": "cf-cache-status",
+              "value": "DYNAMIC"
+            },
+            {
+              "name": "access-control-allow-origin",
+              "value": "https://publish.buffer.com"
+            },
+            {
+              "name": "cache-control",
+              "value": "no-store"
+            },
+            {
+              "name": "etag",
+              "value": "W/\"3c0-DXcxue6NfznwY+8VT3++3cBBxO8\""
+            },
+            {
+              "name": "server",
+              "value": "cloudflare"
+            },
+            {
+              "name": "set-cookie",
+              "value": "AWSALBTG=Icrse9RpULk8rAL/y69ywqqbk1VAbtSQwEsK/UOrfRpC1J/+jeDRQg03VpP16tuIMPhyUJP/NHDYhtVZY4vnLUbBI+VktBLhjxvoIaMUroTzC5ONdsr0Wp9y6jYj1K+l9+gPir1EqzH0StoK/qMETxWEkV9pGhlrAvLCo0LvB1KH; Expires=Sun, 03 May 2026 09:18:42 GMT; Path=/"
+            },
+            {
+              "name": "set-cookie",
+              "value": "AWSALBTGCORS=Icrse9RpULk8rAL/y69ywqqbk1VAbtSQwEsK/UOrfRpC1J/+jeDRQg03VpP16tuIMPhyUJP/NHDYhtVZY4vnLUbBI+VktBLhjxvoIaMUroTzC5ONdsr0Wp9y6jYj1K+l9+gPir1EqzH0StoK/qMETxWEkV9pGhlrAvLCo0LvB1KH; Expires=Sun, 03 May 2026 09:18:42 GMT; Path=/; SameSite=None; Secure"
+            },
+            {
+              "name": "strict-transport-security",
+              "value": "max-age=15552000"
+            },
+            {
+              "name": "vary",
+              "value": "Origin, accept-encoding"
+            },
+            {
+              "name": "access-control-allow-credentials",
+              "value": "true"
+            },
+            {
+              "name": "cross-origin-opener-policy",
+              "value": "same-origin"
+            },
+            {
+              "name": "cross-origin-resource-policy",
+              "value": "same-origin"
+            },
+            {
+              "name": "origin-agent-cluster",
+              "value": "?1"
+            },
+            {
+              "name": "referrer-policy",
+              "value": "no-referrer"
+            },
+            {
+              "name": "x-content-type-options",
+              "value": "nosniff"
+            },
+            {
+              "name": "x-dns-prefetch-control",
+              "value": "off"
+            },
+            {
+              "name": "x-download-options",
+              "value": "noopen"
+            },
+            {
+              "name": "x-frame-options",
+              "value": "DENY"
+            },
+            {
+              "name": "x-permitted-cross-domain-policies",
+              "value": "none"
+            },
+            {
+              "name": "x-xss-protection",
+              "value": "0"
+            },
+            {
+              "name": "priority",
+              "value": "u=0,i=?0"
+            },
+            {
+              "name": "content-encoding",
+              "value": "br"
+            },
+            {
+              "name": "alt-svc",
+              "value": "h3=\":443\"; ma=86400"
+            },
+            {
+              "name": "server-timing",
+              "value": "cfExtPri"
+            }
+          ],
+          "cookies": [
+            {
+              "name": "AWSALBTG",
+              "value": "Icrse9RpULk8rAL/y69ywqqbk1VAbtSQwEsK/UOrfRpC1J/+jeDRQg03VpP16tuIMPhyUJP/NHDYhtVZY4vnLUbBI+VktBLhjxvoIaMUroTzC5ONdsr0Wp9y6jYj1K+l9+gPir1EqzH0StoK/qMETxWEkV9pGhlrAvLCo0LvB1KH"
+            },
+            {
+              "name": "AWSALBTGCORS",
+              "value": "Icrse9RpULk8rAL/y69ywqqbk1VAbtSQwEsK/UOrfRpC1J/+jeDRQg03VpP16tuIMPhyUJP/NHDYhtVZY4vnLUbBI+VktBLhjxvoIaMUroTzC5ONdsr0Wp9y6jYj1K+l9+gPir1EqzH0StoK/qMETxWEkV9pGhlrAvLCo0LvB1KH"
+            }
+          ],
+          "content": {
+            "mimeType": "application/json; charset=utf-8",
+            "size": 960,
+            "text": "{\"data\":{\"channels\":[{\"id\":\"5ebdf7028e911757542f83f3\",\"name\":\"Love Me Some Honey\",\"displayName\":\"Love Me Some Honey\",\"service\":\"facebook\",\"type\":\"page\",\"avatar\":\"https://buffer-channel-avatars-bucket.s3.amazonaws.com/5ebdf7028e911757542f83f3\",\"locationData\":null,\"isLocked\":false,\"isDisconnected\":false,\"__typename\":\"Channel\"},{\"id\":\"695b229d457dae6a34dc3fee\",\"name\":\"yes2matt\",\"displayName\":\"yes2matt\",\"service\":\"instagram\",\"type\":\"business\",\"avatar\":\"https://buffer-channel-avatars-bucket.s3.amazonaws.com/695b229d457dae6a34dc3fee_1777172034731\",\"locationData\":null,\"isLocked\":false,\"isDisconnected\":false,\"__typename\":\"Channel\"},{\"id\":\"695b2378457dae6a34dc4185\",\"name\":\"matthew-burgoon-7763711\",\"displayName\":\"Matthew Burgoon\",\"service\":\"linkedin\",\"type\":\"profile\",\"avatar\":\"https://buffer-channel-avatars-bucket.s3.amazonaws.com/695b2378457dae6a34dc4185_1767580537760\",\"locationData\":null,\"isLocked\":false,\"isDisconnected\":false,\"__typename\":\"Channel\"}]}}\n"
+          },
+          "redirectURL": "",
+          "headersSize": 1326,
+          "bodySize": 1669
+        },
+        "cache": {},
+        "timings": {
+          "blocked": 0,
+          "dns": 0,
+          "connect": 0,
+          "ssl": 0,
+          "send": 0,
+          "wait": 102,
+          "receive": 0
+        },
+        "time": 102,
+        "_securityState": "secure",
+        "serverIPAddress": "2606:4700::6812:6276",
+        "connection": "443",
+        "pageref": "page_2"
+      },
+      {
+        "startedDateTime": "2026-04-26T05:18:42.834-04:00",
+        "request": {
+          "bodySize": 0,
+          "method": "OPTIONS",
+          "url": "https://graph.buffer.com/?_o=GetComposerChannelsList",
+          "httpVersion": "HTTP/3",
+          "headers": [
+            {
+              "name": "Host",
+              "value": "graph.buffer.com"
+            },
+            {
+              "name": "User-Agent",
+              "value": "Mozilla/5.0 (X11; Linux x86_64; rv:149.0) Gecko/20100101 Firefox/149.0"
+            },
+            {
+              "name": "Accept",
+              "value": "*/*"
+            },
+            {
+              "name": "Accept-Language",
+              "value": "en-US,en;q=0.9"
+            },
+            {
+              "name": "Accept-Encoding",
+              "value": "gzip, deflate, br, zstd"
+            },
+            {
+              "name": "Access-Control-Request-Method",
+              "value": "POST"
+            },
+            {
+              "name": "Access-Control-Request-Headers",
+              "value": "content-type,x-buffer-client-id,x-buffer-client-name"
+            },
+            {
+              "name": "Referer",
+              "value": "https://publish.buffer.com/"
+            },
+            {
+              "name": "Origin",
+              "value": "https://publish.buffer.com"
+            },
+            {
+              "name": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "name": "Sec-Fetch-Dest",
+              "value": "empty"
+            },
+            {
+              "name": "Sec-Fetch-Mode",
+              "value": "cors"
+            },
+            {
+              "name": "Sec-Fetch-Site",
+              "value": "same-site"
+            },
+            {
+              "name": "Priority",
+              "value": "u=4"
+            },
+            {
+              "name": "TE",
+              "value": "trailers"
+            }
+          ],
+          "cookies": [],
+          "queryString": [
+            {
+              "name": "_o",
+              "value": "GetComposerChannelsList"
+            }
+          ],
+          "headersSize": 553
+        },
+        "response": {
+          "status": 204,
+          "statusText": "",
+          "httpVersion": "HTTP/3",
+          "headers": [
+            {
+              "name": "date",
+              "value": "Sun, 26 Apr 2026 09:18:42 GMT"
+            },
+            {
+              "name": "cf-ray",
+              "value": "9f24806dfcc3c202-ATL"
+            },
+            {
+              "name": "cf-cache-status",
+              "value": "DYNAMIC"
+            },
+            {
+              "name": "access-control-allow-origin",
+              "value": "https://publish.buffer.com"
+            },
+            {
+              "name": "server",
+              "value": "cloudflare"
+            },
+            {
+              "name": "set-cookie",
+              "value": "AWSALBTG=d03W9urQQB31s2XR+DYFRVxuhj4Pa2awXCIPx7QZgKMMVwLE3UOWLmpIU+nnFtlHHGm4hDEWiF55PwrfoqcXNU5g96v+AHa//IeOPFjKIwiT7WO0UxZUMuCGSsuoWYzc3JnapD4QfW6hKz2LKfyXaghx9UY8aJ5aiVF+Jv6VlHBL; Expires=Sun, 03 May 2026 09:18:42 GMT; Path=/"
+            },
+            {
+              "name": "set-cookie",
+              "value": "AWSALBTGCORS=d03W9urQQB31s2XR+DYFRVxuhj4Pa2awXCIPx7QZgKMMVwLE3UOWLmpIU+nnFtlHHGm4hDEWiF55PwrfoqcXNU5g96v+AHa//IeOPFjKIwiT7WO0UxZUMuCGSsuoWYzc3JnapD4QfW6hKz2LKfyXaghx9UY8aJ5aiVF+Jv6VlHBL; Expires=Sun, 03 May 2026 09:18:42 GMT; Path=/; SameSite=None; Secure"
+            },
+            {
+              "name": "strict-transport-security",
+              "value": "max-age=15552000"
+            },
+            {
+              "name": "vary",
+              "value": "Origin, Access-Control-Request-Headers, accept-encoding"
+            },
+            {
+              "name": "access-control-allow-credentials",
+              "value": "true"
+            },
+            {
+              "name": "access-control-allow-headers",
+              "value": "content-type,x-buffer-client-id,x-buffer-client-name"
+            },
+            {
+              "name": "access-control-allow-methods",
+              "value": "GET,HEAD,PUT,PATCH,POST,DELETE"
+            },
+            {
+              "name": "access-control-max-age",
+              "value": "86400"
+            },
+            {
+              "name": "cross-origin-opener-policy",
+              "value": "same-origin"
+            },
+            {
+              "name": "cross-origin-resource-policy",
+              "value": "same-origin"
+            },
+            {
+              "name": "origin-agent-cluster",
+              "value": "?1"
+            },
+            {
+              "name": "referrer-policy",
+              "value": "no-referrer"
+            },
+            {
+              "name": "x-content-type-options",
+              "value": "nosniff"
+            },
+            {
+              "name": "x-dns-prefetch-control",
+              "value": "off"
+            },
+            {
+              "name": "x-download-options",
+              "value": "noopen"
+            },
+            {
+              "name": "x-frame-options",
+              "value": "DENY"
+            },
+            {
+              "name": "x-permitted-cross-domain-policies",
+              "value": "none"
+            },
+            {
+              "name": "x-xss-protection",
+              "value": "0"
+            },
+            {
+              "name": "priority",
+              "value": "u=4,i=?0"
+            },
+            {
+              "name": "alt-svc",
+              "value": "h3=\":443\"; ma=86400"
+            },
+            {
+              "name": "server-timing",
+              "value": "cfExtPri"
+            }
+          ],
+          "cookies": [
+            {
+              "name": "AWSALBTG",
+              "value": "d03W9urQQB31s2XR+DYFRVxuhj4Pa2awXCIPx7QZgKMMVwLE3UOWLmpIU+nnFtlHHGm4hDEWiF55PwrfoqcXNU5g96v+AHa//IeOPFjKIwiT7WO0UxZUMuCGSsuoWYzc3JnapD4QfW6hKz2LKfyXaghx9UY8aJ5aiVF+Jv6VlHBL"
+            },
+            {
+              "name": "AWSALBTGCORS",
+              "value": "d03W9urQQB31s2XR+DYFRVxuhj4Pa2awXCIPx7QZgKMMVwLE3UOWLmpIU+nnFtlHHGm4hDEWiF55PwrfoqcXNU5g96v+AHa//IeOPFjKIwiT7WO0UxZUMuCGSsuoWYzc3JnapD4QfW6hKz2LKfyXaghx9UY8aJ5aiVF+Jv6VlHBL"
+            }
+          ],
+          "content": {
+            "mimeType": "text/plain",
+            "size": 0,
+            "text": ""
+          },
+          "redirectURL": "",
+          "headersSize": 1398,
+          "bodySize": 1398
+        },
+        "cache": {},
+        "timings": {
+          "blocked": 0,
+          "dns": 0,
+          "connect": 0,
+          "ssl": 0,
+          "send": 0,
+          "wait": 86,
+          "receive": 0
+        },
+        "time": 86,
+        "_securityState": "secure",
+        "serverIPAddress": "2606:4700::6812:6276",
+        "connection": "443",
+        "pageref": "page_2"
+      },
+      {
+        "startedDateTime": "2026-04-26T05:19:33.288-04:00",
+        "request": {
+          "bodySize": 1231,
+          "method": "POST",
+          "url": "https://graph.buffer.com/?_o=GetPostCountsByChannel",
+          "httpVersion": "HTTP/2",
+          "headers": [
+            {
+              "name": "Host",
+              "value": "graph.buffer.com"
+            },
+            {
+              "name": "User-Agent",
+              "value": "Mozilla/5.0 (X11; Linux x86_64; rv:149.0) Gecko/20100101 Firefox/149.0"
+            },
+            {
+              "name": "Accept",
+              "value": "*/*"
+            },
+            {
+              "name": "Accept-Language",
+              "value": "en-US,en;q=0.9"
+            },
+            {
+              "name": "Accept-Encoding",
+              "value": "gzip, deflate, br, zstd"
+            },
+            {
+              "name": "Referer",
+              "value": "https://publish.buffer.com/"
+            },
+            {
+              "name": "content-type",
+              "value": "application/json"
+            },
+            {
+              "name": "x-buffer-client-id",
+              "value": "webapp-publishing"
+            },
+            {
+              "name": "x-buffer-client-name",
+              "value": "webapp-publishing"
+            },
+            {
+              "name": "Content-Length",
+              "value": "1231"
+            },
+            {
+              "name": "Origin",
+              "value": "https://publish.buffer.com"
+            },
+            {
+              "name": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "name": "Cookie",
+              "value": "buffer-marketing=eyJ2aXNpdG9ySWQiOiI1NTA2MzFkYS0yMDBmLTQyZGMtYjk4Ny0wZWI3MTM5YzdlOWYiLCJjb29raWVWZXJzaW9uIjoyLCJ0cmFja2luZyI6eyJyZWZlcnJlciI6Imh0dHBzOi8vYnVmZmVyLmNvbS8iLCJ1c2VyQWdlbnQiOiJNb3ppbGxhLzUuMCAoWDExOyBMaW51eCB4ODZfNjQ7IHJ2OjE0OS4wKSBHZWNrby8yMDEwMDEwMSBGaXJlZm94LzE0OS4wIiwiZmJwIjoiZmIuMS4xNzc3MTA5MDgwNTQ1LjY4MzY2NDIwOTg3NDE4MDQ3In0sInV0bXMiOnsidmFsdWVzIjp7InV0bV9jYW1wYWlnbiI6IlJlc2VuZCBFbWFpbCBWZXJpZmljYXRpb24gKFNIIC0gMDYvMjMpIiwidXRtX21lZGl1bSI6ImVtYWlsX2FjdGlvbiIsInV0bV9zb3VyY2UiOiJjdXN0b21lci5pbyIsInV0bV9jb250ZW50IjoiUmVzZW5kIEVtYWlsIFZlcmlmaWNhdGlvbiAoU0ggLSAwNi8yMykifSwidXBkYXRlZEF0IjoxNzc3MTA5MjA2NTI2fX0=; buffer-marketing.sig=QcSFbPso1UQ3rd66QS5j2yBmtMw; cookieyesID=YjZGNlJ4NVpKQzRZNXRmcENPQU5rOGlwMXpobnBWNXo; ajs_anonymous_id=cabcf131-7c17-429f-a501-41fd2e3fd438; cky-consent=no; cookieyes-necessary=yes; cookieyes-functional=yes; cookieyes-analytics=yes; cookieyes-performance=yes; cookieyes-advertisement=yes; cookieyes-other=yes; _ga_VQSKXK8EGY=GS2.1.s1777171296$o2$g1$t1777172867$j60$l0$h0; _ga=GA1.1.191495887.1777109080; _fbp=fb.1.1777109080545.68366420987418047; buffer-signup=eyJ2aXNpdG9ySWQiOiI1NTA2MzFkYS0yMDBmLTQyZGMtYjk4Ny0wZWI3MTM5YzdlOWYifQ==; _clck=omhqn2%5E2%5Eg5j%5E0%5E2306; _clsk=wo4vaj%5E1777172722647%5E4%5E1%5Eo.clarity.ms%2Fcollect; buffer_session=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzZXNzaW9uSWQiOiJ2MV81ZWJjZjA5Yjg4NDBjMzNhMTdhOTE0YWNfNTJlZjA3ZTYtZjQzMS00MjI1LThiZTUtMGUwNWVlZWMzNzI0Iiwic2Vzc2lvblZlcnNpb24iOiJ2MSIsImlhdCI6MTc3NzEwOTE0OX0.clIgBxnSq6LOk0d9FT_WmZM3MrxozZ2ZzYJHPCMCK3Y; bufferapp_ci_session=u9uh4G%2F0lELugNDUDXtBPhD6UMj3jcMC7oKLOkARcuETB7dWrGRmBiW5v9rT4rR8FYWz1VUAfVF9l8dn2VSo1j%2FpV7FGl3pO%2BbA7Ic91%2B9xMY8shxXZs1wIRjkjU0%2FqeD87UrjBCFMHP0qOIqMsdMmVxshlEjQli0lGMfrnyGrtPyE%2Fw%2B5orBcYmHQHXTyi9N02BsqJqnF98ZTfDGT%2BnzPCrjx0BwSgLC68MKrBK%2B8gcxwtx92H1ReRh0Dfd4eeLmsUTe0XQ5bLGJs95WG9S2avQmI%2BZwwVd19T0kLqI6kzIxpSyN%2BLnTbKbCBogCrVCixwFDnNhNo7Z32UAJrkHs74naGH9K8l6xfeIiwSsSYtumBi%2F2ebc8l2DV9cRTudeX%2BMREV0uKm23mBofV50nN8yfMX3LiWwdGh8JqxKwJmyFSIaeELjCiWFK%2FeR2TvJloCs7gxraztNZS5y0b9x3yflnLTSVxPLHu%2BApSG4xrp52AhKDQMH%2F3ylpTHLJQ6IA2mLteKPED%2BnnQFtrdVBcA4hi8NaFopUsz4riwwr7rvsa9JEbdvAOUfekp08Z208nvq7wDF44l%2FztnCyRh9I4iLuzrsk%2Bq8NjJWv1o%2BGU6ZQ70NSbfpxJT0s2YhavV%2FPz; ajs_user_id=5ebcf09b8840c33a17a914ac; AWSALBTG=Icrse9RpULk8rAL/y69ywqqbk1VAbtSQwEsK/UOrfRpC1J/+jeDRQg03VpP16tuIMPhyUJP/NHDYhtVZY4vnLUbBI+VktBLhjxvoIaMUroTzC5ONdsr0Wp9y6jYj1K+l9+gPir1EqzH0StoK/qMETxWEkV9pGhlrAvLCo0LvB1KH; AWSALBTGCORS=Icrse9RpULk8rAL/y69ywqqbk1VAbtSQwEsK/UOrfRpC1J/+jeDRQg03VpP16tuIMPhyUJP/NHDYhtVZY4vnLUbBI+VktBLhjxvoIaMUroTzC5ONdsr0Wp9y6jYj1K+l9+gPir1EqzH0StoK/qMETxWEkV9pGhlrAvLCo0LvB1KH; ajs_group_id=5ebcf09c951223611428be19; popcorn_theme=%22light%22; _gcl_au=1.1.313526753.1777172034; _twpid=tw.1777172692856.531898524915413066; _gid=GA1.2.1504414671.1777172694; mp_90f73cfa0608e74231d66fdf4f31e120_mixpanel=%7B%22distinct_id%22%3A%20%22cabcf131-7c17-429f-a501-41fd2e3fd438%22%2C%22%24device_id%22%3A%20%22cabcf131-7c17-429f-a501-41fd2e3fd438%22%2C%22%24initial_referrer%22%3A%20%22https%3A%2F%2Flogin.buffer.com%2F%22%2C%22%24initial_referring_domain%22%3A%20%22login.buffer.com%22%2C%22__mps%22%3A%20%7B%7D%2C%22__mpso%22%3A%20%7B%7D%2C%22__mpus%22%3A%20%7B%7D%2C%22__mpa%22%3A%20%7B%7D%2C%22__mpu%22%3A%20%7B%7D%2C%22__mpr%22%3A%20%5B%5D%2C%22__mpap%22%3A%20%5B%5D%2C%22visual_refresh_enabled%22%3A%20true%2C%22%24user_id%22%3A%20%225ebcf09b8840c33a17a914ac%22%7D"
+            },
+            {
+              "name": "Sec-Fetch-Dest",
+              "value": "empty"
+            },
+            {
+              "name": "Sec-Fetch-Mode",
+              "value": "cors"
+            },
+            {
+              "name": "Sec-Fetch-Site",
+              "value": "same-site"
+            },
+            {
+              "name": "Priority",
+              "value": "u=4"
+            },
+            {
+              "name": "TE",
+              "value": "trailers"
+            }
+          ],
+          "cookies": [
+            {
+              "name": "buffer-marketing",
+              "value": "eyJ2aXNpdG9ySWQiOiI1NTA2MzFkYS0yMDBmLTQyZGMtYjk4Ny0wZWI3MTM5YzdlOWYiLCJjb29raWVWZXJzaW9uIjoyLCJ0cmFja2luZyI6eyJyZWZlcnJlciI6Imh0dHBzOi8vYnVmZmVyLmNvbS8iLCJ1c2VyQWdlbnQiOiJNb3ppbGxhLzUuMCAoWDExOyBMaW51eCB4ODZfNjQ7IHJ2OjE0OS4wKSBHZWNrby8yMDEwMDEwMSBGaXJlZm94LzE0OS4wIiwiZmJwIjoiZmIuMS4xNzc3MTA5MDgwNTQ1LjY4MzY2NDIwOTg3NDE4MDQ3In0sInV0bXMiOnsidmFsdWVzIjp7InV0bV9jYW1wYWlnbiI6IlJlc2VuZCBFbWFpbCBWZXJpZmljYXRpb24gKFNIIC0gMDYvMjMpIiwidXRtX21lZGl1bSI6ImVtYWlsX2FjdGlvbiIsInV0bV9zb3VyY2UiOiJjdXN0b21lci5pbyIsInV0bV9jb250ZW50IjoiUmVzZW5kIEVtYWlsIFZlcmlmaWNhdGlvbiAoU0ggLSAwNi8yMykifSwidXBkYXRlZEF0IjoxNzc3MTA5MjA2NTI2fX0="
+            },
+            {
+              "name": "buffer-marketing.sig",
+              "value": "QcSFbPso1UQ3rd66QS5j2yBmtMw"
+            },
+            {
+              "name": "cookieyesID",
+              "value": "YjZGNlJ4NVpKQzRZNXRmcENPQU5rOGlwMXpobnBWNXo"
+            },
+            {
+              "name": "ajs_anonymous_id",
+              "value": "cabcf131-7c17-429f-a501-41fd2e3fd438"
+            },
+            {
+              "name": "cky-consent",
+              "value": "no"
+            },
+            {
+              "name": "cookieyes-necessary",
+              "value": "yes"
+            },
+            {
+              "name": "cookieyes-functional",
+              "value": "yes"
+            },
+            {
+              "name": "cookieyes-analytics",
+              "value": "yes"
+            },
+            {
+              "name": "cookieyes-performance",
+              "value": "yes"
+            },
+            {
+              "name": "cookieyes-advertisement",
+              "value": "yes"
+            },
+            {
+              "name": "cookieyes-other",
+              "value": "yes"
+            },
+            {
+              "name": "_ga_VQSKXK8EGY",
+              "value": "GS2.1.s1777171296$o2$g1$t1777172867$j60$l0$h0"
+            },
+            {
+              "name": "_ga",
+              "value": "GA1.1.191495887.1777109080"
+            },
+            {
+              "name": "_fbp",
+              "value": "fb.1.1777109080545.68366420987418047"
+            },
+            {
+              "name": "buffer-signup",
+              "value": "eyJ2aXNpdG9ySWQiOiI1NTA2MzFkYS0yMDBmLTQyZGMtYjk4Ny0wZWI3MTM5YzdlOWYifQ=="
+            },
+            {
+              "name": "_clck",
+              "value": "omhqn2^2^g5j^0^2306"
+            },
+            {
+              "name": "_clsk",
+              "value": "wo4vaj^1777172722647^4^1^o.clarity.ms/collect"
+            },
+            {
+              "name": "buffer_session",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzZXNzaW9uSWQiOiJ2MV81ZWJjZjA5Yjg4NDBjMzNhMTdhOTE0YWNfNTJlZjA3ZTYtZjQzMS00MjI1LThiZTUtMGUwNWVlZWMzNzI0Iiwic2Vzc2lvblZlcnNpb24iOiJ2MSIsImlhdCI6MTc3NzEwOTE0OX0.clIgBxnSq6LOk0d9FT_WmZM3MrxozZ2ZzYJHPCMCK3Y"
+            },
+            {
+              "name": "bufferapp_ci_session",
+              "value": "u9uh4G/0lELugNDUDXtBPhD6UMj3jcMC7oKLOkARcuETB7dWrGRmBiW5v9rT4rR8FYWz1VUAfVF9l8dn2VSo1j/pV7FGl3pO+bA7Ic91+9xMY8shxXZs1wIRjkjU0/qeD87UrjBCFMHP0qOIqMsdMmVxshlEjQli0lGMfrnyGrtPyE/w+5orBcYmHQHXTyi9N02BsqJqnF98ZTfDGT+nzPCrjx0BwSgLC68MKrBK+8gcxwtx92H1ReRh0Dfd4eeLmsUTe0XQ5bLGJs95WG9S2avQmI+ZwwVd19T0kLqI6kzIxpSyN+LnTbKbCBogCrVCixwFDnNhNo7Z32UAJrkHs74naGH9K8l6xfeIiwSsSYtumBi/2ebc8l2DV9cRTudeX+MREV0uKm23mBofV50nN8yfMX3LiWwdGh8JqxKwJmyFSIaeELjCiWFK/eR2TvJloCs7gxraztNZS5y0b9x3yflnLTSVxPLHu+ApSG4xrp52AhKDQMH/3ylpTHLJQ6IA2mLteKPED+nnQFtrdVBcA4hi8NaFopUsz4riwwr7rvsa9JEbdvAOUfekp08Z208nvq7wDF44l/ztnCyRh9I4iLuzrsk+q8NjJWv1o+GU6ZQ70NSbfpxJT0s2YhavV/Pz"
+            },
+            {
+              "name": "ajs_user_id",
+              "value": "5ebcf09b8840c33a17a914ac"
+            },
+            {
+              "name": "AWSALBTG",
+              "value": "Icrse9RpULk8rAL/y69ywqqbk1VAbtSQwEsK/UOrfRpC1J/+jeDRQg03VpP16tuIMPhyUJP/NHDYhtVZY4vnLUbBI+VktBLhjxvoIaMUroTzC5ONdsr0Wp9y6jYj1K+l9+gPir1EqzH0StoK/qMETxWEkV9pGhlrAvLCo0LvB1KH"
+            },
+            {
+              "name": "AWSALBTGCORS",
+              "value": "Icrse9RpULk8rAL/y69ywqqbk1VAbtSQwEsK/UOrfRpC1J/+jeDRQg03VpP16tuIMPhyUJP/NHDYhtVZY4vnLUbBI+VktBLhjxvoIaMUroTzC5ONdsr0Wp9y6jYj1K+l9+gPir1EqzH0StoK/qMETxWEkV9pGhlrAvLCo0LvB1KH"
+            },
+            {
+              "name": "ajs_group_id",
+              "value": "5ebcf09c951223611428be19"
+            },
+            {
+              "name": "popcorn_theme",
+              "value": "\"light\""
+            },
+            {
+              "name": "_gcl_au",
+              "value": "1.1.313526753.1777172034"
+            },
+            {
+              "name": "_twpid",
+              "value": "tw.1777172692856.531898524915413066"
+            },
+            {
+              "name": "_gid",
+              "value": "GA1.2.1504414671.1777172694"
+            },
+            {
+              "name": "mp_90f73cfa0608e74231d66fdf4f31e120_mixpanel",
+              "value": "{\"distinct_id\": \"cabcf131-7c17-429f-a501-41fd2e3fd438\",\"$device_id\": \"cabcf131-7c17-429f-a501-41fd2e3fd438\",\"$initial_referrer\": \"https://login.buffer.com/\",\"$initial_referring_domain\": \"login.buffer.com\",\"__mps\": {},\"__mpso\": {},\"__mpus\": {},\"__mpa\": {},\"__mpu\": {},\"__mpr\": [],\"__mpap\": [],\"visual_refresh_enabled\": true,\"$user_id\": \"5ebcf09b8840c33a17a914ac\"}"
+            }
+          ],
+          "queryString": [
+            {
+              "name": "_o",
+              "value": "GetPostCountsByChannel"
+            }
+          ],
+          "headersSize": 4006,
+          "postData": {
+            "mimeType": "application/json",
+            "params": [],
+            "text": "{\"operationName\":\"GetPostCountsByChannel\",\"variables\":{\"organizationId\":\"5ebcf09c951223611428be19\"},\"query\":\"query GetPostCountsByChannel($organizationId: OrganizationId!, $channelIds: [ChannelId!], $tags: TagComparator) {\\n  drafts: postCounts(\\n    input: {organizationId: $organizationId, filter: {channelIds: $channelIds, tags: $tags, status: [draft]}}\\n  ) {\\n    counts {\\n      channelId\\n      count\\n      limit\\n      __typename\\n    }\\n    __typename\\n  }\\n  queue: postCounts(\\n    input: {organizationId: $organizationId, filter: {channelIds: $channelIds, tags: $tags, status: [scheduled, error]}}\\n  ) {\\n    counts {\\n      channelId\\n      count\\n      limit\\n      __typename\\n    }\\n    __typename\\n  }\\n  approvals: postCounts(\\n    input: {organizationId: $organizationId, filter: {channelIds: $channelIds, tags: $tags, status: [needs_approval]}}\\n  ) {\\n    counts {\\n      channelId\\n      count\\n      limit\\n      __typename\\n    }\\n    __typename\\n  }\\n  sent: postCounts(\\n    input: {organizationId: $organizationId, filter: {channelIds: $channelIds, tags: $tags, status: [sent, sending]}}\\n  ) {\\n    counts {\\n      channelId\\n      count\\n      limit\\n      __typename\\n    }\\n    __typename\\n  }\\n}\"}"
+          }
+        },
+        "response": {
+          "status": 200,
+          "statusText": "",
+          "httpVersion": "HTTP/2",
+          "headers": [
+            {
+              "name": "date",
+              "value": "Sun, 26 Apr 2026 09:19:33 GMT"
+            },
+            {
+              "name": "content-type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "name": "cf-ray",
+              "value": "9f2481a93c7a41c4-ATL"
+            },
+            {
+              "name": "cf-cache-status",
+              "value": "DYNAMIC"
+            },
+            {
+              "name": "access-control-allow-origin",
+              "value": "https://publish.buffer.com"
+            },
+            {
+              "name": "cache-control",
+              "value": "no-store"
+            },
+            {
+              "name": "etag",
+              "value": "W/\"417-51uNjQECCXLa5t1+q8jWr0PpMms\""
+            },
+            {
+              "name": "server",
+              "value": "cloudflare"
+            },
+            {
+              "name": "set-cookie",
+              "value": "AWSALBTG=3JJRux7rNEp5ObFIgU5Yh+ZwAZqtSYs9Js/qqPbnquT+xoEZ/jznBVYOy2qiPNsgEA4MM/B9kdGWnzaJ0q+4saVkwlUJyoai/DjcpdYtnVHZi9FnfuHKG0piqRZWahYy8koh1D2xLJwnsTzjefl+uXiUMGjqVwZQosQZh35TH3DQ; Expires=Sun, 03 May 2026 09:19:33 GMT; Path=/"
+            },
+            {
+              "name": "set-cookie",
+              "value": "AWSALBTGCORS=3JJRux7rNEp5ObFIgU5Yh+ZwAZqtSYs9Js/qqPbnquT+xoEZ/jznBVYOy2qiPNsgEA4MM/B9kdGWnzaJ0q+4saVkwlUJyoai/DjcpdYtnVHZi9FnfuHKG0piqRZWahYy8koh1D2xLJwnsTzjefl+uXiUMGjqVwZQosQZh35TH3DQ; Expires=Sun, 03 May 2026 09:19:33 GMT; Path=/; SameSite=None; Secure"
+            },
+            {
+              "name": "strict-transport-security",
+              "value": "max-age=15552000"
+            },
+            {
+              "name": "vary",
+              "value": "Origin, accept-encoding"
+            },
+            {
+              "name": "access-control-allow-credentials",
+              "value": "true"
+            },
+            {
+              "name": "cross-origin-opener-policy",
+              "value": "same-origin"
+            },
+            {
+              "name": "cross-origin-resource-policy",
+              "value": "same-origin"
+            },
+            {
+              "name": "origin-agent-cluster",
+              "value": "?1"
+            },
+            {
+              "name": "referrer-policy",
+              "value": "no-referrer"
+            },
+            {
+              "name": "x-content-type-options",
+              "value": "nosniff"
+            },
+            {
+              "name": "x-dns-prefetch-control",
+              "value": "off"
+            },
+            {
+              "name": "x-download-options",
+              "value": "noopen"
+            },
+            {
+              "name": "x-frame-options",
+              "value": "DENY"
+            },
+            {
+              "name": "x-permitted-cross-domain-policies",
+              "value": "none"
+            },
+            {
+              "name": "x-xss-protection",
+              "value": "0"
+            },
+            {
+              "name": "content-encoding",
+              "value": "br"
+            },
+            {
+              "name": "alt-svc",
+              "value": "h3=\":443\"; ma=86400"
+            },
+            {
+              "name": "X-Firefox-Spdy",
+              "value": "h2"
+            }
+          ],
+          "cookies": [
+            {
+              "name": "AWSALBTG",
+              "value": "3JJRux7rNEp5ObFIgU5Yh+ZwAZqtSYs9Js/qqPbnquT+xoEZ/jznBVYOy2qiPNsgEA4MM/B9kdGWnzaJ0q+4saVkwlUJyoai/DjcpdYtnVHZi9FnfuHKG0piqRZWahYy8koh1D2xLJwnsTzjefl+uXiUMGjqVwZQosQZh35TH3DQ"
+            },
+            {
+              "name": "AWSALBTGCORS",
+              "value": "3JJRux7rNEp5ObFIgU5Yh+ZwAZqtSYs9Js/qqPbnquT+xoEZ/jznBVYOy2qiPNsgEA4MM/B9kdGWnzaJ0q+4saVkwlUJyoai/DjcpdYtnVHZi9FnfuHKG0piqRZWahYy8koh1D2xLJwnsTzjefl+uXiUMGjqVwZQosQZh35TH3DQ"
+            }
+          ],
+          "content": {
+            "mimeType": "application/json; charset=utf-8",
+            "size": 1047,
+            "text": "{\"data\":{\"drafts\":{\"counts\":[{\"channelId\":\"5ebdf7028e911757542f83f3\",\"count\":2,\"limit\":null,\"__typename\":\"PostsCount\"},{\"channelId\":\"695b229d457dae6a34dc3fee\",\"count\":2,\"limit\":null,\"__typename\":\"PostsCount\"},{\"channelId\":\"695b2378457dae6a34dc4185\",\"count\":2,\"limit\":null,\"__typename\":\"PostsCount\"}],\"__typename\":\"PostCountsResponse\"},\"queue\":{\"counts\":[{\"channelId\":\"5ebdf7028e911757542f83f3\",\"count\":1,\"limit\":null,\"__typename\":\"PostsCount\"},{\"channelId\":\"695b229d457dae6a34dc3fee\",\"count\":1,\"limit\":null,\"__typename\":\"PostsCount\"},{\"channelId\":\"695b2378457dae6a34dc4185\",\"count\":1,\"limit\":null,\"__typename\":\"PostsCount\"}],\"__typename\":\"PostCountsResponse\"},\"approvals\":{\"counts\":[],\"__typename\":\"PostCountsResponse\"},\"sent\":{\"counts\":[{\"channelId\":\"695b229d457dae6a34dc3fee\",\"count\":20,\"limit\":null,\"__typename\":\"PostsCount\"},{\"channelId\":\"695b2378457dae6a34dc4185\",\"count\":1,\"limit\":null,\"__typename\":\"PostsCount\"},{\"channelId\":\"5ebdf7028e911757542f83f3\",\"count\":1,\"limit\":null,\"__typename\":\"PostsCount\"}],\"__typename\":\"PostCountsResponse\"}}}\n"
+          },
+          "redirectURL": "",
+          "headersSize": 1301,
+          "bodySize": 1514
+        },
+        "cache": {},
+        "timings": {
+          "blocked": 0,
+          "dns": 0,
+          "connect": 0,
+          "ssl": 0,
+          "send": 0,
+          "wait": 233,
+          "receive": 0
+        },
+        "time": 233,
+        "_securityState": "secure",
+        "serverIPAddress": "2606:4700::6812:6276",
+        "connection": "443",
+        "pageref": "page_2"
+      },
+      {
+        "startedDateTime": "2026-04-26T05:19:33.291-04:00",
+        "request": {
+          "bodySize": 5010,
+          "method": "POST",
+          "url": "https://graph.buffer.com/?_o=GetPostForRealTimeUpdate",
+          "httpVersion": "HTTP/2",
+          "headers": [
+            {
+              "name": "Host",
+              "value": "graph.buffer.com"
+            },
+            {
+              "name": "User-Agent",
+              "value": "Mozilla/5.0 (X11; Linux x86_64; rv:149.0) Gecko/20100101 Firefox/149.0"
+            },
+            {
+              "name": "Accept",
+              "value": "*/*"
+            },
+            {
+              "name": "Accept-Language",
+              "value": "en-US,en;q=0.9"
+            },
+            {
+              "name": "Accept-Encoding",
+              "value": "gzip, deflate, br, zstd"
+            },
+            {
+              "name": "Referer",
+              "value": "https://publish.buffer.com/"
+            },
+            {
+              "name": "content-type",
+              "value": "application/json"
+            },
+            {
+              "name": "x-buffer-client-id",
+              "value": "webapp-publishing"
+            },
+            {
+              "name": "x-buffer-client-name",
+              "value": "webapp-publishing"
+            },
+            {
+              "name": "Content-Length",
+              "value": "5010"
+            },
+            {
+              "name": "Origin",
+              "value": "https://publish.buffer.com"
+            },
+            {
+              "name": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "name": "Cookie",
+              "value": "buffer-marketing=eyJ2aXNpdG9ySWQiOiI1NTA2MzFkYS0yMDBmLTQyZGMtYjk4Ny0wZWI3MTM5YzdlOWYiLCJjb29raWVWZXJzaW9uIjoyLCJ0cmFja2luZyI6eyJyZWZlcnJlciI6Imh0dHBzOi8vYnVmZmVyLmNvbS8iLCJ1c2VyQWdlbnQiOiJNb3ppbGxhLzUuMCAoWDExOyBMaW51eCB4ODZfNjQ7IHJ2OjE0OS4wKSBHZWNrby8yMDEwMDEwMSBGaXJlZm94LzE0OS4wIiwiZmJwIjoiZmIuMS4xNzc3MTA5MDgwNTQ1LjY4MzY2NDIwOTg3NDE4MDQ3In0sInV0bXMiOnsidmFsdWVzIjp7InV0bV9jYW1wYWlnbiI6IlJlc2VuZCBFbWFpbCBWZXJpZmljYXRpb24gKFNIIC0gMDYvMjMpIiwidXRtX21lZGl1bSI6ImVtYWlsX2FjdGlvbiIsInV0bV9zb3VyY2UiOiJjdXN0b21lci5pbyIsInV0bV9jb250ZW50IjoiUmVzZW5kIEVtYWlsIFZlcmlmaWNhdGlvbiAoU0ggLSAwNi8yMykifSwidXBkYXRlZEF0IjoxNzc3MTA5MjA2NTI2fX0=; buffer-marketing.sig=QcSFbPso1UQ3rd66QS5j2yBmtMw; cookieyesID=YjZGNlJ4NVpKQzRZNXRmcENPQU5rOGlwMXpobnBWNXo; ajs_anonymous_id=cabcf131-7c17-429f-a501-41fd2e3fd438; cky-consent=no; cookieyes-necessary=yes; cookieyes-functional=yes; cookieyes-analytics=yes; cookieyes-performance=yes; cookieyes-advertisement=yes; cookieyes-other=yes; _ga_VQSKXK8EGY=GS2.1.s1777171296$o2$g1$t1777172867$j60$l0$h0; _ga=GA1.1.191495887.1777109080; _fbp=fb.1.1777109080545.68366420987418047; buffer-signup=eyJ2aXNpdG9ySWQiOiI1NTA2MzFkYS0yMDBmLTQyZGMtYjk4Ny0wZWI3MTM5YzdlOWYifQ==; _clck=omhqn2%5E2%5Eg5j%5E0%5E2306; _clsk=wo4vaj%5E1777172722647%5E4%5E1%5Eo.clarity.ms%2Fcollect; buffer_session=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzZXNzaW9uSWQiOiJ2MV81ZWJjZjA5Yjg4NDBjMzNhMTdhOTE0YWNfNTJlZjA3ZTYtZjQzMS00MjI1LThiZTUtMGUwNWVlZWMzNzI0Iiwic2Vzc2lvblZlcnNpb24iOiJ2MSIsImlhdCI6MTc3NzEwOTE0OX0.clIgBxnSq6LOk0d9FT_WmZM3MrxozZ2ZzYJHPCMCK3Y; bufferapp_ci_session=u9uh4G%2F0lELugNDUDXtBPhD6UMj3jcMC7oKLOkARcuETB7dWrGRmBiW5v9rT4rR8FYWz1VUAfVF9l8dn2VSo1j%2FpV7FGl3pO%2BbA7Ic91%2B9xMY8shxXZs1wIRjkjU0%2FqeD87UrjBCFMHP0qOIqMsdMmVxshlEjQli0lGMfrnyGrtPyE%2Fw%2B5orBcYmHQHXTyi9N02BsqJqnF98ZTfDGT%2BnzPCrjx0BwSgLC68MKrBK%2B8gcxwtx92H1ReRh0Dfd4eeLmsUTe0XQ5bLGJs95WG9S2avQmI%2BZwwVd19T0kLqI6kzIxpSyN%2BLnTbKbCBogCrVCixwFDnNhNo7Z32UAJrkHs74naGH9K8l6xfeIiwSsSYtumBi%2F2ebc8l2DV9cRTudeX%2BMREV0uKm23mBofV50nN8yfMX3LiWwdGh8JqxKwJmyFSIaeELjCiWFK%2FeR2TvJloCs7gxraztNZS5y0b9x3yflnLTSVxPLHu%2BApSG4xrp52AhKDQMH%2F3ylpTHLJQ6IA2mLteKPED%2BnnQFtrdVBcA4hi8NaFopUsz4riwwr7rvsa9JEbdvAOUfekp08Z208nvq7wDF44l%2FztnCyRh9I4iLuzrsk%2Bq8NjJWv1o%2BGU6ZQ70NSbfpxJT0s2YhavV%2FPz; ajs_user_id=5ebcf09b8840c33a17a914ac; AWSALBTG=Icrse9RpULk8rAL/y69ywqqbk1VAbtSQwEsK/UOrfRpC1J/+jeDRQg03VpP16tuIMPhyUJP/NHDYhtVZY4vnLUbBI+VktBLhjxvoIaMUroTzC5ONdsr0Wp9y6jYj1K+l9+gPir1EqzH0StoK/qMETxWEkV9pGhlrAvLCo0LvB1KH; AWSALBTGCORS=Icrse9RpULk8rAL/y69ywqqbk1VAbtSQwEsK/UOrfRpC1J/+jeDRQg03VpP16tuIMPhyUJP/NHDYhtVZY4vnLUbBI+VktBLhjxvoIaMUroTzC5ONdsr0Wp9y6jYj1K+l9+gPir1EqzH0StoK/qMETxWEkV9pGhlrAvLCo0LvB1KH; ajs_group_id=5ebcf09c951223611428be19; popcorn_theme=%22light%22; _gcl_au=1.1.313526753.1777172034; _twpid=tw.1777172692856.531898524915413066; _gid=GA1.2.1504414671.1777172694; mp_90f73cfa0608e74231d66fdf4f31e120_mixpanel=%7B%22distinct_id%22%3A%20%22cabcf131-7c17-429f-a501-41fd2e3fd438%22%2C%22%24device_id%22%3A%20%22cabcf131-7c17-429f-a501-41fd2e3fd438%22%2C%22%24initial_referrer%22%3A%20%22https%3A%2F%2Flogin.buffer.com%2F%22%2C%22%24initial_referring_domain%22%3A%20%22login.buffer.com%22%2C%22__mps%22%3A%20%7B%7D%2C%22__mpso%22%3A%20%7B%7D%2C%22__mpus%22%3A%20%7B%7D%2C%22__mpa%22%3A%20%7B%7D%2C%22__mpu%22%3A%20%7B%7D%2C%22__mpr%22%3A%20%5B%5D%2C%22__mpap%22%3A%20%5B%5D%2C%22visual_refresh_enabled%22%3A%20true%2C%22%24user_id%22%3A%20%225ebcf09b8840c33a17a914ac%22%7D"
+            },
+            {
+              "name": "Sec-Fetch-Dest",
+              "value": "empty"
+            },
+            {
+              "name": "Sec-Fetch-Mode",
+              "value": "cors"
+            },
+            {
+              "name": "Sec-Fetch-Site",
+              "value": "same-site"
+            },
+            {
+              "name": "Priority",
+              "value": "u=4"
+            },
+            {
+              "name": "TE",
+              "value": "trailers"
+            }
+          ],
+          "cookies": [
+            {
+              "name": "buffer-marketing",
+              "value": "eyJ2aXNpdG9ySWQiOiI1NTA2MzFkYS0yMDBmLTQyZGMtYjk4Ny0wZWI3MTM5YzdlOWYiLCJjb29raWVWZXJzaW9uIjoyLCJ0cmFja2luZyI6eyJyZWZlcnJlciI6Imh0dHBzOi8vYnVmZmVyLmNvbS8iLCJ1c2VyQWdlbnQiOiJNb3ppbGxhLzUuMCAoWDExOyBMaW51eCB4ODZfNjQ7IHJ2OjE0OS4wKSBHZWNrby8yMDEwMDEwMSBGaXJlZm94LzE0OS4wIiwiZmJwIjoiZmIuMS4xNzc3MTA5MDgwNTQ1LjY4MzY2NDIwOTg3NDE4MDQ3In0sInV0bXMiOnsidmFsdWVzIjp7InV0bV9jYW1wYWlnbiI6IlJlc2VuZCBFbWFpbCBWZXJpZmljYXRpb24gKFNIIC0gMDYvMjMpIiwidXRtX21lZGl1bSI6ImVtYWlsX2FjdGlvbiIsInV0bV9zb3VyY2UiOiJjdXN0b21lci5pbyIsInV0bV9jb250ZW50IjoiUmVzZW5kIEVtYWlsIFZlcmlmaWNhdGlvbiAoU0ggLSAwNi8yMykifSwidXBkYXRlZEF0IjoxNzc3MTA5MjA2NTI2fX0="
+            },
+            {
+              "name": "buffer-marketing.sig",
+              "value": "QcSFbPso1UQ3rd66QS5j2yBmtMw"
+            },
+            {
+              "name": "cookieyesID",
+              "value": "YjZGNlJ4NVpKQzRZNXRmcENPQU5rOGlwMXpobnBWNXo"
+            },
+            {
+              "name": "ajs_anonymous_id",
+              "value": "cabcf131-7c17-429f-a501-41fd2e3fd438"
+            },
+            {
+              "name": "cky-consent",
+              "value": "no"
+            },
+            {
+              "name": "cookieyes-necessary",
+              "value": "yes"
+            },
+            {
+              "name": "cookieyes-functional",
+              "value": "yes"
+            },
+            {
+              "name": "cookieyes-analytics",
+              "value": "yes"
+            },
+            {
+              "name": "cookieyes-performance",
+              "value": "yes"
+            },
+            {
+              "name": "cookieyes-advertisement",
+              "value": "yes"
+            },
+            {
+              "name": "cookieyes-other",
+              "value": "yes"
+            },
+            {
+              "name": "_ga_VQSKXK8EGY",
+              "value": "GS2.1.s1777171296$o2$g1$t1777172867$j60$l0$h0"
+            },
+            {
+              "name": "_ga",
+              "value": "GA1.1.191495887.1777109080"
+            },
+            {
+              "name": "_fbp",
+              "value": "fb.1.1777109080545.68366420987418047"
+            },
+            {
+              "name": "buffer-signup",
+              "value": "eyJ2aXNpdG9ySWQiOiI1NTA2MzFkYS0yMDBmLTQyZGMtYjk4Ny0wZWI3MTM5YzdlOWYifQ=="
+            },
+            {
+              "name": "_clck",
+              "value": "omhqn2^2^g5j^0^2306"
+            },
+            {
+              "name": "_clsk",
+              "value": "wo4vaj^1777172722647^4^1^o.clarity.ms/collect"
+            },
+            {
+              "name": "buffer_session",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzZXNzaW9uSWQiOiJ2MV81ZWJjZjA5Yjg4NDBjMzNhMTdhOTE0YWNfNTJlZjA3ZTYtZjQzMS00MjI1LThiZTUtMGUwNWVlZWMzNzI0Iiwic2Vzc2lvblZlcnNpb24iOiJ2MSIsImlhdCI6MTc3NzEwOTE0OX0.clIgBxnSq6LOk0d9FT_WmZM3MrxozZ2ZzYJHPCMCK3Y"
+            },
+            {
+              "name": "bufferapp_ci_session",
+              "value": "u9uh4G/0lELugNDUDXtBPhD6UMj3jcMC7oKLOkARcuETB7dWrGRmBiW5v9rT4rR8FYWz1VUAfVF9l8dn2VSo1j/pV7FGl3pO+bA7Ic91+9xMY8shxXZs1wIRjkjU0/qeD87UrjBCFMHP0qOIqMsdMmVxshlEjQli0lGMfrnyGrtPyE/w+5orBcYmHQHXTyi9N02BsqJqnF98ZTfDGT+nzPCrjx0BwSgLC68MKrBK+8gcxwtx92H1ReRh0Dfd4eeLmsUTe0XQ5bLGJs95WG9S2avQmI+ZwwVd19T0kLqI6kzIxpSyN+LnTbKbCBogCrVCixwFDnNhNo7Z32UAJrkHs74naGH9K8l6xfeIiwSsSYtumBi/2ebc8l2DV9cRTudeX+MREV0uKm23mBofV50nN8yfMX3LiWwdGh8JqxKwJmyFSIaeELjCiWFK/eR2TvJloCs7gxraztNZS5y0b9x3yflnLTSVxPLHu+ApSG4xrp52AhKDQMH/3ylpTHLJQ6IA2mLteKPED+nnQFtrdVBcA4hi8NaFopUsz4riwwr7rvsa9JEbdvAOUfekp08Z208nvq7wDF44l/ztnCyRh9I4iLuzrsk+q8NjJWv1o+GU6ZQ70NSbfpxJT0s2YhavV/Pz"
+            },
+            {
+              "name": "ajs_user_id",
+              "value": "5ebcf09b8840c33a17a914ac"
+            },
+            {
+              "name": "AWSALBTG",
+              "value": "Icrse9RpULk8rAL/y69ywqqbk1VAbtSQwEsK/UOrfRpC1J/+jeDRQg03VpP16tuIMPhyUJP/NHDYhtVZY4vnLUbBI+VktBLhjxvoIaMUroTzC5ONdsr0Wp9y6jYj1K+l9+gPir1EqzH0StoK/qMETxWEkV9pGhlrAvLCo0LvB1KH"
+            },
+            {
+              "name": "AWSALBTGCORS",
+              "value": "Icrse9RpULk8rAL/y69ywqqbk1VAbtSQwEsK/UOrfRpC1J/+jeDRQg03VpP16tuIMPhyUJP/NHDYhtVZY4vnLUbBI+VktBLhjxvoIaMUroTzC5ONdsr0Wp9y6jYj1K+l9+gPir1EqzH0StoK/qMETxWEkV9pGhlrAvLCo0LvB1KH"
+            },
+            {
+              "name": "ajs_group_id",
+              "value": "5ebcf09c951223611428be19"
+            },
+            {
+              "name": "popcorn_theme",
+              "value": "\"light\""
+            },
+            {
+              "name": "_gcl_au",
+              "value": "1.1.313526753.1777172034"
+            },
+            {
+              "name": "_twpid",
+              "value": "tw.1777172692856.531898524915413066"
+            },
+            {
+              "name": "_gid",
+              "value": "GA1.2.1504414671.1777172694"
+            },
+            {
+              "name": "mp_90f73cfa0608e74231d66fdf4f31e120_mixpanel",
+              "value": "{\"distinct_id\": \"cabcf131-7c17-429f-a501-41fd2e3fd438\",\"$device_id\": \"cabcf131-7c17-429f-a501-41fd2e3fd438\",\"$initial_referrer\": \"https://login.buffer.com/\",\"$initial_referring_domain\": \"login.buffer.com\",\"__mps\": {},\"__mpso\": {},\"__mpus\": {},\"__mpa\": {},\"__mpu\": {},\"__mpr\": [],\"__mpap\": [],\"visual_refresh_enabled\": true,\"$user_id\": \"5ebcf09b8840c33a17a914ac\"}"
+            }
+          ],
+          "queryString": [
+            {
+              "name": "_o",
+              "value": "GetPostForRealTimeUpdate"
+            }
+          ],
+          "headersSize": 4008,
+          "postData": {
+            "mimeType": "application/json",
+            "params": [],
+            "text": "{\"operationName\":\"GetPostForRealTimeUpdate\",\"variables\":{\"postId\":\"69edd8a520cc99878c028b75\"},\"query\":\"query GetPostForRealTimeUpdate($postId: PostId!) {\\n  post(input: {id: $postId}) {\\n    id\\n    dueAt\\n    ...PostCard_Post\\n    ...RealTimeUpdates_Post\\n    __typename\\n  }\\n}\\n\\nfragment PostCardContent_Annotation on Annotation {\\n  type\\n  indices\\n  content\\n  text\\n  url\\n  __typename\\n}\\n\\nfragment PostMediaAsset_Asset on Asset {\\n  __typename\\n  mimeType\\n  thumbnail\\n  source\\n  ... on ImageAsset {\\n    image {\\n      altText\\n      width\\n      height\\n      isAnimated\\n      __typename\\n    }\\n    __typename\\n  }\\n  ... on VideoAsset {\\n    video {\\n      width\\n      height\\n      isVideoProcessing\\n      __typename\\n    }\\n    __typename\\n  }\\n  ... on DocumentAsset {\\n    document {\\n      filesize\\n      numPages\\n      __typename\\n    }\\n    __typename\\n  }\\n}\\n\\nfragment PostCardNotes_Note on Note {\\n  __typename\\n  id\\n  text\\n  type\\n  createdAt\\n  updatedAt\\n  author {\\n    __typename\\n    id\\n    email\\n    avatar\\n    isDeleted\\n    name\\n  }\\n  allowedActions\\n}\\n\\nfragment PostCard_Post on Post {\\n  id\\n  allowedActions\\n  ideaId\\n  status\\n  notificationStatus\\n  sharedNow\\n  via\\n  schedulingType\\n  author {\\n    __typename\\n    id\\n    email\\n    name\\n    avatar\\n    isDeleted\\n  }\\n  isCustomScheduled\\n  isPinned\\n  externalLink\\n  createdAt\\n  updatedAt\\n  dueAt\\n  sentAt\\n  metricsUpdatedAt\\n  text\\n  externalLink\\n  metadata {\\n    __typename\\n    ... on CommonPostMetadata {\\n      type\\n      annotations {\\n        __typename\\n        ...PostCardContent_Annotation\\n      }\\n      __typename\\n    }\\n    ... on InstagramPostMetadata {\\n      firstComment\\n      link\\n      geolocation {\\n        id\\n        text\\n        __typename\\n      }\\n      __typename\\n    }\\n    ... on PinterestPostMetadata {\\n      title\\n      url\\n      board {\\n        serviceId\\n        name\\n        url\\n        description\\n        avatar\\n        __typename\\n      }\\n      __typename\\n    }\\n    ... on GoogleBusinessPostMetadata {\\n      title\\n      __typename\\n    }\\n    ... on TwitterPostMetadata {\\n      threadCount\\n      thread {\\n        text\\n        assets {\\n          __typename\\n          ...PostMediaAsset_Asset\\n        }\\n        __typename\\n      }\\n      retweet {\\n        id\\n        url\\n        text\\n        createdAt\\n        user {\\n          name\\n          username\\n          avatar\\n          __typename\\n        }\\n        __typename\\n      }\\n      __typename\\n    }\\n    ... on LinkedInPostMetadata {\\n      firstComment\\n      linkAttachment {\\n        __typename\\n        url\\n        expandedUrl\\n        title\\n        thumbnail\\n        text\\n      }\\n      __typename\\n    }\\n    ... on FacebookPostMetadata {\\n      firstComment\\n      linkAttachment {\\n        __typename\\n        url\\n        expandedUrl\\n        title\\n        thumbnail\\n        text\\n      }\\n      __typename\\n    }\\n    ... on ThreadsPostMetadata {\\n      threadCount\\n      thread {\\n        text\\n        assets {\\n          __typename\\n          ...PostMediaAsset_Asset\\n        }\\n        __typename\\n      }\\n      topic\\n      __typename\\n    }\\n    ... on MastodonPostMetadata {\\n      threadCount\\n      thread {\\n        text\\n        assets {\\n          __typename\\n          ...PostMediaAsset_Asset\\n        }\\n        __typename\\n      }\\n      __typename\\n    }\\n    ... on BlueskyPostMetadata {\\n      threadCount\\n      thread {\\n        text\\n        assets {\\n          __typename\\n          ...PostMediaAsset_Asset\\n        }\\n        __typename\\n      }\\n      linkAttachment {\\n        __typename\\n        url\\n        expandedUrl\\n        title\\n        thumbnail\\n        text\\n      }\\n      __typename\\n    }\\n  }\\n  channel {\\n    __typename\\n    id\\n    type\\n    name\\n    avatar\\n    service\\n    products\\n    serviceId\\n    serverUrl\\n    timezone\\n    displayName\\n    isQueuePaused\\n    isDisconnected\\n    locationData {\\n      location\\n      __typename\\n    }\\n    metadata {\\n      ... on BlueskyMetadata {\\n        serverUrl\\n        __typename\\n      }\\n      ... on MastodonMetadata {\\n        serverUrl\\n        __typename\\n      }\\n      __typename\\n    }\\n    scopes\\n  }\\n  tags {\\n    id\\n    name\\n    color\\n    __typename\\n  }\\n  notes {\\n    ...PostCardNotes_Note\\n    __typename\\n  }\\n  error {\\n    message\\n    supportUrl\\n    __typename\\n  }\\n  assets {\\n    __typename\\n    ...PostMediaAsset_Asset\\n  }\\n  metrics {\\n    type\\n    name\\n    description\\n    value\\n    nullableValue\\n    unit\\n    __typename\\n  }\\n  recurrence {\\n    cadence {\\n      frequency\\n      frequencyStep\\n      __typename\\n    }\\n    maxRecurrentPosts\\n    recurrentPostsLeft\\n    postNumber\\n    parentPostId\\n    __typename\\n  }\\n  __typename\\n}\\n\\nfragment RealTimeUpdates_Post on Post {\\n  id\\n  status\\n  dueAt\\n  tags {\\n    id\\n    __typename\\n  }\\n  channel {\\n    id\\n    __typename\\n  }\\n  __typename\\n}\"}"
+          }
+        },
+        "response": {
+          "status": 200,
+          "statusText": "",
+          "httpVersion": "HTTP/2",
+          "headers": [
+            {
+              "name": "date",
+              "value": "Sun, 26 Apr 2026 09:19:33 GMT"
+            },
+            {
+              "name": "content-type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "name": "cf-ray",
+              "value": "9f2481a94c9141c4-ATL"
+            },
+            {
+              "name": "cf-cache-status",
+              "value": "DYNAMIC"
+            },
+            {
+              "name": "access-control-allow-origin",
+              "value": "https://publish.buffer.com"
+            },
+            {
+              "name": "cache-control",
+              "value": "no-store"
+            },
+            {
+              "name": "etag",
+              "value": "W/\"91e-gnBYo9E0S6pOXiUwLId9WK3iq/A\""
+            },
+            {
+              "name": "server",
+              "value": "cloudflare"
+            },
+            {
+              "name": "set-cookie",
+              "value": "AWSALBTG=y1erv/RuJCBVEweFU7r4sLYGvxB9FPIWB/stOUB35eBdXHpXkniLOraLzP5/vWOZwevzloonmz+7BrSwbV5/YaOxQF6pmJmGP9j/Gzd05zkAJgarCOwC6VQEl0IsgPfq4KXjlFDmIILB+rEYVa1heTsSAWb6718AvXU4dgFT5DQ/; Expires=Sun, 03 May 2026 09:19:33 GMT; Path=/"
+            },
+            {
+              "name": "set-cookie",
+              "value": "AWSALBTGCORS=y1erv/RuJCBVEweFU7r4sLYGvxB9FPIWB/stOUB35eBdXHpXkniLOraLzP5/vWOZwevzloonmz+7BrSwbV5/YaOxQF6pmJmGP9j/Gzd05zkAJgarCOwC6VQEl0IsgPfq4KXjlFDmIILB+rEYVa1heTsSAWb6718AvXU4dgFT5DQ/; Expires=Sun, 03 May 2026 09:19:33 GMT; Path=/; SameSite=None; Secure"
+            },
+            {
+              "name": "strict-transport-security",
+              "value": "max-age=15552000"
+            },
+            {
+              "name": "vary",
+              "value": "Origin, accept-encoding"
+            },
+            {
+              "name": "access-control-allow-credentials",
+              "value": "true"
+            },
+            {
+              "name": "cross-origin-opener-policy",
+              "value": "same-origin"
+            },
+            {
+              "name": "cross-origin-resource-policy",
+              "value": "same-origin"
+            },
+            {
+              "name": "origin-agent-cluster",
+              "value": "?1"
+            },
+            {
+              "name": "referrer-policy",
+              "value": "no-referrer"
+            },
+            {
+              "name": "x-content-type-options",
+              "value": "nosniff"
+            },
+            {
+              "name": "x-dns-prefetch-control",
+              "value": "off"
+            },
+            {
+              "name": "x-download-options",
+              "value": "noopen"
+            },
+            {
+              "name": "x-frame-options",
+              "value": "DENY"
+            },
+            {
+              "name": "x-permitted-cross-domain-policies",
+              "value": "none"
+            },
+            {
+              "name": "x-xss-protection",
+              "value": "0"
+            },
+            {
+              "name": "content-encoding",
+              "value": "br"
+            },
+            {
+              "name": "alt-svc",
+              "value": "h3=\":443\"; ma=86400"
+            },
+            {
+              "name": "X-Firefox-Spdy",
+              "value": "h2"
+            }
+          ],
+          "cookies": [
+            {
+              "name": "AWSALBTG",
+              "value": "y1erv/RuJCBVEweFU7r4sLYGvxB9FPIWB/stOUB35eBdXHpXkniLOraLzP5/vWOZwevzloonmz+7BrSwbV5/YaOxQF6pmJmGP9j/Gzd05zkAJgarCOwC6VQEl0IsgPfq4KXjlFDmIILB+rEYVa1heTsSAWb6718AvXU4dgFT5DQ/"
+            },
+            {
+              "name": "AWSALBTGCORS",
+              "value": "y1erv/RuJCBVEweFU7r4sLYGvxB9FPIWB/stOUB35eBdXHpXkniLOraLzP5/vWOZwevzloonmz+7BrSwbV5/YaOxQF6pmJmGP9j/Gzd05zkAJgarCOwC6VQEl0IsgPfq4KXjlFDmIILB+rEYVa1heTsSAWb6718AvXU4dgFT5DQ/"
+            }
+          ],
+          "content": {
+            "mimeType": "application/json; charset=utf-8",
+            "size": 2334,
+            "text": "{\"data\":{\"post\":{\"id\":\"69edd8a520cc99878c028b75\",\"dueAt\":null,\"allowedActions\":[\"addPostToQueue\",\"publishPostNow\",\"updatePost\",\"publishPostNext\",\"updatePostSchedule\",\"updatePostTags\",\"addPostNote\",\"duplicatePost\",\"deletePost\",\"updateShopGridLink\"],\"ideaId\":null,\"status\":\"draft\",\"notificationStatus\":null,\"sharedNow\":false,\"via\":\"buffer\",\"schedulingType\":null,\"author\":{\"__typename\":\"Author\",\"id\":\"5ebcf09b8840c33a17a914ac\",\"email\":\"yes2matt@yahoo.com\",\"name\":null,\"avatar\":\"https://buffer-account-avatars-bucket.s3.amazonaws.com/5ebcf09b8840c33a17a914ac/uploads/1777112250570/b363de8f-33cb-42d7-8d9d-b4d998779651.jpg\",\"isDeleted\":false},\"isCustomScheduled\":false,\"isPinned\":false,\"externalLink\":null,\"createdAt\":\"2026-04-26T09:19:33.037Z\",\"updatedAt\":\"2026-04-26T09:19:33.037Z\",\"sentAt\":null,\"metricsUpdatedAt\":null,\"text\":\"Hello from the chat land pony fixer\",\"metadata\":{\"__typename\":\"LinkedInPostMetadata\",\"type\":\"post\",\"annotations\":[],\"firstComment\":null,\"linkAttachment\":null},\"channel\":{\"__typename\":\"Channel\",\"id\":\"695b2378457dae6a34dc4185\",\"type\":\"profile\",\"name\":\"matthew-burgoon-7763711\",\"avatar\":\"https://buffer-channel-avatars-bucket.s3.amazonaws.com/695b2378457dae6a34dc4185_1767580537760\",\"service\":\"linkedin\",\"products\":[\"publish\"],\"serviceId\":\"8Tm_bHWQVf\",\"serverUrl\":null,\"timezone\":\"America/New_York\",\"displayName\":\"Matthew Burgoon\",\"isQueuePaused\":false,\"isDisconnected\":false,\"locationData\":null,\"metadata\":{\"__typename\":\"LinkedInMetadata\"},\"scopes\":[\"r_basicprofile\",\"r_member_connections\",\"r_member_postAnalytics\",\"r_member_profileAnalytics\",\"r_member_social\",\"r_organization_followers\",\"r_organization_social\",\"r_organization_social_feed\",\"rw_organization_admin\",\"w_member_social\",\"w_member_social_feed\",\"w_organization_social\",\"w_organization_social_feed\"]},\"tags\":[],\"notes\":[],\"error\":null,\"assets\":[],\"metrics\":[{\"type\":\"reactions\",\"name\":\"Reactions\",\"description\":\"How many people reacted to your post. Includes Like, Celebrate, Support, and more.\",\"value\":0,\"nullableValue\":null,\"unit\":\"count\",\"__typename\":\"PostMetric\"},{\"type\":\"comments\",\"name\":\"Comments\",\"description\":\"The number of comments your post received. Shows when your post is starting conversations, not just getting seen.\",\"value\":0,\"nullableValue\":null,\"unit\":\"count\",\"__typename\":\"PostMetric\"}],\"recurrence\":null,\"__typename\":\"Post\"}}}\n"
+          },
+          "redirectURL": "",
+          "headersSize": 1301,
+          "bodySize": 2362
+        },
+        "cache": {},
+        "timings": {
+          "blocked": 0,
+          "dns": 0,
+          "connect": 0,
+          "ssl": 0,
+          "send": 0,
+          "wait": 204,
+          "receive": 0
+        },
+        "time": 204,
+        "_securityState": "secure",
+        "serverIPAddress": "2606:4700::6812:6276",
+        "connection": "443",
+        "pageref": "page_2"
+      },
+      {
+        "startedDateTime": "2026-04-26T05:19:33.309-04:00",
+        "request": {
+          "bodySize": 5010,
+          "method": "POST",
+          "url": "https://graph.buffer.com/?_o=GetPostForRealTimeUpdate",
+          "httpVersion": "HTTP/2",
+          "headers": [
+            {
+              "name": "Host",
+              "value": "graph.buffer.com"
+            },
+            {
+              "name": "User-Agent",
+              "value": "Mozilla/5.0 (X11; Linux x86_64; rv:149.0) Gecko/20100101 Firefox/149.0"
+            },
+            {
+              "name": "Accept",
+              "value": "*/*"
+            },
+            {
+              "name": "Accept-Language",
+              "value": "en-US,en;q=0.9"
+            },
+            {
+              "name": "Accept-Encoding",
+              "value": "gzip, deflate, br, zstd"
+            },
+            {
+              "name": "Referer",
+              "value": "https://publish.buffer.com/"
+            },
+            {
+              "name": "content-type",
+              "value": "application/json"
+            },
+            {
+              "name": "x-buffer-client-id",
+              "value": "webapp-publishing"
+            },
+            {
+              "name": "x-buffer-client-name",
+              "value": "webapp-publishing"
+            },
+            {
+              "name": "Content-Length",
+              "value": "5010"
+            },
+            {
+              "name": "Origin",
+              "value": "https://publish.buffer.com"
+            },
+            {
+              "name": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "name": "Cookie",
+              "value": "buffer-marketing=eyJ2aXNpdG9ySWQiOiI1NTA2MzFkYS0yMDBmLTQyZGMtYjk4Ny0wZWI3MTM5YzdlOWYiLCJjb29raWVWZXJzaW9uIjoyLCJ0cmFja2luZyI6eyJyZWZlcnJlciI6Imh0dHBzOi8vYnVmZmVyLmNvbS8iLCJ1c2VyQWdlbnQiOiJNb3ppbGxhLzUuMCAoWDExOyBMaW51eCB4ODZfNjQ7IHJ2OjE0OS4wKSBHZWNrby8yMDEwMDEwMSBGaXJlZm94LzE0OS4wIiwiZmJwIjoiZmIuMS4xNzc3MTA5MDgwNTQ1LjY4MzY2NDIwOTg3NDE4MDQ3In0sInV0bXMiOnsidmFsdWVzIjp7InV0bV9jYW1wYWlnbiI6IlJlc2VuZCBFbWFpbCBWZXJpZmljYXRpb24gKFNIIC0gMDYvMjMpIiwidXRtX21lZGl1bSI6ImVtYWlsX2FjdGlvbiIsInV0bV9zb3VyY2UiOiJjdXN0b21lci5pbyIsInV0bV9jb250ZW50IjoiUmVzZW5kIEVtYWlsIFZlcmlmaWNhdGlvbiAoU0ggLSAwNi8yMykifSwidXBkYXRlZEF0IjoxNzc3MTA5MjA2NTI2fX0=; buffer-marketing.sig=QcSFbPso1UQ3rd66QS5j2yBmtMw; cookieyesID=YjZGNlJ4NVpKQzRZNXRmcENPQU5rOGlwMXpobnBWNXo; ajs_anonymous_id=cabcf131-7c17-429f-a501-41fd2e3fd438; cky-consent=no; cookieyes-necessary=yes; cookieyes-functional=yes; cookieyes-analytics=yes; cookieyes-performance=yes; cookieyes-advertisement=yes; cookieyes-other=yes; _ga_VQSKXK8EGY=GS2.1.s1777171296$o2$g1$t1777172867$j60$l0$h0; _ga=GA1.1.191495887.1777109080; _fbp=fb.1.1777109080545.68366420987418047; buffer-signup=eyJ2aXNpdG9ySWQiOiI1NTA2MzFkYS0yMDBmLTQyZGMtYjk4Ny0wZWI3MTM5YzdlOWYifQ==; _clck=omhqn2%5E2%5Eg5j%5E0%5E2306; _clsk=wo4vaj%5E1777172722647%5E4%5E1%5Eo.clarity.ms%2Fcollect; buffer_session=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzZXNzaW9uSWQiOiJ2MV81ZWJjZjA5Yjg4NDBjMzNhMTdhOTE0YWNfNTJlZjA3ZTYtZjQzMS00MjI1LThiZTUtMGUwNWVlZWMzNzI0Iiwic2Vzc2lvblZlcnNpb24iOiJ2MSIsImlhdCI6MTc3NzEwOTE0OX0.clIgBxnSq6LOk0d9FT_WmZM3MrxozZ2ZzYJHPCMCK3Y; bufferapp_ci_session=u9uh4G%2F0lELugNDUDXtBPhD6UMj3jcMC7oKLOkARcuETB7dWrGRmBiW5v9rT4rR8FYWz1VUAfVF9l8dn2VSo1j%2FpV7FGl3pO%2BbA7Ic91%2B9xMY8shxXZs1wIRjkjU0%2FqeD87UrjBCFMHP0qOIqMsdMmVxshlEjQli0lGMfrnyGrtPyE%2Fw%2B5orBcYmHQHXTyi9N02BsqJqnF98ZTfDGT%2BnzPCrjx0BwSgLC68MKrBK%2B8gcxwtx92H1ReRh0Dfd4eeLmsUTe0XQ5bLGJs95WG9S2avQmI%2BZwwVd19T0kLqI6kzIxpSyN%2BLnTbKbCBogCrVCixwFDnNhNo7Z32UAJrkHs74naGH9K8l6xfeIiwSsSYtumBi%2F2ebc8l2DV9cRTudeX%2BMREV0uKm23mBofV50nN8yfMX3LiWwdGh8JqxKwJmyFSIaeELjCiWFK%2FeR2TvJloCs7gxraztNZS5y0b9x3yflnLTSVxPLHu%2BApSG4xrp52AhKDQMH%2F3ylpTHLJQ6IA2mLteKPED%2BnnQFtrdVBcA4hi8NaFopUsz4riwwr7rvsa9JEbdvAOUfekp08Z208nvq7wDF44l%2FztnCyRh9I4iLuzrsk%2Bq8NjJWv1o%2BGU6ZQ70NSbfpxJT0s2YhavV%2FPz; ajs_user_id=5ebcf09b8840c33a17a914ac; AWSALBTG=Icrse9RpULk8rAL/y69ywqqbk1VAbtSQwEsK/UOrfRpC1J/+jeDRQg03VpP16tuIMPhyUJP/NHDYhtVZY4vnLUbBI+VktBLhjxvoIaMUroTzC5ONdsr0Wp9y6jYj1K+l9+gPir1EqzH0StoK/qMETxWEkV9pGhlrAvLCo0LvB1KH; AWSALBTGCORS=Icrse9RpULk8rAL/y69ywqqbk1VAbtSQwEsK/UOrfRpC1J/+jeDRQg03VpP16tuIMPhyUJP/NHDYhtVZY4vnLUbBI+VktBLhjxvoIaMUroTzC5ONdsr0Wp9y6jYj1K+l9+gPir1EqzH0StoK/qMETxWEkV9pGhlrAvLCo0LvB1KH; ajs_group_id=5ebcf09c951223611428be19; popcorn_theme=%22light%22; _gcl_au=1.1.313526753.1777172034; _twpid=tw.1777172692856.531898524915413066; _gid=GA1.2.1504414671.1777172694; mp_90f73cfa0608e74231d66fdf4f31e120_mixpanel=%7B%22distinct_id%22%3A%20%22cabcf131-7c17-429f-a501-41fd2e3fd438%22%2C%22%24device_id%22%3A%20%22cabcf131-7c17-429f-a501-41fd2e3fd438%22%2C%22%24initial_referrer%22%3A%20%22https%3A%2F%2Flogin.buffer.com%2F%22%2C%22%24initial_referring_domain%22%3A%20%22login.buffer.com%22%2C%22__mps%22%3A%20%7B%7D%2C%22__mpso%22%3A%20%7B%7D%2C%22__mpus%22%3A%20%7B%7D%2C%22__mpa%22%3A%20%7B%7D%2C%22__mpu%22%3A%20%7B%7D%2C%22__mpr%22%3A%20%5B%5D%2C%22__mpap%22%3A%20%5B%5D%2C%22visual_refresh_enabled%22%3A%20true%2C%22%24user_id%22%3A%20%225ebcf09b8840c33a17a914ac%22%7D"
+            },
+            {
+              "name": "Sec-Fetch-Dest",
+              "value": "empty"
+            },
+            {
+              "name": "Sec-Fetch-Mode",
+              "value": "cors"
+            },
+            {
+              "name": "Sec-Fetch-Site",
+              "value": "same-site"
+            },
+            {
+              "name": "Priority",
+              "value": "u=4"
+            },
+            {
+              "name": "TE",
+              "value": "trailers"
+            }
+          ],
+          "cookies": [
+            {
+              "name": "buffer-marketing",
+              "value": "eyJ2aXNpdG9ySWQiOiI1NTA2MzFkYS0yMDBmLTQyZGMtYjk4Ny0wZWI3MTM5YzdlOWYiLCJjb29raWVWZXJzaW9uIjoyLCJ0cmFja2luZyI6eyJyZWZlcnJlciI6Imh0dHBzOi8vYnVmZmVyLmNvbS8iLCJ1c2VyQWdlbnQiOiJNb3ppbGxhLzUuMCAoWDExOyBMaW51eCB4ODZfNjQ7IHJ2OjE0OS4wKSBHZWNrby8yMDEwMDEwMSBGaXJlZm94LzE0OS4wIiwiZmJwIjoiZmIuMS4xNzc3MTA5MDgwNTQ1LjY4MzY2NDIwOTg3NDE4MDQ3In0sInV0bXMiOnsidmFsdWVzIjp7InV0bV9jYW1wYWlnbiI6IlJlc2VuZCBFbWFpbCBWZXJpZmljYXRpb24gKFNIIC0gMDYvMjMpIiwidXRtX21lZGl1bSI6ImVtYWlsX2FjdGlvbiIsInV0bV9zb3VyY2UiOiJjdXN0b21lci5pbyIsInV0bV9jb250ZW50IjoiUmVzZW5kIEVtYWlsIFZlcmlmaWNhdGlvbiAoU0ggLSAwNi8yMykifSwidXBkYXRlZEF0IjoxNzc3MTA5MjA2NTI2fX0="
+            },
+            {
+              "name": "buffer-marketing.sig",
+              "value": "QcSFbPso1UQ3rd66QS5j2yBmtMw"
+            },
+            {
+              "name": "cookieyesID",
+              "value": "YjZGNlJ4NVpKQzRZNXRmcENPQU5rOGlwMXpobnBWNXo"
+            },
+            {
+              "name": "ajs_anonymous_id",
+              "value": "cabcf131-7c17-429f-a501-41fd2e3fd438"
+            },
+            {
+              "name": "cky-consent",
+              "value": "no"
+            },
+            {
+              "name": "cookieyes-necessary",
+              "value": "yes"
+            },
+            {
+              "name": "cookieyes-functional",
+              "value": "yes"
+            },
+            {
+              "name": "cookieyes-analytics",
+              "value": "yes"
+            },
+            {
+              "name": "cookieyes-performance",
+              "value": "yes"
+            },
+            {
+              "name": "cookieyes-advertisement",
+              "value": "yes"
+            },
+            {
+              "name": "cookieyes-other",
+              "value": "yes"
+            },
+            {
+              "name": "_ga_VQSKXK8EGY",
+              "value": "GS2.1.s1777171296$o2$g1$t1777172867$j60$l0$h0"
+            },
+            {
+              "name": "_ga",
+              "value": "GA1.1.191495887.1777109080"
+            },
+            {
+              "name": "_fbp",
+              "value": "fb.1.1777109080545.68366420987418047"
+            },
+            {
+              "name": "buffer-signup",
+              "value": "eyJ2aXNpdG9ySWQiOiI1NTA2MzFkYS0yMDBmLTQyZGMtYjk4Ny0wZWI3MTM5YzdlOWYifQ=="
+            },
+            {
+              "name": "_clck",
+              "value": "omhqn2^2^g5j^0^2306"
+            },
+            {
+              "name": "_clsk",
+              "value": "wo4vaj^1777172722647^4^1^o.clarity.ms/collect"
+            },
+            {
+              "name": "buffer_session",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzZXNzaW9uSWQiOiJ2MV81ZWJjZjA5Yjg4NDBjMzNhMTdhOTE0YWNfNTJlZjA3ZTYtZjQzMS00MjI1LThiZTUtMGUwNWVlZWMzNzI0Iiwic2Vzc2lvblZlcnNpb24iOiJ2MSIsImlhdCI6MTc3NzEwOTE0OX0.clIgBxnSq6LOk0d9FT_WmZM3MrxozZ2ZzYJHPCMCK3Y"
+            },
+            {
+              "name": "bufferapp_ci_session",
+              "value": "u9uh4G/0lELugNDUDXtBPhD6UMj3jcMC7oKLOkARcuETB7dWrGRmBiW5v9rT4rR8FYWz1VUAfVF9l8dn2VSo1j/pV7FGl3pO+bA7Ic91+9xMY8shxXZs1wIRjkjU0/qeD87UrjBCFMHP0qOIqMsdMmVxshlEjQli0lGMfrnyGrtPyE/w+5orBcYmHQHXTyi9N02BsqJqnF98ZTfDGT+nzPCrjx0BwSgLC68MKrBK+8gcxwtx92H1ReRh0Dfd4eeLmsUTe0XQ5bLGJs95WG9S2avQmI+ZwwVd19T0kLqI6kzIxpSyN+LnTbKbCBogCrVCixwFDnNhNo7Z32UAJrkHs74naGH9K8l6xfeIiwSsSYtumBi/2ebc8l2DV9cRTudeX+MREV0uKm23mBofV50nN8yfMX3LiWwdGh8JqxKwJmyFSIaeELjCiWFK/eR2TvJloCs7gxraztNZS5y0b9x3yflnLTSVxPLHu+ApSG4xrp52AhKDQMH/3ylpTHLJQ6IA2mLteKPED+nnQFtrdVBcA4hi8NaFopUsz4riwwr7rvsa9JEbdvAOUfekp08Z208nvq7wDF44l/ztnCyRh9I4iLuzrsk+q8NjJWv1o+GU6ZQ70NSbfpxJT0s2YhavV/Pz"
+            },
+            {
+              "name": "ajs_user_id",
+              "value": "5ebcf09b8840c33a17a914ac"
+            },
+            {
+              "name": "AWSALBTG",
+              "value": "Icrse9RpULk8rAL/y69ywqqbk1VAbtSQwEsK/UOrfRpC1J/+jeDRQg03VpP16tuIMPhyUJP/NHDYhtVZY4vnLUbBI+VktBLhjxvoIaMUroTzC5ONdsr0Wp9y6jYj1K+l9+gPir1EqzH0StoK/qMETxWEkV9pGhlrAvLCo0LvB1KH"
+            },
+            {
+              "name": "AWSALBTGCORS",
+              "value": "Icrse9RpULk8rAL/y69ywqqbk1VAbtSQwEsK/UOrfRpC1J/+jeDRQg03VpP16tuIMPhyUJP/NHDYhtVZY4vnLUbBI+VktBLhjxvoIaMUroTzC5ONdsr0Wp9y6jYj1K+l9+gPir1EqzH0StoK/qMETxWEkV9pGhlrAvLCo0LvB1KH"
+            },
+            {
+              "name": "ajs_group_id",
+              "value": "5ebcf09c951223611428be19"
+            },
+            {
+              "name": "popcorn_theme",
+              "value": "\"light\""
+            },
+            {
+              "name": "_gcl_au",
+              "value": "1.1.313526753.1777172034"
+            },
+            {
+              "name": "_twpid",
+              "value": "tw.1777172692856.531898524915413066"
+            },
+            {
+              "name": "_gid",
+              "value": "GA1.2.1504414671.1777172694"
+            },
+            {
+              "name": "mp_90f73cfa0608e74231d66fdf4f31e120_mixpanel",
+              "value": "{\"distinct_id\": \"cabcf131-7c17-429f-a501-41fd2e3fd438\",\"$device_id\": \"cabcf131-7c17-429f-a501-41fd2e3fd438\",\"$initial_referrer\": \"https://login.buffer.com/\",\"$initial_referring_domain\": \"login.buffer.com\",\"__mps\": {},\"__mpso\": {},\"__mpus\": {},\"__mpa\": {},\"__mpu\": {},\"__mpr\": [],\"__mpap\": [],\"visual_refresh_enabled\": true,\"$user_id\": \"5ebcf09b8840c33a17a914ac\"}"
+            }
+          ],
+          "queryString": [
+            {
+              "name": "_o",
+              "value": "GetPostForRealTimeUpdate"
+            }
+          ],
+          "headersSize": 4008,
+          "postData": {
+            "mimeType": "application/json",
+            "params": [],
+            "text": "{\"operationName\":\"GetPostForRealTimeUpdate\",\"variables\":{\"postId\":\"69edd8a5ef72e1ef6704457c\"},\"query\":\"query GetPostForRealTimeUpdate($postId: PostId!) {\\n  post(input: {id: $postId}) {\\n    id\\n    dueAt\\n    ...PostCard_Post\\n    ...RealTimeUpdates_Post\\n    __typename\\n  }\\n}\\n\\nfragment PostCardContent_Annotation on Annotation {\\n  type\\n  indices\\n  content\\n  text\\n  url\\n  __typename\\n}\\n\\nfragment PostMediaAsset_Asset on Asset {\\n  __typename\\n  mimeType\\n  thumbnail\\n  source\\n  ... on ImageAsset {\\n    image {\\n      altText\\n      width\\n      height\\n      isAnimated\\n      __typename\\n    }\\n    __typename\\n  }\\n  ... on VideoAsset {\\n    video {\\n      width\\n      height\\n      isVideoProcessing\\n      __typename\\n    }\\n    __typename\\n  }\\n  ... on DocumentAsset {\\n    document {\\n      filesize\\n      numPages\\n      __typename\\n    }\\n    __typename\\n  }\\n}\\n\\nfragment PostCardNotes_Note on Note {\\n  __typename\\n  id\\n  text\\n  type\\n  createdAt\\n  updatedAt\\n  author {\\n    __typename\\n    id\\n    email\\n    avatar\\n    isDeleted\\n    name\\n  }\\n  allowedActions\\n}\\n\\nfragment PostCard_Post on Post {\\n  id\\n  allowedActions\\n  ideaId\\n  status\\n  notificationStatus\\n  sharedNow\\n  via\\n  schedulingType\\n  author {\\n    __typename\\n    id\\n    email\\n    name\\n    avatar\\n    isDeleted\\n  }\\n  isCustomScheduled\\n  isPinned\\n  externalLink\\n  createdAt\\n  updatedAt\\n  dueAt\\n  sentAt\\n  metricsUpdatedAt\\n  text\\n  externalLink\\n  metadata {\\n    __typename\\n    ... on CommonPostMetadata {\\n      type\\n      annotations {\\n        __typename\\n        ...PostCardContent_Annotation\\n      }\\n      __typename\\n    }\\n    ... on InstagramPostMetadata {\\n      firstComment\\n      link\\n      geolocation {\\n        id\\n        text\\n        __typename\\n      }\\n      __typename\\n    }\\n    ... on PinterestPostMetadata {\\n      title\\n      url\\n      board {\\n        serviceId\\n        name\\n        url\\n        description\\n        avatar\\n        __typename\\n      }\\n      __typename\\n    }\\n    ... on GoogleBusinessPostMetadata {\\n      title\\n      __typename\\n    }\\n    ... on TwitterPostMetadata {\\n      threadCount\\n      thread {\\n        text\\n        assets {\\n          __typename\\n          ...PostMediaAsset_Asset\\n        }\\n        __typename\\n      }\\n      retweet {\\n        id\\n        url\\n        text\\n        createdAt\\n        user {\\n          name\\n          username\\n          avatar\\n          __typename\\n        }\\n        __typename\\n      }\\n      __typename\\n    }\\n    ... on LinkedInPostMetadata {\\n      firstComment\\n      linkAttachment {\\n        __typename\\n        url\\n        expandedUrl\\n        title\\n        thumbnail\\n        text\\n      }\\n      __typename\\n    }\\n    ... on FacebookPostMetadata {\\n      firstComment\\n      linkAttachment {\\n        __typename\\n        url\\n        expandedUrl\\n        title\\n        thumbnail\\n        text\\n      }\\n      __typename\\n    }\\n    ... on ThreadsPostMetadata {\\n      threadCount\\n      thread {\\n        text\\n        assets {\\n          __typename\\n          ...PostMediaAsset_Asset\\n        }\\n        __typename\\n      }\\n      topic\\n      __typename\\n    }\\n    ... on MastodonPostMetadata {\\n      threadCount\\n      thread {\\n        text\\n        assets {\\n          __typename\\n          ...PostMediaAsset_Asset\\n        }\\n        __typename\\n      }\\n      __typename\\n    }\\n    ... on BlueskyPostMetadata {\\n      threadCount\\n      thread {\\n        text\\n        assets {\\n          __typename\\n          ...PostMediaAsset_Asset\\n        }\\n        __typename\\n      }\\n      linkAttachment {\\n        __typename\\n        url\\n        expandedUrl\\n        title\\n        thumbnail\\n        text\\n      }\\n      __typename\\n    }\\n  }\\n  channel {\\n    __typename\\n    id\\n    type\\n    name\\n    avatar\\n    service\\n    products\\n    serviceId\\n    serverUrl\\n    timezone\\n    displayName\\n    isQueuePaused\\n    isDisconnected\\n    locationData {\\n      location\\n      __typename\\n    }\\n    metadata {\\n      ... on BlueskyMetadata {\\n        serverUrl\\n        __typename\\n      }\\n      ... on MastodonMetadata {\\n        serverUrl\\n        __typename\\n      }\\n      __typename\\n    }\\n    scopes\\n  }\\n  tags {\\n    id\\n    name\\n    color\\n    __typename\\n  }\\n  notes {\\n    ...PostCardNotes_Note\\n    __typename\\n  }\\n  error {\\n    message\\n    supportUrl\\n    __typename\\n  }\\n  assets {\\n    __typename\\n    ...PostMediaAsset_Asset\\n  }\\n  metrics {\\n    type\\n    name\\n    description\\n    value\\n    nullableValue\\n    unit\\n    __typename\\n  }\\n  recurrence {\\n    cadence {\\n      frequency\\n      frequencyStep\\n      __typename\\n    }\\n    maxRecurrentPosts\\n    recurrentPostsLeft\\n    postNumber\\n    parentPostId\\n    __typename\\n  }\\n  __typename\\n}\\n\\nfragment RealTimeUpdates_Post on Post {\\n  id\\n  status\\n  dueAt\\n  tags {\\n    id\\n    __typename\\n  }\\n  channel {\\n    id\\n    __typename\\n  }\\n  __typename\\n}\"}"
+          }
+        },
+        "response": {
+          "status": 200,
+          "statusText": "",
+          "httpVersion": "HTTP/2",
+          "headers": [
+            {
+              "name": "date",
+              "value": "Sun, 26 Apr 2026 09:19:33 GMT"
+            },
+            {
+              "name": "content-type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "name": "cf-ray",
+              "value": "9f2481a96cc641c4-ATL"
+            },
+            {
+              "name": "cf-cache-status",
+              "value": "DYNAMIC"
+            },
+            {
+              "name": "access-control-allow-origin",
+              "value": "https://publish.buffer.com"
+            },
+            {
+              "name": "cache-control",
+              "value": "no-store"
+            },
+            {
+              "name": "etag",
+              "value": "W/\"6c4-a0Fs49YovWWQNviZmYFak3eQPBM\""
+            },
+            {
+              "name": "server",
+              "value": "cloudflare"
+            },
+            {
+              "name": "set-cookie",
+              "value": "AWSALBTG=JoCwj4D9f+nZ9VnUofqPpU2JnWdrOearMdCG81WYewR6jo2RKVoZj2sRHc/L2ZrJivLkifAYnPkGjQDG+IW1INnZF2JE+nT615cnht5hlmR+GE8uIK3mKNNGgdl92RAoxLHKA19b+5plo9jKjT7OH4PKN0iNsVzxstITyFEHss1c; Expires=Sun, 03 May 2026 09:19:33 GMT; Path=/"
+            },
+            {
+              "name": "set-cookie",
+              "value": "AWSALBTGCORS=JoCwj4D9f+nZ9VnUofqPpU2JnWdrOearMdCG81WYewR6jo2RKVoZj2sRHc/L2ZrJivLkifAYnPkGjQDG+IW1INnZF2JE+nT615cnht5hlmR+GE8uIK3mKNNGgdl92RAoxLHKA19b+5plo9jKjT7OH4PKN0iNsVzxstITyFEHss1c; Expires=Sun, 03 May 2026 09:19:33 GMT; Path=/; SameSite=None; Secure"
+            },
+            {
+              "name": "strict-transport-security",
+              "value": "max-age=15552000"
+            },
+            {
+              "name": "vary",
+              "value": "Origin, accept-encoding"
+            },
+            {
+              "name": "access-control-allow-credentials",
+              "value": "true"
+            },
+            {
+              "name": "cross-origin-opener-policy",
+              "value": "same-origin"
+            },
+            {
+              "name": "cross-origin-resource-policy",
+              "value": "same-origin"
+            },
+            {
+              "name": "origin-agent-cluster",
+              "value": "?1"
+            },
+            {
+              "name": "referrer-policy",
+              "value": "no-referrer"
+            },
+            {
+              "name": "x-content-type-options",
+              "value": "nosniff"
+            },
+            {
+              "name": "x-dns-prefetch-control",
+              "value": "off"
+            },
+            {
+              "name": "x-download-options",
+              "value": "noopen"
+            },
+            {
+              "name": "x-frame-options",
+              "value": "DENY"
+            },
+            {
+              "name": "x-permitted-cross-domain-policies",
+              "value": "none"
+            },
+            {
+              "name": "x-xss-protection",
+              "value": "0"
+            },
+            {
+              "name": "content-encoding",
+              "value": "br"
+            },
+            {
+              "name": "alt-svc",
+              "value": "h3=\":443\"; ma=86400"
+            },
+            {
+              "name": "X-Firefox-Spdy",
+              "value": "h2"
+            }
+          ],
+          "cookies": [
+            {
+              "name": "AWSALBTG",
+              "value": "JoCwj4D9f+nZ9VnUofqPpU2JnWdrOearMdCG81WYewR6jo2RKVoZj2sRHc/L2ZrJivLkifAYnPkGjQDG+IW1INnZF2JE+nT615cnht5hlmR+GE8uIK3mKNNGgdl92RAoxLHKA19b+5plo9jKjT7OH4PKN0iNsVzxstITyFEHss1c"
+            },
+            {
+              "name": "AWSALBTGCORS",
+              "value": "JoCwj4D9f+nZ9VnUofqPpU2JnWdrOearMdCG81WYewR6jo2RKVoZj2sRHc/L2ZrJivLkifAYnPkGjQDG+IW1INnZF2JE+nT615cnht5hlmR+GE8uIK3mKNNGgdl92RAoxLHKA19b+5plo9jKjT7OH4PKN0iNsVzxstITyFEHss1c"
+            }
+          ],
+          "content": {
+            "mimeType": "application/json; charset=utf-8",
+            "size": 1732,
+            "text": "{\"data\":{\"post\":{\"id\":\"69edd8a5ef72e1ef6704457c\",\"dueAt\":null,\"allowedActions\":[\"addPostToQueue\",\"publishPostNow\",\"updatePost\",\"publishPostNext\",\"updatePostSchedule\",\"updatePostTags\",\"addPostNote\",\"duplicatePost\",\"deletePost\",\"updateShopGridLink\"],\"ideaId\":null,\"status\":\"draft\",\"notificationStatus\":null,\"sharedNow\":false,\"via\":\"buffer\",\"schedulingType\":null,\"author\":{\"__typename\":\"Author\",\"id\":\"5ebcf09b8840c33a17a914ac\",\"email\":\"yes2matt@yahoo.com\",\"name\":null,\"avatar\":\"https://buffer-account-avatars-bucket.s3.amazonaws.com/5ebcf09b8840c33a17a914ac/uploads/1777112250570/b363de8f-33cb-42d7-8d9d-b4d998779651.jpg\",\"isDeleted\":false},\"isCustomScheduled\":false,\"isPinned\":false,\"externalLink\":null,\"createdAt\":\"2026-04-26T09:19:33.032Z\",\"updatedAt\":\"2026-04-26T09:19:33.411Z\",\"sentAt\":null,\"metricsUpdatedAt\":null,\"text\":\"Hello from the chat land pony fixer\",\"metadata\":{\"__typename\":\"InstagramPostMetadata\",\"type\":\"post\",\"annotations\":[],\"firstComment\":null,\"link\":null,\"geolocation\":null},\"channel\":{\"__typename\":\"Channel\",\"id\":\"695b229d457dae6a34dc3fee\",\"type\":\"business\",\"name\":\"yes2matt\",\"avatar\":\"https://buffer-channel-avatars-bucket.s3.amazonaws.com/695b229d457dae6a34dc3fee_1777172034731\",\"service\":\"instagram\",\"products\":[\"analyze\",\"engage\",\"publish\"],\"serviceId\":\"17841412444800842\",\"serverUrl\":null,\"timezone\":\"America/New_York\",\"displayName\":\"yes2matt\",\"isQueuePaused\":false,\"isDisconnected\":false,\"locationData\":null,\"metadata\":{\"__typename\":\"InstagramMetadata\"},\"scopes\":[\"instagram_business_basic\",\"instagram_business_content_publish\",\"instagram_business_manage_insights\",\"instagram_business_manage_comments\"]},\"tags\":[],\"notes\":[],\"error\":null,\"assets\":[],\"metrics\":null,\"recurrence\":null,\"__typename\":\"Post\"}}}\n"
+          },
+          "redirectURL": "",
+          "headersSize": 1301,
+          "bodySize": 2118
+        },
+        "cache": {},
+        "timings": {
+          "blocked": 0,
+          "dns": 0,
+          "connect": 0,
+          "ssl": 0,
+          "send": 0,
+          "wait": 199,
+          "receive": 0
+        },
+        "time": 199,
+        "_securityState": "secure",
+        "serverIPAddress": "2606:4700::6812:6276",
+        "connection": "443",
+        "pageref": "page_2"
+      },
+      {
+        "startedDateTime": "2026-04-26T05:19:33.318-04:00",
+        "request": {
+          "bodySize": 5010,
+          "method": "POST",
+          "url": "https://graph.buffer.com/?_o=GetPostForRealTimeUpdate",
+          "httpVersion": "HTTP/2",
+          "headers": [
+            {
+              "name": "Host",
+              "value": "graph.buffer.com"
+            },
+            {
+              "name": "User-Agent",
+              "value": "Mozilla/5.0 (X11; Linux x86_64; rv:149.0) Gecko/20100101 Firefox/149.0"
+            },
+            {
+              "name": "Accept",
+              "value": "*/*"
+            },
+            {
+              "name": "Accept-Language",
+              "value": "en-US,en;q=0.9"
+            },
+            {
+              "name": "Accept-Encoding",
+              "value": "gzip, deflate, br, zstd"
+            },
+            {
+              "name": "Referer",
+              "value": "https://publish.buffer.com/"
+            },
+            {
+              "name": "content-type",
+              "value": "application/json"
+            },
+            {
+              "name": "x-buffer-client-id",
+              "value": "webapp-publishing"
+            },
+            {
+              "name": "x-buffer-client-name",
+              "value": "webapp-publishing"
+            },
+            {
+              "name": "Content-Length",
+              "value": "5010"
+            },
+            {
+              "name": "Origin",
+              "value": "https://publish.buffer.com"
+            },
+            {
+              "name": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "name": "Cookie",
+              "value": "buffer-marketing=eyJ2aXNpdG9ySWQiOiI1NTA2MzFkYS0yMDBmLTQyZGMtYjk4Ny0wZWI3MTM5YzdlOWYiLCJjb29raWVWZXJzaW9uIjoyLCJ0cmFja2luZyI6eyJyZWZlcnJlciI6Imh0dHBzOi8vYnVmZmVyLmNvbS8iLCJ1c2VyQWdlbnQiOiJNb3ppbGxhLzUuMCAoWDExOyBMaW51eCB4ODZfNjQ7IHJ2OjE0OS4wKSBHZWNrby8yMDEwMDEwMSBGaXJlZm94LzE0OS4wIiwiZmJwIjoiZmIuMS4xNzc3MTA5MDgwNTQ1LjY4MzY2NDIwOTg3NDE4MDQ3In0sInV0bXMiOnsidmFsdWVzIjp7InV0bV9jYW1wYWlnbiI6IlJlc2VuZCBFbWFpbCBWZXJpZmljYXRpb24gKFNIIC0gMDYvMjMpIiwidXRtX21lZGl1bSI6ImVtYWlsX2FjdGlvbiIsInV0bV9zb3VyY2UiOiJjdXN0b21lci5pbyIsInV0bV9jb250ZW50IjoiUmVzZW5kIEVtYWlsIFZlcmlmaWNhdGlvbiAoU0ggLSAwNi8yMykifSwidXBkYXRlZEF0IjoxNzc3MTA5MjA2NTI2fX0=; buffer-marketing.sig=QcSFbPso1UQ3rd66QS5j2yBmtMw; cookieyesID=YjZGNlJ4NVpKQzRZNXRmcENPQU5rOGlwMXpobnBWNXo; ajs_anonymous_id=cabcf131-7c17-429f-a501-41fd2e3fd438; cky-consent=no; cookieyes-necessary=yes; cookieyes-functional=yes; cookieyes-analytics=yes; cookieyes-performance=yes; cookieyes-advertisement=yes; cookieyes-other=yes; _ga_VQSKXK8EGY=GS2.1.s1777171296$o2$g1$t1777172867$j60$l0$h0; _ga=GA1.1.191495887.1777109080; _fbp=fb.1.1777109080545.68366420987418047; buffer-signup=eyJ2aXNpdG9ySWQiOiI1NTA2MzFkYS0yMDBmLTQyZGMtYjk4Ny0wZWI3MTM5YzdlOWYifQ==; _clck=omhqn2%5E2%5Eg5j%5E0%5E2306; _clsk=wo4vaj%5E1777172722647%5E4%5E1%5Eo.clarity.ms%2Fcollect; buffer_session=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzZXNzaW9uSWQiOiJ2MV81ZWJjZjA5Yjg4NDBjMzNhMTdhOTE0YWNfNTJlZjA3ZTYtZjQzMS00MjI1LThiZTUtMGUwNWVlZWMzNzI0Iiwic2Vzc2lvblZlcnNpb24iOiJ2MSIsImlhdCI6MTc3NzEwOTE0OX0.clIgBxnSq6LOk0d9FT_WmZM3MrxozZ2ZzYJHPCMCK3Y; bufferapp_ci_session=u9uh4G%2F0lELugNDUDXtBPhD6UMj3jcMC7oKLOkARcuETB7dWrGRmBiW5v9rT4rR8FYWz1VUAfVF9l8dn2VSo1j%2FpV7FGl3pO%2BbA7Ic91%2B9xMY8shxXZs1wIRjkjU0%2FqeD87UrjBCFMHP0qOIqMsdMmVxshlEjQli0lGMfrnyGrtPyE%2Fw%2B5orBcYmHQHXTyi9N02BsqJqnF98ZTfDGT%2BnzPCrjx0BwSgLC68MKrBK%2B8gcxwtx92H1ReRh0Dfd4eeLmsUTe0XQ5bLGJs95WG9S2avQmI%2BZwwVd19T0kLqI6kzIxpSyN%2BLnTbKbCBogCrVCixwFDnNhNo7Z32UAJrkHs74naGH9K8l6xfeIiwSsSYtumBi%2F2ebc8l2DV9cRTudeX%2BMREV0uKm23mBofV50nN8yfMX3LiWwdGh8JqxKwJmyFSIaeELjCiWFK%2FeR2TvJloCs7gxraztNZS5y0b9x3yflnLTSVxPLHu%2BApSG4xrp52AhKDQMH%2F3ylpTHLJQ6IA2mLteKPED%2BnnQFtrdVBcA4hi8NaFopUsz4riwwr7rvsa9JEbdvAOUfekp08Z208nvq7wDF44l%2FztnCyRh9I4iLuzrsk%2Bq8NjJWv1o%2BGU6ZQ70NSbfpxJT0s2YhavV%2FPz; ajs_user_id=5ebcf09b8840c33a17a914ac; AWSALBTG=Icrse9RpULk8rAL/y69ywqqbk1VAbtSQwEsK/UOrfRpC1J/+jeDRQg03VpP16tuIMPhyUJP/NHDYhtVZY4vnLUbBI+VktBLhjxvoIaMUroTzC5ONdsr0Wp9y6jYj1K+l9+gPir1EqzH0StoK/qMETxWEkV9pGhlrAvLCo0LvB1KH; AWSALBTGCORS=Icrse9RpULk8rAL/y69ywqqbk1VAbtSQwEsK/UOrfRpC1J/+jeDRQg03VpP16tuIMPhyUJP/NHDYhtVZY4vnLUbBI+VktBLhjxvoIaMUroTzC5ONdsr0Wp9y6jYj1K+l9+gPir1EqzH0StoK/qMETxWEkV9pGhlrAvLCo0LvB1KH; ajs_group_id=5ebcf09c951223611428be19; popcorn_theme=%22light%22; _gcl_au=1.1.313526753.1777172034; _twpid=tw.1777172692856.531898524915413066; _gid=GA1.2.1504414671.1777172694; mp_90f73cfa0608e74231d66fdf4f31e120_mixpanel=%7B%22distinct_id%22%3A%20%22cabcf131-7c17-429f-a501-41fd2e3fd438%22%2C%22%24device_id%22%3A%20%22cabcf131-7c17-429f-a501-41fd2e3fd438%22%2C%22%24initial_referrer%22%3A%20%22https%3A%2F%2Flogin.buffer.com%2F%22%2C%22%24initial_referring_domain%22%3A%20%22login.buffer.com%22%2C%22__mps%22%3A%20%7B%7D%2C%22__mpso%22%3A%20%7B%7D%2C%22__mpus%22%3A%20%7B%7D%2C%22__mpa%22%3A%20%7B%7D%2C%22__mpu%22%3A%20%7B%7D%2C%22__mpr%22%3A%20%5B%5D%2C%22__mpap%22%3A%20%5B%5D%2C%22visual_refresh_enabled%22%3A%20true%2C%22%24user_id%22%3A%20%225ebcf09b8840c33a17a914ac%22%7D"
+            },
+            {
+              "name": "Sec-Fetch-Dest",
+              "value": "empty"
+            },
+            {
+              "name": "Sec-Fetch-Mode",
+              "value": "cors"
+            },
+            {
+              "name": "Sec-Fetch-Site",
+              "value": "same-site"
+            },
+            {
+              "name": "Priority",
+              "value": "u=4"
+            },
+            {
+              "name": "TE",
+              "value": "trailers"
+            }
+          ],
+          "cookies": [
+            {
+              "name": "buffer-marketing",
+              "value": "eyJ2aXNpdG9ySWQiOiI1NTA2MzFkYS0yMDBmLTQyZGMtYjk4Ny0wZWI3MTM5YzdlOWYiLCJjb29raWVWZXJzaW9uIjoyLCJ0cmFja2luZyI6eyJyZWZlcnJlciI6Imh0dHBzOi8vYnVmZmVyLmNvbS8iLCJ1c2VyQWdlbnQiOiJNb3ppbGxhLzUuMCAoWDExOyBMaW51eCB4ODZfNjQ7IHJ2OjE0OS4wKSBHZWNrby8yMDEwMDEwMSBGaXJlZm94LzE0OS4wIiwiZmJwIjoiZmIuMS4xNzc3MTA5MDgwNTQ1LjY4MzY2NDIwOTg3NDE4MDQ3In0sInV0bXMiOnsidmFsdWVzIjp7InV0bV9jYW1wYWlnbiI6IlJlc2VuZCBFbWFpbCBWZXJpZmljYXRpb24gKFNIIC0gMDYvMjMpIiwidXRtX21lZGl1bSI6ImVtYWlsX2FjdGlvbiIsInV0bV9zb3VyY2UiOiJjdXN0b21lci5pbyIsInV0bV9jb250ZW50IjoiUmVzZW5kIEVtYWlsIFZlcmlmaWNhdGlvbiAoU0ggLSAwNi8yMykifSwidXBkYXRlZEF0IjoxNzc3MTA5MjA2NTI2fX0="
+            },
+            {
+              "name": "buffer-marketing.sig",
+              "value": "QcSFbPso1UQ3rd66QS5j2yBmtMw"
+            },
+            {
+              "name": "cookieyesID",
+              "value": "YjZGNlJ4NVpKQzRZNXRmcENPQU5rOGlwMXpobnBWNXo"
+            },
+            {
+              "name": "ajs_anonymous_id",
+              "value": "cabcf131-7c17-429f-a501-41fd2e3fd438"
+            },
+            {
+              "name": "cky-consent",
+              "value": "no"
+            },
+            {
+              "name": "cookieyes-necessary",
+              "value": "yes"
+            },
+            {
+              "name": "cookieyes-functional",
+              "value": "yes"
+            },
+            {
+              "name": "cookieyes-analytics",
+              "value": "yes"
+            },
+            {
+              "name": "cookieyes-performance",
+              "value": "yes"
+            },
+            {
+              "name": "cookieyes-advertisement",
+              "value": "yes"
+            },
+            {
+              "name": "cookieyes-other",
+              "value": "yes"
+            },
+            {
+              "name": "_ga_VQSKXK8EGY",
+              "value": "GS2.1.s1777171296$o2$g1$t1777172867$j60$l0$h0"
+            },
+            {
+              "name": "_ga",
+              "value": "GA1.1.191495887.1777109080"
+            },
+            {
+              "name": "_fbp",
+              "value": "fb.1.1777109080545.68366420987418047"
+            },
+            {
+              "name": "buffer-signup",
+              "value": "eyJ2aXNpdG9ySWQiOiI1NTA2MzFkYS0yMDBmLTQyZGMtYjk4Ny0wZWI3MTM5YzdlOWYifQ=="
+            },
+            {
+              "name": "_clck",
+              "value": "omhqn2^2^g5j^0^2306"
+            },
+            {
+              "name": "_clsk",
+              "value": "wo4vaj^1777172722647^4^1^o.clarity.ms/collect"
+            },
+            {
+              "name": "buffer_session",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzZXNzaW9uSWQiOiJ2MV81ZWJjZjA5Yjg4NDBjMzNhMTdhOTE0YWNfNTJlZjA3ZTYtZjQzMS00MjI1LThiZTUtMGUwNWVlZWMzNzI0Iiwic2Vzc2lvblZlcnNpb24iOiJ2MSIsImlhdCI6MTc3NzEwOTE0OX0.clIgBxnSq6LOk0d9FT_WmZM3MrxozZ2ZzYJHPCMCK3Y"
+            },
+            {
+              "name": "bufferapp_ci_session",
+              "value": "u9uh4G/0lELugNDUDXtBPhD6UMj3jcMC7oKLOkARcuETB7dWrGRmBiW5v9rT4rR8FYWz1VUAfVF9l8dn2VSo1j/pV7FGl3pO+bA7Ic91+9xMY8shxXZs1wIRjkjU0/qeD87UrjBCFMHP0qOIqMsdMmVxshlEjQli0lGMfrnyGrtPyE/w+5orBcYmHQHXTyi9N02BsqJqnF98ZTfDGT+nzPCrjx0BwSgLC68MKrBK+8gcxwtx92H1ReRh0Dfd4eeLmsUTe0XQ5bLGJs95WG9S2avQmI+ZwwVd19T0kLqI6kzIxpSyN+LnTbKbCBogCrVCixwFDnNhNo7Z32UAJrkHs74naGH9K8l6xfeIiwSsSYtumBi/2ebc8l2DV9cRTudeX+MREV0uKm23mBofV50nN8yfMX3LiWwdGh8JqxKwJmyFSIaeELjCiWFK/eR2TvJloCs7gxraztNZS5y0b9x3yflnLTSVxPLHu+ApSG4xrp52AhKDQMH/3ylpTHLJQ6IA2mLteKPED+nnQFtrdVBcA4hi8NaFopUsz4riwwr7rvsa9JEbdvAOUfekp08Z208nvq7wDF44l/ztnCyRh9I4iLuzrsk+q8NjJWv1o+GU6ZQ70NSbfpxJT0s2YhavV/Pz"
+            },
+            {
+              "name": "ajs_user_id",
+              "value": "5ebcf09b8840c33a17a914ac"
+            },
+            {
+              "name": "AWSALBTG",
+              "value": "Icrse9RpULk8rAL/y69ywqqbk1VAbtSQwEsK/UOrfRpC1J/+jeDRQg03VpP16tuIMPhyUJP/NHDYhtVZY4vnLUbBI+VktBLhjxvoIaMUroTzC5ONdsr0Wp9y6jYj1K+l9+gPir1EqzH0StoK/qMETxWEkV9pGhlrAvLCo0LvB1KH"
+            },
+            {
+              "name": "AWSALBTGCORS",
+              "value": "Icrse9RpULk8rAL/y69ywqqbk1VAbtSQwEsK/UOrfRpC1J/+jeDRQg03VpP16tuIMPhyUJP/NHDYhtVZY4vnLUbBI+VktBLhjxvoIaMUroTzC5ONdsr0Wp9y6jYj1K+l9+gPir1EqzH0StoK/qMETxWEkV9pGhlrAvLCo0LvB1KH"
+            },
+            {
+              "name": "ajs_group_id",
+              "value": "5ebcf09c951223611428be19"
+            },
+            {
+              "name": "popcorn_theme",
+              "value": "\"light\""
+            },
+            {
+              "name": "_gcl_au",
+              "value": "1.1.313526753.1777172034"
+            },
+            {
+              "name": "_twpid",
+              "value": "tw.1777172692856.531898524915413066"
+            },
+            {
+              "name": "_gid",
+              "value": "GA1.2.1504414671.1777172694"
+            },
+            {
+              "name": "mp_90f73cfa0608e74231d66fdf4f31e120_mixpanel",
+              "value": "{\"distinct_id\": \"cabcf131-7c17-429f-a501-41fd2e3fd438\",\"$device_id\": \"cabcf131-7c17-429f-a501-41fd2e3fd438\",\"$initial_referrer\": \"https://login.buffer.com/\",\"$initial_referring_domain\": \"login.buffer.com\",\"__mps\": {},\"__mpso\": {},\"__mpus\": {},\"__mpa\": {},\"__mpu\": {},\"__mpr\": [],\"__mpap\": [],\"visual_refresh_enabled\": true,\"$user_id\": \"5ebcf09b8840c33a17a914ac\"}"
+            }
+          ],
+          "queryString": [
+            {
+              "name": "_o",
+              "value": "GetPostForRealTimeUpdate"
+            }
+          ],
+          "headersSize": 4008,
+          "postData": {
+            "mimeType": "application/json",
+            "params": [],
+            "text": "{\"operationName\":\"GetPostForRealTimeUpdate\",\"variables\":{\"postId\":\"69edd8a56ea5aa7495025d82\"},\"query\":\"query GetPostForRealTimeUpdate($postId: PostId!) {\\n  post(input: {id: $postId}) {\\n    id\\n    dueAt\\n    ...PostCard_Post\\n    ...RealTimeUpdates_Post\\n    __typename\\n  }\\n}\\n\\nfragment PostCardContent_Annotation on Annotation {\\n  type\\n  indices\\n  content\\n  text\\n  url\\n  __typename\\n}\\n\\nfragment PostMediaAsset_Asset on Asset {\\n  __typename\\n  mimeType\\n  thumbnail\\n  source\\n  ... on ImageAsset {\\n    image {\\n      altText\\n      width\\n      height\\n      isAnimated\\n      __typename\\n    }\\n    __typename\\n  }\\n  ... on VideoAsset {\\n    video {\\n      width\\n      height\\n      isVideoProcessing\\n      __typename\\n    }\\n    __typename\\n  }\\n  ... on DocumentAsset {\\n    document {\\n      filesize\\n      numPages\\n      __typename\\n    }\\n    __typename\\n  }\\n}\\n\\nfragment PostCardNotes_Note on Note {\\n  __typename\\n  id\\n  text\\n  type\\n  createdAt\\n  updatedAt\\n  author {\\n    __typename\\n    id\\n    email\\n    avatar\\n    isDeleted\\n    name\\n  }\\n  allowedActions\\n}\\n\\nfragment PostCard_Post on Post {\\n  id\\n  allowedActions\\n  ideaId\\n  status\\n  notificationStatus\\n  sharedNow\\n  via\\n  schedulingType\\n  author {\\n    __typename\\n    id\\n    email\\n    name\\n    avatar\\n    isDeleted\\n  }\\n  isCustomScheduled\\n  isPinned\\n  externalLink\\n  createdAt\\n  updatedAt\\n  dueAt\\n  sentAt\\n  metricsUpdatedAt\\n  text\\n  externalLink\\n  metadata {\\n    __typename\\n    ... on CommonPostMetadata {\\n      type\\n      annotations {\\n        __typename\\n        ...PostCardContent_Annotation\\n      }\\n      __typename\\n    }\\n    ... on InstagramPostMetadata {\\n      firstComment\\n      link\\n      geolocation {\\n        id\\n        text\\n        __typename\\n      }\\n      __typename\\n    }\\n    ... on PinterestPostMetadata {\\n      title\\n      url\\n      board {\\n        serviceId\\n        name\\n        url\\n        description\\n        avatar\\n        __typename\\n      }\\n      __typename\\n    }\\n    ... on GoogleBusinessPostMetadata {\\n      title\\n      __typename\\n    }\\n    ... on TwitterPostMetadata {\\n      threadCount\\n      thread {\\n        text\\n        assets {\\n          __typename\\n          ...PostMediaAsset_Asset\\n        }\\n        __typename\\n      }\\n      retweet {\\n        id\\n        url\\n        text\\n        createdAt\\n        user {\\n          name\\n          username\\n          avatar\\n          __typename\\n        }\\n        __typename\\n      }\\n      __typename\\n    }\\n    ... on LinkedInPostMetadata {\\n      firstComment\\n      linkAttachment {\\n        __typename\\n        url\\n        expandedUrl\\n        title\\n        thumbnail\\n        text\\n      }\\n      __typename\\n    }\\n    ... on FacebookPostMetadata {\\n      firstComment\\n      linkAttachment {\\n        __typename\\n        url\\n        expandedUrl\\n        title\\n        thumbnail\\n        text\\n      }\\n      __typename\\n    }\\n    ... on ThreadsPostMetadata {\\n      threadCount\\n      thread {\\n        text\\n        assets {\\n          __typename\\n          ...PostMediaAsset_Asset\\n        }\\n        __typename\\n      }\\n      topic\\n      __typename\\n    }\\n    ... on MastodonPostMetadata {\\n      threadCount\\n      thread {\\n        text\\n        assets {\\n          __typename\\n          ...PostMediaAsset_Asset\\n        }\\n        __typename\\n      }\\n      __typename\\n    }\\n    ... on BlueskyPostMetadata {\\n      threadCount\\n      thread {\\n        text\\n        assets {\\n          __typename\\n          ...PostMediaAsset_Asset\\n        }\\n        __typename\\n      }\\n      linkAttachment {\\n        __typename\\n        url\\n        expandedUrl\\n        title\\n        thumbnail\\n        text\\n      }\\n      __typename\\n    }\\n  }\\n  channel {\\n    __typename\\n    id\\n    type\\n    name\\n    avatar\\n    service\\n    products\\n    serviceId\\n    serverUrl\\n    timezone\\n    displayName\\n    isQueuePaused\\n    isDisconnected\\n    locationData {\\n      location\\n      __typename\\n    }\\n    metadata {\\n      ... on BlueskyMetadata {\\n        serverUrl\\n        __typename\\n      }\\n      ... on MastodonMetadata {\\n        serverUrl\\n        __typename\\n      }\\n      __typename\\n    }\\n    scopes\\n  }\\n  tags {\\n    id\\n    name\\n    color\\n    __typename\\n  }\\n  notes {\\n    ...PostCardNotes_Note\\n    __typename\\n  }\\n  error {\\n    message\\n    supportUrl\\n    __typename\\n  }\\n  assets {\\n    __typename\\n    ...PostMediaAsset_Asset\\n  }\\n  metrics {\\n    type\\n    name\\n    description\\n    value\\n    nullableValue\\n    unit\\n    __typename\\n  }\\n  recurrence {\\n    cadence {\\n      frequency\\n      frequencyStep\\n      __typename\\n    }\\n    maxRecurrentPosts\\n    recurrentPostsLeft\\n    postNumber\\n    parentPostId\\n    __typename\\n  }\\n  __typename\\n}\\n\\nfragment RealTimeUpdates_Post on Post {\\n  id\\n  status\\n  dueAt\\n  tags {\\n    id\\n    __typename\\n  }\\n  channel {\\n    id\\n    __typename\\n  }\\n  __typename\\n}\"}"
+          }
+        },
+        "response": {
+          "status": 200,
+          "statusText": "",
+          "httpVersion": "HTTP/2",
+          "headers": [
+            {
+              "name": "date",
+              "value": "Sun, 26 Apr 2026 09:19:33 GMT"
+            },
+            {
+              "name": "content-type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "name": "cf-ray",
+              "value": "9f2481a97cdc41c4-ATL"
+            },
+            {
+              "name": "cf-cache-status",
+              "value": "DYNAMIC"
+            },
+            {
+              "name": "access-control-allow-origin",
+              "value": "https://publish.buffer.com"
+            },
+            {
+              "name": "cache-control",
+              "value": "no-store"
+            },
+            {
+              "name": "etag",
+              "value": "W/\"ccf-6HnzLXaTJYwfUGg0YjvmoX0ldT0\""
+            },
+            {
+              "name": "server",
+              "value": "cloudflare"
+            },
+            {
+              "name": "set-cookie",
+              "value": "AWSALBTG=7+earVLRF5hUFjHYQXQLJo+rlgpiID162gcmqbMPlI6TKgJJimBrszD74IpSyV2Mdp44PB4fp57t2+p8tg6tV39Zo5DagGyvekWAF22lESOE5dgdcKtv9CByCNm5c9b8zHnGBFoOGmuov1nggZaUElZtpG01DxXs7lwk8LU0p0Gp; Expires=Sun, 03 May 2026 09:19:33 GMT; Path=/"
+            },
+            {
+              "name": "set-cookie",
+              "value": "AWSALBTGCORS=7+earVLRF5hUFjHYQXQLJo+rlgpiID162gcmqbMPlI6TKgJJimBrszD74IpSyV2Mdp44PB4fp57t2+p8tg6tV39Zo5DagGyvekWAF22lESOE5dgdcKtv9CByCNm5c9b8zHnGBFoOGmuov1nggZaUElZtpG01DxXs7lwk8LU0p0Gp; Expires=Sun, 03 May 2026 09:19:33 GMT; Path=/; SameSite=None; Secure"
+            },
+            {
+              "name": "strict-transport-security",
+              "value": "max-age=15552000"
+            },
+            {
+              "name": "vary",
+              "value": "Origin, accept-encoding"
+            },
+            {
+              "name": "access-control-allow-credentials",
+              "value": "true"
+            },
+            {
+              "name": "cross-origin-opener-policy",
+              "value": "same-origin"
+            },
+            {
+              "name": "cross-origin-resource-policy",
+              "value": "same-origin"
+            },
+            {
+              "name": "origin-agent-cluster",
+              "value": "?1"
+            },
+            {
+              "name": "referrer-policy",
+              "value": "no-referrer"
+            },
+            {
+              "name": "x-content-type-options",
+              "value": "nosniff"
+            },
+            {
+              "name": "x-dns-prefetch-control",
+              "value": "off"
+            },
+            {
+              "name": "x-download-options",
+              "value": "noopen"
+            },
+            {
+              "name": "x-frame-options",
+              "value": "DENY"
+            },
+            {
+              "name": "x-permitted-cross-domain-policies",
+              "value": "none"
+            },
+            {
+              "name": "x-xss-protection",
+              "value": "0"
+            },
+            {
+              "name": "content-encoding",
+              "value": "br"
+            },
+            {
+              "name": "alt-svc",
+              "value": "h3=\":443\"; ma=86400"
+            },
+            {
+              "name": "X-Firefox-Spdy",
+              "value": "h2"
+            }
+          ],
+          "cookies": [
+            {
+              "name": "AWSALBTG",
+              "value": "7+earVLRF5hUFjHYQXQLJo+rlgpiID162gcmqbMPlI6TKgJJimBrszD74IpSyV2Mdp44PB4fp57t2+p8tg6tV39Zo5DagGyvekWAF22lESOE5dgdcKtv9CByCNm5c9b8zHnGBFoOGmuov1nggZaUElZtpG01DxXs7lwk8LU0p0Gp"
+            },
+            {
+              "name": "AWSALBTGCORS",
+              "value": "7+earVLRF5hUFjHYQXQLJo+rlgpiID162gcmqbMPlI6TKgJJimBrszD74IpSyV2Mdp44PB4fp57t2+p8tg6tV39Zo5DagGyvekWAF22lESOE5dgdcKtv9CByCNm5c9b8zHnGBFoOGmuov1nggZaUElZtpG01DxXs7lwk8LU0p0Gp"
+            }
+          ],
+          "content": {
+            "mimeType": "application/json; charset=utf-8",
+            "size": 3279,
+            "text": "{\"data\":{\"post\":{\"id\":\"69edd8a56ea5aa7495025d82\",\"dueAt\":null,\"allowedActions\":[\"addPostToQueue\",\"publishPostNow\",\"updatePost\",\"publishPostNext\",\"updatePostSchedule\",\"updatePostTags\",\"addPostNote\",\"duplicatePost\",\"deletePost\",\"updateShopGridLink\"],\"ideaId\":null,\"status\":\"draft\",\"notificationStatus\":null,\"sharedNow\":false,\"via\":\"buffer\",\"schedulingType\":null,\"author\":{\"__typename\":\"Author\",\"id\":\"5ebcf09b8840c33a17a914ac\",\"email\":\"yes2matt@yahoo.com\",\"name\":null,\"avatar\":\"https://buffer-account-avatars-bucket.s3.amazonaws.com/5ebcf09b8840c33a17a914ac/uploads/1777112250570/b363de8f-33cb-42d7-8d9d-b4d998779651.jpg\",\"isDeleted\":false},\"isCustomScheduled\":false,\"isPinned\":false,\"externalLink\":null,\"createdAt\":\"2026-04-26T09:19:33.067Z\",\"updatedAt\":\"2026-04-26T09:19:33.413Z\",\"sentAt\":null,\"metricsUpdatedAt\":null,\"text\":\"Hello from the chat land pony fixer\",\"metadata\":{\"__typename\":\"FacebookPostMetadata\",\"type\":\"post\",\"annotations\":[],\"firstComment\":null,\"linkAttachment\":null},\"channel\":{\"__typename\":\"Channel\",\"id\":\"5ebdf7028e911757542f83f3\",\"type\":\"page\",\"name\":\"Love Me Some Honey\",\"avatar\":\"https://buffer-channel-avatars-bucket.s3.amazonaws.com/5ebdf7028e911757542f83f3\",\"service\":\"facebook\",\"products\":[\"analyze\",\"publish\"],\"serviceId\":\"810080366181132\",\"serverUrl\":null,\"timezone\":\"America/New_York\",\"displayName\":\"Love Me Some Honey\",\"isQueuePaused\":false,\"isDisconnected\":false,\"locationData\":null,\"metadata\":null,\"scopes\":[]},\"tags\":[],\"notes\":[],\"error\":null,\"assets\":[],\"metrics\":[{\"type\":\"reactions\",\"name\":\"Reactions\",\"description\":\"How many people reacted to your post. Includes Like, Love, Care, Haha, Wow, Sad, and Angry.\",\"value\":0,\"nullableValue\":null,\"unit\":\"count\",\"__typename\":\"PostMetric\"},{\"type\":\"comments\",\"name\":\"Comments\",\"description\":\"The number of comments your post received. Shows when your post is starting conversations, not just getting seen.\",\"value\":0,\"nullableValue\":null,\"unit\":\"count\",\"__typename\":\"PostMetric\"},{\"type\":\"engagementRate\",\"name\":\"Eng. Rate\",\"description\":\"The percentage of people who interacted with your post compared to how many saw it. Balances views and actions to show how compelling your posts are.\",\"value\":0,\"nullableValue\":null,\"unit\":\"percentage\",\"__typename\":\"PostMetric\"},{\"type\":\"likes\",\"name\":\"Likes\",\"description\":\"How many people liked your post. This counts only the Like reaction, not other reactions like Love or Haha.\",\"value\":0,\"nullableValue\":null,\"unit\":\"count\",\"__typename\":\"PostMetric\"},{\"type\":\"impressions\",\"name\":\"Impressions\",\"description\":\"How many times your post was shown on screen. This can include multiple views by the same person. Useful for spotting how often your content gets surfaced.\",\"value\":0,\"nullableValue\":null,\"unit\":\"count\",\"__typename\":\"PostMetric\"},{\"type\":\"shares\",\"name\":\"Shares\",\"description\":\"How many times your post was shared by others. A sign your content is reaching beyond your immediate audience.\",\"value\":0,\"nullableValue\":null,\"unit\":\"count\",\"__typename\":\"PostMetric\"},{\"type\":\"clicks\",\"name\":\"Clicks\",\"description\":\"How many times people clicked on your post or link. Shows when your content drives action beyond the channel it's on.\",\"value\":0,\"nullableValue\":null,\"unit\":\"count\",\"__typename\":\"PostMetric\"}],\"recurrence\":null,\"__typename\":\"Post\"}}}\n"
+          },
+          "redirectURL": "",
+          "headersSize": 1301,
+          "bodySize": 2593
+        },
+        "cache": {},
+        "timings": {
+          "blocked": 0,
+          "dns": 0,
+          "connect": 0,
+          "ssl": 0,
+          "send": 0,
+          "wait": 225,
+          "receive": 0
+        },
+        "time": 225,
+        "_securityState": "secure",
+        "serverIPAddress": "2606:4700::6812:6276",
+        "connection": "443",
+        "pageref": "page_2"
+      },
+      {
+        "startedDateTime": "2026-04-26T05:19:38.516-04:00",
+        "request": {
+          "bodySize": 343,
+          "method": "POST",
+          "url": "https://graph.buffer.com/?_o=WeeklyPostingStreak",
+          "httpVersion": "HTTP/2",
+          "headers": [
+            {
+              "name": "Host",
+              "value": "graph.buffer.com"
+            },
+            {
+              "name": "User-Agent",
+              "value": "Mozilla/5.0 (X11; Linux x86_64; rv:149.0) Gecko/20100101 Firefox/149.0"
+            },
+            {
+              "name": "Accept",
+              "value": "*/*"
+            },
+            {
+              "name": "Accept-Language",
+              "value": "en-US,en;q=0.9"
+            },
+            {
+              "name": "Accept-Encoding",
+              "value": "gzip, deflate, br, zstd"
+            },
+            {
+              "name": "Referer",
+              "value": "https://publish.buffer.com/"
+            },
+            {
+              "name": "content-type",
+              "value": "application/json"
+            },
+            {
+              "name": "x-buffer-client-id",
+              "value": "webapp-publishing"
+            },
+            {
+              "name": "x-buffer-client-name",
+              "value": "webapp-publishing"
+            },
+            {
+              "name": "Content-Length",
+              "value": "343"
+            },
+            {
+              "name": "Origin",
+              "value": "https://publish.buffer.com"
+            },
+            {
+              "name": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "name": "Cookie",
+              "value": "buffer-marketing=eyJ2aXNpdG9ySWQiOiI1NTA2MzFkYS0yMDBmLTQyZGMtYjk4Ny0wZWI3MTM5YzdlOWYiLCJjb29raWVWZXJzaW9uIjoyLCJ0cmFja2luZyI6eyJyZWZlcnJlciI6Imh0dHBzOi8vYnVmZmVyLmNvbS8iLCJ1c2VyQWdlbnQiOiJNb3ppbGxhLzUuMCAoWDExOyBMaW51eCB4ODZfNjQ7IHJ2OjE0OS4wKSBHZWNrby8yMDEwMDEwMSBGaXJlZm94LzE0OS4wIiwiZmJwIjoiZmIuMS4xNzc3MTA5MDgwNTQ1LjY4MzY2NDIwOTg3NDE4MDQ3In0sInV0bXMiOnsidmFsdWVzIjp7InV0bV9jYW1wYWlnbiI6IlJlc2VuZCBFbWFpbCBWZXJpZmljYXRpb24gKFNIIC0gMDYvMjMpIiwidXRtX21lZGl1bSI6ImVtYWlsX2FjdGlvbiIsInV0bV9zb3VyY2UiOiJjdXN0b21lci5pbyIsInV0bV9jb250ZW50IjoiUmVzZW5kIEVtYWlsIFZlcmlmaWNhdGlvbiAoU0ggLSAwNi8yMykifSwidXBkYXRlZEF0IjoxNzc3MTA5MjA2NTI2fX0=; buffer-marketing.sig=QcSFbPso1UQ3rd66QS5j2yBmtMw; cookieyesID=YjZGNlJ4NVpKQzRZNXRmcENPQU5rOGlwMXpobnBWNXo; ajs_anonymous_id=cabcf131-7c17-429f-a501-41fd2e3fd438; cky-consent=no; cookieyes-necessary=yes; cookieyes-functional=yes; cookieyes-analytics=yes; cookieyes-performance=yes; cookieyes-advertisement=yes; cookieyes-other=yes; _ga_VQSKXK8EGY=GS2.1.s1777171296$o2$g1$t1777172867$j60$l0$h0; _ga=GA1.1.191495887.1777109080; _fbp=fb.1.1777109080545.68366420987418047; buffer-signup=eyJ2aXNpdG9ySWQiOiI1NTA2MzFkYS0yMDBmLTQyZGMtYjk4Ny0wZWI3MTM5YzdlOWYifQ==; _clck=omhqn2%5E2%5Eg5j%5E0%5E2306; _clsk=wo4vaj%5E1777172722647%5E4%5E1%5Eo.clarity.ms%2Fcollect; buffer_session=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzZXNzaW9uSWQiOiJ2MV81ZWJjZjA5Yjg4NDBjMzNhMTdhOTE0YWNfNTJlZjA3ZTYtZjQzMS00MjI1LThiZTUtMGUwNWVlZWMzNzI0Iiwic2Vzc2lvblZlcnNpb24iOiJ2MSIsImlhdCI6MTc3NzEwOTE0OX0.clIgBxnSq6LOk0d9FT_WmZM3MrxozZ2ZzYJHPCMCK3Y; bufferapp_ci_session=u9uh4G%2F0lELugNDUDXtBPhD6UMj3jcMC7oKLOkARcuETB7dWrGRmBiW5v9rT4rR8FYWz1VUAfVF9l8dn2VSo1j%2FpV7FGl3pO%2BbA7Ic91%2B9xMY8shxXZs1wIRjkjU0%2FqeD87UrjBCFMHP0qOIqMsdMmVxshlEjQli0lGMfrnyGrtPyE%2Fw%2B5orBcYmHQHXTyi9N02BsqJqnF98ZTfDGT%2BnzPCrjx0BwSgLC68MKrBK%2B8gcxwtx92H1ReRh0Dfd4eeLmsUTe0XQ5bLGJs95WG9S2avQmI%2BZwwVd19T0kLqI6kzIxpSyN%2BLnTbKbCBogCrVCixwFDnNhNo7Z32UAJrkHs74naGH9K8l6xfeIiwSsSYtumBi%2F2ebc8l2DV9cRTudeX%2BMREV0uKm23mBofV50nN8yfMX3LiWwdGh8JqxKwJmyFSIaeELjCiWFK%2FeR2TvJloCs7gxraztNZS5y0b9x3yflnLTSVxPLHu%2BApSG4xrp52AhKDQMH%2F3ylpTHLJQ6IA2mLteKPED%2BnnQFtrdVBcA4hi8NaFopUsz4riwwr7rvsa9JEbdvAOUfekp08Z208nvq7wDF44l%2FztnCyRh9I4iLuzrsk%2Bq8NjJWv1o%2BGU6ZQ70NSbfpxJT0s2YhavV%2FPz; ajs_user_id=5ebcf09b8840c33a17a914ac; AWSALBTG=7+earVLRF5hUFjHYQXQLJo+rlgpiID162gcmqbMPlI6TKgJJimBrszD74IpSyV2Mdp44PB4fp57t2+p8tg6tV39Zo5DagGyvekWAF22lESOE5dgdcKtv9CByCNm5c9b8zHnGBFoOGmuov1nggZaUElZtpG01DxXs7lwk8LU0p0Gp; AWSALBTGCORS=7+earVLRF5hUFjHYQXQLJo+rlgpiID162gcmqbMPlI6TKgJJimBrszD74IpSyV2Mdp44PB4fp57t2+p8tg6tV39Zo5DagGyvekWAF22lESOE5dgdcKtv9CByCNm5c9b8zHnGBFoOGmuov1nggZaUElZtpG01DxXs7lwk8LU0p0Gp; ajs_group_id=5ebcf09c951223611428be19; popcorn_theme=%22light%22; _gcl_au=1.1.313526753.1777172034; _twpid=tw.1777172692856.531898524915413066; _gid=GA1.2.1504414671.1777172694; mp_90f73cfa0608e74231d66fdf4f31e120_mixpanel=%7B%22distinct_id%22%3A%20%22cabcf131-7c17-429f-a501-41fd2e3fd438%22%2C%22%24device_id%22%3A%20%22cabcf131-7c17-429f-a501-41fd2e3fd438%22%2C%22%24initial_referrer%22%3A%20%22https%3A%2F%2Flogin.buffer.com%2F%22%2C%22%24initial_referring_domain%22%3A%20%22login.buffer.com%22%2C%22__mps%22%3A%20%7B%7D%2C%22__mpso%22%3A%20%7B%7D%2C%22__mpus%22%3A%20%7B%7D%2C%22__mpa%22%3A%20%7B%7D%2C%22__mpu%22%3A%20%7B%7D%2C%22__mpr%22%3A%20%5B%5D%2C%22__mpap%22%3A%20%5B%5D%2C%22visual_refresh_enabled%22%3A%20true%2C%22%24user_id%22%3A%20%225ebcf09b8840c33a17a914ac%22%7D"
+            },
+            {
+              "name": "Sec-Fetch-Dest",
+              "value": "empty"
+            },
+            {
+              "name": "Sec-Fetch-Mode",
+              "value": "cors"
+            },
+            {
+              "name": "Sec-Fetch-Site",
+              "value": "same-site"
+            },
+            {
+              "name": "Priority",
+              "value": "u=4"
+            },
+            {
+              "name": "TE",
+              "value": "trailers"
+            }
+          ],
+          "cookies": [
+            {
+              "name": "buffer-marketing",
+              "value": "eyJ2aXNpdG9ySWQiOiI1NTA2MzFkYS0yMDBmLTQyZGMtYjk4Ny0wZWI3MTM5YzdlOWYiLCJjb29raWVWZXJzaW9uIjoyLCJ0cmFja2luZyI6eyJyZWZlcnJlciI6Imh0dHBzOi8vYnVmZmVyLmNvbS8iLCJ1c2VyQWdlbnQiOiJNb3ppbGxhLzUuMCAoWDExOyBMaW51eCB4ODZfNjQ7IHJ2OjE0OS4wKSBHZWNrby8yMDEwMDEwMSBGaXJlZm94LzE0OS4wIiwiZmJwIjoiZmIuMS4xNzc3MTA5MDgwNTQ1LjY4MzY2NDIwOTg3NDE4MDQ3In0sInV0bXMiOnsidmFsdWVzIjp7InV0bV9jYW1wYWlnbiI6IlJlc2VuZCBFbWFpbCBWZXJpZmljYXRpb24gKFNIIC0gMDYvMjMpIiwidXRtX21lZGl1bSI6ImVtYWlsX2FjdGlvbiIsInV0bV9zb3VyY2UiOiJjdXN0b21lci5pbyIsInV0bV9jb250ZW50IjoiUmVzZW5kIEVtYWlsIFZlcmlmaWNhdGlvbiAoU0ggLSAwNi8yMykifSwidXBkYXRlZEF0IjoxNzc3MTA5MjA2NTI2fX0="
+            },
+            {
+              "name": "buffer-marketing.sig",
+              "value": "QcSFbPso1UQ3rd66QS5j2yBmtMw"
+            },
+            {
+              "name": "cookieyesID",
+              "value": "YjZGNlJ4NVpKQzRZNXRmcENPQU5rOGlwMXpobnBWNXo"
+            },
+            {
+              "name": "ajs_anonymous_id",
+              "value": "cabcf131-7c17-429f-a501-41fd2e3fd438"
+            },
+            {
+              "name": "cky-consent",
+              "value": "no"
+            },
+            {
+              "name": "cookieyes-necessary",
+              "value": "yes"
+            },
+            {
+              "name": "cookieyes-functional",
+              "value": "yes"
+            },
+            {
+              "name": "cookieyes-analytics",
+              "value": "yes"
+            },
+            {
+              "name": "cookieyes-performance",
+              "value": "yes"
+            },
+            {
+              "name": "cookieyes-advertisement",
+              "value": "yes"
+            },
+            {
+              "name": "cookieyes-other",
+              "value": "yes"
+            },
+            {
+              "name": "_ga_VQSKXK8EGY",
+              "value": "GS2.1.s1777171296$o2$g1$t1777172867$j60$l0$h0"
+            },
+            {
+              "name": "_ga",
+              "value": "GA1.1.191495887.1777109080"
+            },
+            {
+              "name": "_fbp",
+              "value": "fb.1.1777109080545.68366420987418047"
+            },
+            {
+              "name": "buffer-signup",
+              "value": "eyJ2aXNpdG9ySWQiOiI1NTA2MzFkYS0yMDBmLTQyZGMtYjk4Ny0wZWI3MTM5YzdlOWYifQ=="
+            },
+            {
+              "name": "_clck",
+              "value": "omhqn2^2^g5j^0^2306"
+            },
+            {
+              "name": "_clsk",
+              "value": "wo4vaj^1777172722647^4^1^o.clarity.ms/collect"
+            },
+            {
+              "name": "buffer_session",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzZXNzaW9uSWQiOiJ2MV81ZWJjZjA5Yjg4NDBjMzNhMTdhOTE0YWNfNTJlZjA3ZTYtZjQzMS00MjI1LThiZTUtMGUwNWVlZWMzNzI0Iiwic2Vzc2lvblZlcnNpb24iOiJ2MSIsImlhdCI6MTc3NzEwOTE0OX0.clIgBxnSq6LOk0d9FT_WmZM3MrxozZ2ZzYJHPCMCK3Y"
+            },
+            {
+              "name": "bufferapp_ci_session",
+              "value": "u9uh4G/0lELugNDUDXtBPhD6UMj3jcMC7oKLOkARcuETB7dWrGRmBiW5v9rT4rR8FYWz1VUAfVF9l8dn2VSo1j/pV7FGl3pO+bA7Ic91+9xMY8shxXZs1wIRjkjU0/qeD87UrjBCFMHP0qOIqMsdMmVxshlEjQli0lGMfrnyGrtPyE/w+5orBcYmHQHXTyi9N02BsqJqnF98ZTfDGT+nzPCrjx0BwSgLC68MKrBK+8gcxwtx92H1ReRh0Dfd4eeLmsUTe0XQ5bLGJs95WG9S2avQmI+ZwwVd19T0kLqI6kzIxpSyN+LnTbKbCBogCrVCixwFDnNhNo7Z32UAJrkHs74naGH9K8l6xfeIiwSsSYtumBi/2ebc8l2DV9cRTudeX+MREV0uKm23mBofV50nN8yfMX3LiWwdGh8JqxKwJmyFSIaeELjCiWFK/eR2TvJloCs7gxraztNZS5y0b9x3yflnLTSVxPLHu+ApSG4xrp52AhKDQMH/3ylpTHLJQ6IA2mLteKPED+nnQFtrdVBcA4hi8NaFopUsz4riwwr7rvsa9JEbdvAOUfekp08Z208nvq7wDF44l/ztnCyRh9I4iLuzrsk+q8NjJWv1o+GU6ZQ70NSbfpxJT0s2YhavV/Pz"
+            },
+            {
+              "name": "ajs_user_id",
+              "value": "5ebcf09b8840c33a17a914ac"
+            },
+            {
+              "name": "AWSALBTG",
+              "value": "7+earVLRF5hUFjHYQXQLJo+rlgpiID162gcmqbMPlI6TKgJJimBrszD74IpSyV2Mdp44PB4fp57t2+p8tg6tV39Zo5DagGyvekWAF22lESOE5dgdcKtv9CByCNm5c9b8zHnGBFoOGmuov1nggZaUElZtpG01DxXs7lwk8LU0p0Gp"
+            },
+            {
+              "name": "AWSALBTGCORS",
+              "value": "7+earVLRF5hUFjHYQXQLJo+rlgpiID162gcmqbMPlI6TKgJJimBrszD74IpSyV2Mdp44PB4fp57t2+p8tg6tV39Zo5DagGyvekWAF22lESOE5dgdcKtv9CByCNm5c9b8zHnGBFoOGmuov1nggZaUElZtpG01DxXs7lwk8LU0p0Gp"
+            },
+            {
+              "name": "ajs_group_id",
+              "value": "5ebcf09c951223611428be19"
+            },
+            {
+              "name": "popcorn_theme",
+              "value": "\"light\""
+            },
+            {
+              "name": "_gcl_au",
+              "value": "1.1.313526753.1777172034"
+            },
+            {
+              "name": "_twpid",
+              "value": "tw.1777172692856.531898524915413066"
+            },
+            {
+              "name": "_gid",
+              "value": "GA1.2.1504414671.1777172694"
+            },
+            {
+              "name": "mp_90f73cfa0608e74231d66fdf4f31e120_mixpanel",
+              "value": "{\"distinct_id\": \"cabcf131-7c17-429f-a501-41fd2e3fd438\",\"$device_id\": \"cabcf131-7c17-429f-a501-41fd2e3fd438\",\"$initial_referrer\": \"https://login.buffer.com/\",\"$initial_referring_domain\": \"login.buffer.com\",\"__mps\": {},\"__mpso\": {},\"__mpus\": {},\"__mpa\": {},\"__mpu\": {},\"__mpr\": [],\"__mpap\": [],\"visual_refresh_enabled\": true,\"$user_id\": \"5ebcf09b8840c33a17a914ac\"}"
+            }
+          ],
+          "queryString": [
+            {
+              "name": "_o",
+              "value": "WeeklyPostingStreak"
+            }
+          ],
+          "headersSize": 4002,
+          "postData": {
+            "mimeType": "application/json",
+            "params": [],
+            "text": "{\"operationName\":\"WeeklyPostingStreak\",\"variables\":{\"input\":{\"organizationId\":\"5ebcf09c951223611428be19\"}},\"query\":\"query WeeklyPostingStreak($input: WeeklyPostingStreakInput!) {\\n  weeklyPostingStreak(input: $input) {\\n    count\\n    status\\n    periodsAhead\\n    previousCount\\n    longestCount\\n    userStreakState\\n    __typename\\n  }\\n}\"}"
+          }
+        },
+        "response": {
+          "status": 200,
+          "statusText": "",
+          "httpVersion": "HTTP/2",
+          "headers": [
+            {
+              "name": "date",
+              "value": "Sun, 26 Apr 2026 09:19:38 GMT"
+            },
+            {
+              "name": "content-type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "name": "cf-ray",
+              "value": "9f2481ca1dd041c4-ATL"
+            },
+            {
+              "name": "cf-cache-status",
+              "value": "DYNAMIC"
+            },
+            {
+              "name": "access-control-allow-origin",
+              "value": "https://publish.buffer.com"
+            },
+            {
+              "name": "cache-control",
+              "value": "no-store"
+            },
+            {
+              "name": "etag",
+              "value": "W/\"b4-2uJMBLiRWpF8WV4pEsdfhm+0Wo8\""
+            },
+            {
+              "name": "server",
+              "value": "cloudflare"
+            },
+            {
+              "name": "set-cookie",
+              "value": "AWSALBTG=FvYD80dTdpwua7RJIngqHroqJj+7gkssiSzL9jqxX87ijTrDuYB6xYA17nkCpIrLEBhk9b6CtfkNlzhBciIDfSuz/8ISbpaZTzrxPd/PKcQvFftv0+C0VHHcD3VrCRSy+LX9U+8xPiRJzO7D0N5eWLy7lcwWVRkKdzykehfEpAoE; Expires=Sun, 03 May 2026 09:19:38 GMT; Path=/"
+            },
+            {
+              "name": "set-cookie",
+              "value": "AWSALBTGCORS=FvYD80dTdpwua7RJIngqHroqJj+7gkssiSzL9jqxX87ijTrDuYB6xYA17nkCpIrLEBhk9b6CtfkNlzhBciIDfSuz/8ISbpaZTzrxPd/PKcQvFftv0+C0VHHcD3VrCRSy+LX9U+8xPiRJzO7D0N5eWLy7lcwWVRkKdzykehfEpAoE; Expires=Sun, 03 May 2026 09:19:38 GMT; Path=/; SameSite=None; Secure"
+            },
+            {
+              "name": "strict-transport-security",
+              "value": "max-age=15552000"
+            },
+            {
+              "name": "vary",
+              "value": "Origin, accept-encoding"
+            },
+            {
+              "name": "access-control-allow-credentials",
+              "value": "true"
+            },
+            {
+              "name": "cross-origin-opener-policy",
+              "value": "same-origin"
+            },
+            {
+              "name": "cross-origin-resource-policy",
+              "value": "same-origin"
+            },
+            {
+              "name": "origin-agent-cluster",
+              "value": "?1"
+            },
+            {
+              "name": "referrer-policy",
+              "value": "no-referrer"
+            },
+            {
+              "name": "x-content-type-options",
+              "value": "nosniff"
+            },
+            {
+              "name": "x-dns-prefetch-control",
+              "value": "off"
+            },
+            {
+              "name": "x-download-options",
+              "value": "noopen"
+            },
+            {
+              "name": "x-frame-options",
+              "value": "DENY"
+            },
+            {
+              "name": "x-permitted-cross-domain-policies",
+              "value": "none"
+            },
+            {
+              "name": "x-xss-protection",
+              "value": "0"
+            },
+            {
+              "name": "content-encoding",
+              "value": "br"
+            },
+            {
+              "name": "alt-svc",
+              "value": "h3=\":443\"; ma=86400"
+            },
+            {
+              "name": "X-Firefox-Spdy",
+              "value": "h2"
+            }
+          ],
+          "cookies": [
+            {
+              "name": "AWSALBTG",
+              "value": "FvYD80dTdpwua7RJIngqHroqJj+7gkssiSzL9jqxX87ijTrDuYB6xYA17nkCpIrLEBhk9b6CtfkNlzhBciIDfSuz/8ISbpaZTzrxPd/PKcQvFftv0+C0VHHcD3VrCRSy+LX9U+8xPiRJzO7D0N5eWLy7lcwWVRkKdzykehfEpAoE"
+            },
+            {
+              "name": "AWSALBTGCORS",
+              "value": "FvYD80dTdpwua7RJIngqHroqJj+7gkssiSzL9jqxX87ijTrDuYB6xYA17nkCpIrLEBhk9b6CtfkNlzhBciIDfSuz/8ISbpaZTzrxPd/PKcQvFftv0+C0VHHcD3VrCRSy+LX9U+8xPiRJzO7D0N5eWLy7lcwWVRkKdzykehfEpAoE"
+            }
+          ],
+          "content": {
+            "mimeType": "application/json; charset=utf-8",
+            "size": 180,
+            "text": "{\"data\":{\"weeklyPostingStreak\":{\"count\":1,\"status\":\"OnTrack\",\"periodsAhead\":0,\"previousCount\":1,\"longestCount\":1,\"userStreakState\":\"ExistingStreakOnTrack\",\"__typename\":\"Streak\"}}}\n"
+          },
+          "redirectURL": "",
+          "headersSize": 1300,
+          "bodySize": 1427
+        },
+        "cache": {},
+        "timings": {
+          "blocked": 0,
+          "dns": 0,
+          "connect": 0,
+          "ssl": 0,
+          "send": 0,
+          "wait": 219,
+          "receive": 0
+        },
+        "time": 219,
+        "_securityState": "secure",
+        "serverIPAddress": "2606:4700::6812:6276",
+        "connection": "443",
+        "pageref": "page_2"
+      }
+    ]
+  }
+}
+
+
+{"operationName":"GetPostForRealTimeUpdate","variables":{"postId":"69edd8a520cc99878c028b75"},"query":"query GetPostForRealTimeUpdate($postId: PostId!) {\n  post(input: {id: $postId}) {\n    id\n    dueAt\n    ...PostCard_Post\n    ...RealTimeUpdates_Post\n    __typename\n  }\n}\n\nfragment PostCardContent_Annotation on Annotation {\n  type\n  indices\n  content\n  text\n  url\n  __typename\n}\n\nfragment PostMediaAsset_Asset on Asset {\n  __typename\n  mimeType\n  thumbnail\n  source\n  ... on ImageAsset {\n    image {\n      altText\n      width\n      height\n      isAnimated\n      __typename\n    }\n    __typename\n  }\n  ... on VideoAsset {\n    video {\n      width\n      height\n      isVideoProcessing\n      __typename\n    }\n    __typename\n  }\n  ... on DocumentAsset {\n    document {\n      filesize\n      numPages\n      __typename\n    }\n    __typename\n  }\n}\n\nfragment PostCardNotes_Note on Note {\n  __typename\n  id\n  text\n  type\n  createdAt\n  updatedAt\n  author {\n    __typename\n    id\n    email\n    avatar\n    isDeleted\n    name\n  }\n  allowedActions\n}\n\nfragment PostCard_Post on Post {\n  id\n  allowedActions\n  ideaId\n  status\n  notificationStatus\n  sharedNow\n  via\n  schedulingType\n  author {\n    __typename\n    id\n    email\n    name\n    avatar\n    isDeleted\n  }\n  isCustomScheduled\n  isPinned\n  externalLink\n  createdAt\n  updatedAt\n  dueAt\n  sentAt\n  metricsUpdatedAt\n  text\n  externalLink\n  metadata {\n    __typename\n    ... on CommonPostMetadata {\n      type\n      annotations {\n        __typename\n        ...PostCardContent_Annotation\n      }\n      __typename\n    }\n    ... on InstagramPostMetadata {\n      firstComment\n      link\n      geolocation {\n        id\n        text\n        __typename\n      }\n      __typename\n    }\n    ... on PinterestPostMetadata {\n      title\n      url\n      board {\n        serviceId\n        name\n        url\n        description\n        avatar\n        __typename\n      }\n      __typename\n    }\n    ... on GoogleBusinessPostMetadata {\n      title\n      __typename\n    }\n    ... on TwitterPostMetadata {\n      threadCount\n      thread {\n        text\n        assets {\n          __typename\n          ...PostMediaAsset_Asset\n        }\n        __typename\n      }\n      retweet {\n        id\n        url\n        text\n        createdAt\n        user {\n          name\n          username\n          avatar\n          __typename\n        }\n        __typename\n      }\n      __typename\n    }\n    ... on LinkedInPostMetadata {\n      firstComment\n      linkAttachment {\n        __typename\n        url\n        expandedUrl\n        title\n        thumbnail\n        text\n      }\n      __typename\n    }\n    ... on FacebookPostMetadata {\n      firstComment\n      linkAttachment {\n        __typename\n        url\n        expandedUrl\n        title\n        thumbnail\n        text\n      }\n      __typename\n    }\n    ... on ThreadsPostMetadata {\n      threadCount\n      thread {\n        text\n        assets {\n          __typename\n          ...PostMediaAsset_Asset\n        }\n        __typename\n      }\n      topic\n      __typename\n    }\n    ... on MastodonPostMetadata {\n      threadCount\n      thread {\n        text\n        assets {\n          __typename\n          ...PostMediaAsset_Asset\n        }\n        __typename\n      }\n      __typename\n    }\n    ... on BlueskyPostMetadata {\n      threadCount\n      thread {\n        text\n        assets {\n          __typename\n          ...PostMediaAsset_Asset\n        }\n        __typename\n      }\n      linkAttachment {\n        __typename\n        url\n        expandedUrl\n        title\n        thumbnail\n        text\n      }\n      __typename\n    }\n  }\n  channel {\n    __typename\n    id\n    type\n    name\n    avatar\n    service\n    products\n    serviceId\n    serverUrl\n    timezone\n    displayName\n    isQueuePaused\n    isDisconnected\n    locationData {\n      location\n      __typename\n    }\n    metadata {\n      ... on BlueskyMetadata {\n        serverUrl\n        __typename\n      }\n      ... on MastodonMetadata {\n        serverUrl\n        __typename\n      }\n      __typename\n    }\n    scopes\n  }\n  tags {\n    id\n    name\n    color\n    __typename\n  }\n  notes {\n    ...PostCardNotes_Note\n    __typename\n  }\n  error {\n    message\n    supportUrl\n    __typename\n  }\n  assets {\n    __typename\n    ...PostMediaAsset_Asset\n  }\n  metrics {\n    type\n    name\n    description\n    value\n    nullableValue\n    unit\n    __typename\n  }\n  recurrence {\n    cadence {\n      frequency\n      frequencyStep\n      __typename\n    }\n    maxRecurrentPosts\n    recurrentPostsLeft\n    postNumber\n    parentPostId\n    __typename\n  }\n  __typename\n}\n\nfragment RealTimeUpdates_Post on Post {\n  id\n  status\n  dueAt\n  tags {\n    id\n    __typename\n  }\n  channel {\n    id\n    __typename\n  }\n  __typename\n}"}
